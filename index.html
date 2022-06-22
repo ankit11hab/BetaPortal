@@ -1,15 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alcheringa 2023</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <title>Alcher</title>
 </head>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Poppins&display=swap');
+
+    html body {
+        font-family: 'Montserrat', sans-serif;
+        min-height: 300vh;
+        overflow-x: hidden !important;
+    }
+
+    .hero {
+        min-height: 100vh;
+        width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-size: 100%;
+
+        text-align: center;
+        color: #fff;
+        position: relative;
+
+    }
+
+    .bg-image {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -12;
+    }
+
+    .hero-head {
+        padding-top: 20vh;
+    }
+
+    .hero-head .first {
+        font-size: 3vw;
+        font-weight: 600;
+
+    }
+
+    .hero-head .second {
+        font-weight: 700;
+        font-size: 7vw;
+        margin-top: -15px;
+    }
+
+    .hero-box {
+        position: absolute;
+        background: url('./images/Frame\ 6356120.png');
+        background-size: cover;
+        bottom: -40vh;
+        left: 0;
+        right: 0;
+        margin: 15vh auto;
+        height: 65vh;
+        width: 70%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 40px;
+    }
+
+    .hero-box .first {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    .hero-box .second {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .hero-box:after {
+        content: '';
+        position: absolute;
+        overflow: hidden;
+        top: 26px;
+        left: -26px;
+        z-index: -5;
+        width: calc(100% + 52px);
+        height: calc(100% + 0px);
+        border: 4px solid rgba(245, 232, 91, 0.971);
+        mix-blend-mode: difference;
+        color: #fff;
+    }
+
+    .circles {
+        margin: 0 auto;
+        margin-top: 60vh;
+        display: flex;
+        height: 40vh;
+        width: 70%;
+        justify-content: space-around;
+
+    }
+
+
+
+    .swiper {
+        height: auto;
+        width: 100%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .swiper-wrapper {
+        display: flex;
+    }
+
+</style>
+
 <body>
-    <h1 class="text-3xl font-bold text-center mt-36">
-        You can use tailwind classes here
-    </h1>
+    <div class="h-screen">
+        <div class="hero">
+            <img class="bg-image" src="./images/Rectangle.png">
+            <div class="hero-head">
+                <p class="first">IIT GUWAHATI'S</p>
+                <p class="second">ALCHERINGA</p>
+            </div>
+            <div class="hero-box">
+                <div class="first">The largest Cultural Fest Of North-East India</div>
+                <div class="second">Alcheringa is the annual cultural festival of the Indian Institute of Technology
+                    (IIT), Guwahati. Started in 1996 by a group of students, Alcheringa, IIT Guwahati has become one of
+                    Asia’s most significant college-level cultural events. Spread over three days and four nights,
+                    Alcheringa attracts people from all over the world with its spectacular events and competitions.
+                </div>
+            </div>
+        </div>
+        <div class="circles">
+
+        </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./images/Frame 6356121.png"></div>
+                <div class="swiper-slide"><img src="./images/Frame 6356121.png"></div>
+                <div class="swiper-slide"><img src="./images/Frame 6356121.png"></div>
+                <div class="swiper-slide"><img src="./images/Frame 6356121.png"></div>
+                <div class="swiper-slide"><img src="./images/Frame 6356121.png"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+
+
 </body>
+<script type="module">
+    import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
+
+    var swiper = new Swiper(".mySwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
+</script>
+
 </html>
