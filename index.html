@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">  
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Alcheringa</title>
 </head>
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Material+Icons">
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Poppins&display=swap');
 
@@ -17,6 +19,10 @@
         font-family: 'Montserrat', sans-serif;
         min-height: 300vh;
         overflow-x: hidden !important;
+    }
+
+    .links {
+        font-size: 1rem;
     }
 
     .hero {
@@ -130,10 +136,36 @@
     .swiper-wrapper {
         display: flex;
     }
-
 </style>
 
 <body>
+    <nav class="flex flex-wrap items-center justify-between p-2" style="background:url('images/Navbar.svg'); position: fixed;width:100%;z-index: 1000;">
+        <div class="flex px-10">
+            <img src="images/name.svg" alt="ACME" width="35" />
+            <img src="images/logo.svg" alt="ACME" width="140" class="px-4" />
+        </div>
+        <div class="flex md:hidden px-10">
+            <button id="hamburger" class="focus:outline-none">
+                <img class="toggle block" src="images/hamburger.png"
+                    width="30" height="30" />
+                <img class="toggle hidden" src="images/close.png"
+                    width="20" height="20" />
+            </button>
+        </div>
+        <div
+            class="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-blue-900 md:border-none links px-7">
+            <a href="index.html"
+                class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Home</a>
+            <a href="events.html"
+                class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Events</a>
+            <a href="#"
+                class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Initiatives</a>
+            <a href="#"
+                class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Team</a>
+            <a href="#"
+                class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Competitions</a>
+        </div>
+    </nav>
     <div class="h-screen">
         <div class="hero">
             <img class="bg-image" src="./images/Rectangle.png">
@@ -176,6 +208,15 @@
             el: ".swiper-pagination",
         },
     });
+
+</script>
+<script>
+    document.getElementById("hamburger").onclick = function toggleMenu() {
+        const navToggle = document.getElementsByClassName("toggle");
+        for (let i = 0; i < navToggle.length; i++) {
+            navToggle.item(i).classList.toggle("hidden");
+        }
+    };
 </script>
 
 </html>
