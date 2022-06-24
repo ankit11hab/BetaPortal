@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Alcheringa</title>
 </head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Material+Icons">
@@ -136,6 +137,52 @@
     .swiper-wrapper {
         display: flex;
     }
+
+    .navigator{
+        position: absolute;
+        font-size: 2vw;
+        z-index: 100;
+        color: #fff;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #prevSlide{
+        top: 0;
+        bottom: 0;
+        left: 30px;
+    }
+    #nextSlide{
+        top: 0;
+        bottom: 0;
+        right: 30px;
+    }
+
+    @media only screen and (max-width: 720px){
+        .hero-box{
+            width: 90%;
+        }
+        .hero-box .first{
+            font-size: 1.2rem;
+        }
+        .hero-box .second{
+            font-size: 0.7rem;
+        }
+        .hero-head .second{
+            margin-top: 6px;
+        }
+        .hero-box:after {
+            top: 5px;
+            left: -5px;
+            z-index: -5;
+            width: calc(100% + 10px);
+            height: calc(100% + 0px);
+            border: 2px solid rgba(245, 232, 91, 0.971);
+            mix-blend-mode: difference;
+            color: #fff;
+        }
+    }
 </style>
 
 <body>
@@ -192,7 +239,11 @@
                 <div class="swiper-slide"><img src="./images/Frame 6356121.png"></div>
                 <div class="swiper-slide"><img src="./images/Frame 6356121.png"></div>
                 <div class="swiper-slide"><img src="./images/Frame 6356121.png"></div>
+
             </div>
+            <div class="navigator" id="prevSlide"><i class="fa-solid fa-circle-arrow-left"></i></div>
+            <div class="navigator" id="nextSlide"><i class="fa-solid fa-circle-arrow-right"></i></div>
+            
             <div class="swiper-pagination"></div>
         </div>
 
@@ -207,6 +258,10 @@
         pagination: {
             el: ".swiper-pagination",
         },
+        navigation: {
+            prevEl: '#prevSlide',
+            nextEl: '#nextSlide',
+        }
     });
 
 </script>
