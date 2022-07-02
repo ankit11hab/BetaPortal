@@ -9,7 +9,9 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Alcheringa</title>
 </head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Material+Icons">
@@ -115,27 +117,32 @@
         justify-content: space-around;
         align-items: center;
     }
-    svg{
+
+    svg {
         width: 25%;
         padding: 0;
     }
-    svg textPath { 
-      font-size: 42px;
+
+    svg textPath {
+        font-size: 42px;
         letter-spacing: 20px;
         fill: red;
-        
+
     }
 
-    .circles .first{
+    .circles .first {
         fill: #F2A450;
     }
-    .circles .second{
+
+    .circles .second {
         fill: #636A8A;
     }
-    .circles .third{
+
+    .circles .third {
         fill: #956FA8;
     }
-    .circles .forth{
+
+    .circles .forth {
         fill: #E6756E;
     }
 
@@ -161,7 +168,7 @@
         display: flex;
     }
 
-    .navigator{
+    .navigator {
         position: absolute;
         font-size: 2vw;
         z-index: 100;
@@ -171,39 +178,47 @@
         align-items: center;
         justify-content: center;
     }
-    #prevSlide{
+
+    #prevSlide {
         top: 0;
         bottom: 0;
         left: 30px;
     }
-    #nextSlide{
+
+    #nextSlide {
         top: 0;
         bottom: 0;
         right: 30px;
     }
+
     .featured-event-heading {
         margin: 40px 10px 40px 10px;
         text-align: center;
         font-size: 27px;
         font-weight: 500;
     }
+
     .person-holder {
         padding: 5px 180px 5px 180px;
     }
-    
-    @media only screen and (max-width: 720px){
-        .hero-box{
+
+    @media only screen and (max-width: 720px) {
+        .hero-box {
             width: 90%;
         }
-        .hero-box .first{
+
+        .hero-box .first {
             font-size: 1.2rem;
         }
-        .hero-box .second{
+
+        .hero-box .second {
             font-size: 0.7rem;
         }
-        .hero-head .second{
+
+        .hero-head .second {
             margin-top: 6px;
         }
+
         .hero-box:after {
             top: 5px;
             left: -5px;
@@ -214,43 +229,40 @@
             mix-blend-mode: difference;
             color: #fff;
         }
-        .circles{
+
+        .circles {
             /* flex-direction: column; */
             height: 30vh;
         }
     }
-
-
-
 </style>
 
 <body>
-    <nav class="flex flex-wrap items-center justify-between p-2" style="background:url('images/image.webp'); position: fixed;width:100%;z-index: 1000;background-size: cover;">
+    <nav class="flex flex-wrap items-center justify-between p-2"
+        style="background:url('images/image.webp'); position: fixed;width:100%;z-index: 1000;background-size: cover;">
         <div class="flex px-10">
             <img src="images/name.svg" alt="ACME" width="35" />
             <img src="images/logo.svg" alt="ACME" width="140" class="px-4" />
         </div>
         <div class="flex md:hidden px-10">
             <button id="hamburger" class="focus:outline-none">
-                <img class="toggle block" src="images/hamburger.png"
-                    width="30" height="30" />
-                <img class="toggle hidden" src="images/close.png"
-                    width="20" height="20" />
+                <img class="toggle block" src="images/hamburger.png" width="30" height="30" />
+                <img class="toggle hidden" src="images/close.png" width="20" height="20" />
             </button>
         </div>
         <div
-      class="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-blue-900 md:border-none links px-7">
-      <a href="index.html"
-        class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Home</a>
-      <a href="events.html"
-        class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Events</a>
-      <a href="initiatives.html"
-        class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Initiatives</a>
-      <a href="team.html"
-        class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Team</a>
-      <a href="competitions.html"
-        class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Competitions</a>
-    </div>
+            class="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-blue-900 md:border-none links px-7">
+            <a href="index.html"
+                class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Home</a>
+            <a href="events.html"
+                class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Events</a>
+            <a href="initiatives.html"
+                class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Initiatives</a>
+            <a href="team.html"
+                class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Team</a>
+            <a href="competitions.html"
+                class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Competitions</a>
+        </div>
     </nav>
     <div class="h-screen">
         <div class="hero">
@@ -271,84 +283,60 @@
         <div class="circles">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
                 <title>Alcher</title>
-              <defs>
-                  <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-                      <animateTransform
-                          attributeName="transform"
-                          begin="0s"
-                          dur="30s"
-                          type="rotate"
-                          from="0 250 250"
-                          to="360 250 250"
-                          repeatCount="indefinite" 
-                          />
-                  </path>
-              </defs>
-              <circle class="first" cx="250" cy="250" r="100" stroke="black" stroke-width="0" />
-                  <text dy="70" textLength="1220">
-                      <textPath class="first" xlink:href="#textcircle">20 EDITIONS • 20 EDITIONS •</textPath>
-                  </text>
-              </svg>
+                <defs>
+                    <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"
+                        id="textcircle">
+                        <animateTransform attributeName="transform" begin="0s" dur="30s" type="rotate" from="0 250 250"
+                            to="360 250 250" repeatCount="indefinite" />
+                    </path>
+                </defs>
+                <circle class="first" cx="250" cy="250" r="100" stroke="black" stroke-width="0" />
+                <text dy="70" textLength="1220">
+                    <textPath class="first" xlink:href="#textcircle">20 EDITIONS • 20 EDITIONS •</textPath>
+                </text>
+            </svg>
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
                 <title>Alcher</title>
-              <defs>
-                  <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-                      <animateTransform
-                          attributeName="transform"
-                          begin="0s"
-                          dur="30s"
-                          type="rotate"
-                          from="0 250 250"
-                          to="360 250 250"
-                          repeatCount="indefinite" 
-                          />
-                  </path>
-              </defs>
-              <circle class="second" cx="250" cy="250" r="100" stroke="black" stroke-width="0" />
-                  <text dy="70" textLength="1220">
-                      <textPath class="second" xlink:href="#textcircle">140k FOOTFALL • 140k FOOTFALL •</textPath>
-                  </text>
-              </svg>
+                <defs>
+                    <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"
+                        id="textcircle">
+                        <animateTransform attributeName="transform" begin="0s" dur="30s" type="rotate" from="0 250 250"
+                            to="360 250 250" repeatCount="indefinite" />
+                    </path>
+                </defs>
+                <circle class="second" cx="250" cy="250" r="100" stroke="black" stroke-width="0" />
+                <text dy="70" textLength="1220">
+                    <textPath class="second" xlink:href="#textcircle">140k FOOTFALL • 140k FOOTFALL •</textPath>
+                </text>
+            </svg>
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
                 <title>Alcher</title>
-              <defs>
-                  <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-                      <animateTransform
-                          attributeName="transform"
-                          begin="0s"
-                          dur="30s"
-                          type="rotate"
-                          from="0 250 250"
-                          to="360 250 250"
-                          repeatCount="indefinite" 
-                          />
-                  </path>
-              </defs>
-              <circle class="third" cx="250" cy="250" r="100" stroke="black" stroke-width="0" />
-                  <text dy="70" textLength="1220">
-                      <textPath class="third" xlink:href="#textcircle">100+ EVENTS • 100+ EVENTS •</textPath>
-                  </text>
-              </svg>
+                <defs>
+                    <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"
+                        id="textcircle">
+                        <animateTransform attributeName="transform" begin="0s" dur="30s" type="rotate" from="0 250 250"
+                            to="360 250 250" repeatCount="indefinite" />
+                    </path>
+                </defs>
+                <circle class="third" cx="250" cy="250" r="100" stroke="black" stroke-width="0" />
+                <text dy="70" textLength="1220">
+                    <textPath class="third" xlink:href="#textcircle">100+ EVENTS • 100+ EVENTS •</textPath>
+                </text>
+            </svg>
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
                 <title>Alcher</title>
-              <defs>
-                  <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
-                      <animateTransform
-                          attributeName="transform"
-                          begin="0s"
-                          dur="30s"
-                          type="rotate"
-                          from="0 250 250"
-                          to="360 250 250"
-                          repeatCount="indefinite" 
-                          />
-                  </path>
-              </defs>
-              <circle class="forth" cx="250" cy="250" r="100" stroke="black" stroke-width="0" />
-                  <text dy="70" textLength="1220">
-                      <textPath class="forth" xlink:href="#textcircle">500 COLLEGES • 500 COLLEGES •</textPath>
-                  </text>
-              </svg>
+                <defs>
+                    <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"
+                        id="textcircle">
+                        <animateTransform attributeName="transform" begin="0s" dur="30s" type="rotate" from="0 250 250"
+                            to="360 250 250" repeatCount="indefinite" />
+                    </path>
+                </defs>
+                <circle class="forth" cx="250" cy="250" r="100" stroke="black" stroke-width="0" />
+                <text dy="70" textLength="1220">
+                    <textPath class="forth" xlink:href="#textcircle">500 COLLEGES • 500 COLLEGES •</textPath>
+                </text>
+            </svg>
         </div>
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
@@ -361,7 +349,7 @@
             </div>
             <div class="navigator" id="prevSlide"><i class="fa-solid fa-circle-arrow-left"></i></div>
             <div class="navigator" id="nextSlide"><i class="fa-solid fa-circle-arrow-right"></i></div>
-            
+
             <div class="swiper-pagination"></div>
         </div>
 
@@ -374,6 +362,45 @@
             <div style="margin:15px"><img src="images/person.png" /></div>
             <div style="margin:15px"><img src="images/person.png" /></div>
         </div>
+
+        <footer
+            style="height:430px; width:100%;background:#2F4858; margin-top: 90px; color:white;padding: 80px 60px 50px 60px;">
+            <div class="flex flex-row justify-between">
+                <div style="width:33%">
+                    Venkat Vikas Ch<br>
+                    PR Head<br>
+                    +91 9983072631<br><br>
+                    Ankit Agarwal<br>
+                    PR Head<br>
+                    +91 9983072631<br>
+                </div>
+                <div style="width:13%; margin-top:auto"><img src="images/Footer_logo.svg" width="100%" /></div>
+                <div style="width: 33%;" class="flex flex-col items-end">
+                    <div>
+                        For business
+                    </div>
+                    <div>
+                        related queries
+                    </div>
+                    <div>
+                        alcheringa@iitg.ac.in<br><br>
+                    </div>
+                    <div class="flex flex-row items-center">
+                        <div class="mx-2"><img src="images/linkedin.svg" style="width:25px" /></div>
+                        <div class="mx-2"><img src="images/instagram.svg" style="width:25px" /></div>
+                        <div class="mx-2"><img src="images/facebook.svg" style="width:13px" /></div>
+                        <div class="mx-2"><img src="images/twitter.svg" style="width:25px" /></div>
+                        <div class="ml-2"><img src="images/youtube.svg" style="width:27px" /></div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8" style="font-size:30px; transform: translate(0,12px);">
+                IIT GUWAHATI'S
+            </div>
+            <div class="text-center" style="font-size:55px; font-weight: 500;">
+                ALCHERINGA
+            </div>
+        </footer>
 
     </div>
 
