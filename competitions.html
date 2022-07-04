@@ -74,30 +74,35 @@
         padding: 5px 180px 5px 180px;
         margin-top: 50px;
     }
+
     .comp-name {
         font-size: 18px;
         font-weight: 600;
         margin-bottom: 10px;
     }
-    .above{
+
+    .above {
         position: absolute;
         z-index: 0;
     }
-    .below1{
-        margin-left: 10px; 
-        position: relative; 
-        visibility: visible; 
+
+    .below1 {
+        margin-left: 10px;
+        position: relative;
+        visibility: visible;
         width: 102%;
         z-index: -1;
     }
-    .below2{
-        margin-left: 10px; 
-        position: relative; 
-        visibility: visible; 
+
+    .below2 {
+        margin-left: 10px;
+        position: relative;
+        visibility: visible;
         width: 102%;
         z-index: -1;
     }
-    #content-b1{
+
+    #content-b1 {
         background-image: url(/images/Frame\ 51\ \(2\).png);
     }
 </style>
@@ -119,14 +124,14 @@
             class="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-blue-900 md:border-none links px-7">
             <a href="index.html"
                 class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Home</a>
+            <a href="competitions.html"
+                class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Competitions</a>
             <a href="events.html"
                 class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Events</a>
             <a href="initiatives.html"
                 class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Initiatives</a>
             <a href="team.html"
                 class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Team</a>
-            <a href="competitions.html"
-                class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Competitions</a>
         </div>
     </nav>
 
@@ -157,7 +162,7 @@
                 <div class="comp-name">Vogue Nation</div>
                 <button onclick="clickedOnComp()">
                     <div style="position: relative;">
-                        <div class="above" ><img src="images/person.png" /></div>
+                        <div class="above"><img src="images/person.png" /></div>
                         <div class="below1" id="notselected"><img src="images/Frame 51 (1).png" /></div>
                         <div class="below2 hidden" id="selected1"><img src="images/Frame 51.png" /></div>
                     </div>
@@ -167,7 +172,7 @@
                 <div class="comp-name">Vogue Nation</div>
                 <button onclick="clickedOnComp1()">
                     <div style="position: relative;">
-                        <div class="above" ><img src="images/person.png" /></div>
+                        <div class="above"><img src="images/person.png" /></div>
                         <div class="below1" id="notselected2"><img src="images/Frame 51 (1).png" /></div>
                         <div class="below2 hidden" id="selected2"><img src="images/Frame 51.png" /></div>
                     </div>
@@ -177,7 +182,7 @@
                 <div class="comp-name">Vogue Nation</div>
                 <button onclick="clickedOnComp3()">
                     <div style="position: relative;">
-                        <div class="above" ><img src="images/person.png" /></div>
+                        <div class="above"><img src="images/person.png" /></div>
                         <div class="below1" id="notselected3"><img src="images/Frame 51 (1).png" /></div>
                         <div class="below2 hidden" id="selected3"><img src="images/Frame 51.png" /></div>
                     </div>
@@ -187,7 +192,7 @@
                 <div class="comp-name">Vogue Nation</div>
                 <button onclick="clickedOnComp4()">
                     <div style="position: relative;">
-                        <div class="above" ><img src="images/person.png" /></div>
+                        <div class="above"><img src="images/person.png" /></div>
                         <div class="below1" id="notselected4"><img src="images/Frame 51 (1).png" /></div>
                         <div class="below2 hidden" id="selected4"><img src="images/Frame 51.png" /></div>
                     </div>
@@ -196,15 +201,15 @@
         </div>
         <div class="flex justify-center hidden " id="content-comp">
             <div class="w-4/5 flex mx-40 justify-self-center" id="content-b1">
-                <div class="bg-white mr-4 mb-4 border-2">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem deserunt quibusdam 
-                    blanditiis similique, sapiente dolor voluptatem inventore illum, nam ex soluta 
+                <div class="bg-white mr-4 mb-4 border-2 px-10 py-10">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem deserunt quibusdam
+                    blanditiis similique, sapiente dolor voluptatem inventore illum, nam ex soluta
                     ipsam consectetur temporibus animi placeat sunt hic consequatur totam?
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, culpa ad
-                    ipisci quaerat sequi saepe, voluptatem exercitationem qui libero quod alias 
+                    ipisci quaerat sequi saepe, voluptatem exercitationem qui libero quod alias
                     molestiae velit vel repudiandae in mollitia enim? Molestias, doloremque earum.
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, culpa ad
-                    ipisci quaerat sequi saepe, voluptatem exercitationem qui libero quod alias 
+                    ipisci quaerat sequi saepe, voluptatem exercitationem qui libero quod alias
                     molestiae velit vel repudiandae in mollitia enim? Molestias, doloremque earum.
 
                 </div>
@@ -236,7 +241,7 @@
             navToggle.item(i).classList.toggle("hidden");
         }
     };
-    function closeall(){
+    function closeall() {
         const elem = $('#content-comp');
         const elem1 = $('#selected1');
         const elem2 = $('#notselected');
@@ -257,44 +262,44 @@
         elem8.show();
         return 0;
     }
-    function clickedOnComp(){
+    function clickedOnComp() {
         const elem = $('#content-comp');
         const elem1 = $('#selected1');
         const elem2 = $('#notselected');
-        if(elem1.is(":hidden")){
+        if (elem1.is(":hidden")) {
             closeall();
         }
         elem.toggle();
         elem1.toggle();
         elem2.toggle();
     }
-    function clickedOnComp1(){
+    function clickedOnComp1() {
         const elem = $('#content-comp');
         const elem1 = $('#selected2');
         const elem2 = $('#notselected2');
-        if(elem1.is(":hidden")){
+        if (elem1.is(":hidden")) {
             closeall();
         }
         elem.toggle();
         elem1.toggle();
         elem2.toggle();
     }
-    function clickedOnComp3(){
+    function clickedOnComp3() {
         const elem = $('#content-comp');
         const elem1 = $('#selected3');
         const elem2 = $('#notselected3');
-        if(elem1.is(":hidden")){
+        if (elem1.is(":hidden")) {
             closeall();
         }
         elem.toggle();
         elem1.toggle();
         elem2.toggle();
     }
-    function clickedOnComp4(){
+    function clickedOnComp4() {
         const elem = $('#content-comp');
         const elem1 = $('#selected4');
         const elem2 = $('#notselected4');
-        if(elem1.is(":hidden")){
+        if (elem1.is(":hidden")) {
             closeall();
         }
         elem.toggle();
