@@ -63,6 +63,10 @@
         font-weight: 500;
     }
 
+    .person-holder {
+        padding: 5px 180px 5px 180px;
+        margin-top: 50px;
+    }
 
     @media screen and (max-width: 700px) {
         .hero-head .second {
@@ -79,6 +83,11 @@
             margin-bottom: 17px;
             font-weight: 500;
         }
+
+        .person-holder {
+            padding: 5px 50px 5px 50px;
+            margin-top: 50px;
+        }
     }
 
     .down-arrow {
@@ -87,10 +96,6 @@
         width: 5%;
     }
 
-    .person-holder {
-        padding: 5px 180px 5px 180px;
-        margin-top: 50px;
-    }
 
     .comp-name {
         font-size: 18px;
@@ -176,10 +181,10 @@
                 </svg>
             </div>
         </div>
-        <div class="flex flex-row justify-center person-holder">
-            <div class="flex flex-col items-center" style="margin:15px; margin-bottom: 0;">
+        <div class="flex flex-row flex-wrap lg:-mx-4 justify-center person-holder">
+            <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
                 <div class="comp-name">Vogue Nation</div>
-                <button onclick="clickedOnComp()">
+                <button onclick="clickedOnComp1()">
                     <div style="position: relative;">
                         <div class="above"><img src="images/person.png" /></div>
                         <div class="below1" id="notselected"><img src="images/Frame 51 (1).png" /></div>
@@ -187,9 +192,9 @@
                     </div>
                 </button>
             </div>
-            <div class="flex flex-col items-center" style="margin:15px; margin-bottom: 0;">
+            <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
                 <div class="comp-name">Vogue Nation</div>
-                <button onclick="clickedOnComp1()">
+                <button onclick="clickedOnComp2()">
                     <div style="position: relative;">
                         <div class="above"><img src="images/person.png" /></div>
                         <div class="below1" id="notselected2"><img src="images/Frame 51 (1).png" /></div>
@@ -197,7 +202,7 @@
                     </div>
                 </button>
             </div>
-            <div class="flex flex-col items-center" style="margin:15px; margin-bottom: 0;">
+            <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
                 <div class="comp-name">Vogue Nation</div>
                 <button onclick="clickedOnComp3()">
                     <div style="position: relative;">
@@ -207,7 +212,7 @@
                     </div>
                 </button>
             </div>
-            <div class="flex flex-col items-center" style="margin:15px; margin-bottom: 0;">
+            <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
                 <div class="comp-name">Vogue Nation</div>
                 <button onclick="clickedOnComp4()">
                     <div style="position: relative;">
@@ -218,22 +223,16 @@
                 </button>
             </div>
         </div>
-        <div class="flex justify-center hidden " id="content-comp">
-            <div class="w-4/5 flex mx-40 justify-self-center" id="content-b1">
-                <div class="bg-white mr-4 mb-4 border-2 px-10 py-10">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem deserunt quibusdam
-                    blanditiis similique, sapiente dolor voluptatem inventore illum, nam ex soluta
-                    ipsam consectetur temporibus animi placeat sunt hic consequatur totam?
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, culpa ad
-                    ipisci quaerat sequi saepe, voluptatem exercitationem qui libero quod alias
-                    molestiae velit vel repudiandae in mollitia enim? Molestias, doloremque earum.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, culpa ad
-                    ipisci quaerat sequi saepe, voluptatem exercitationem qui libero quod alias
-                    molestiae velit vel repudiandae in mollitia enim? Molestias, doloremque earum.
-
+        <center>
+            <div class="flex justify-center hidden items-center" id="content-comp">
+                <div class="w-4/5 flex justify-center items-center" id="content-b1">
+                    <div class="bg-white mr-4 mb-4 border-2 px-10 py-10 flex justify-center items-center"
+                        style="width:100%">
+                        Coming Soon
+                    </div>
                 </div>
             </div>
-        </div>
+        </center>
         <div class="flex flex-row justify-center person-holder">
             <div class="flex flex-col items-center" style="margin:15px">
                 <div class="comp-name">Vogue Nation</div>
@@ -254,76 +253,93 @@
         </div>
 </body>
 <script>
-    document.getElementById("hamburger").onclick = function toggleMenu() {
-        const navToggle = document.getElementsByClassName("toggle");
-        for (let i = 0; i < navToggle.length; i++) {
-            navToggle.item(i).classList.toggle("hidden");
-        }
-    };
-    function closeall() {
-        const elem = $('#content-comp');
-        const elem1 = $('#selected1');
-        const elem2 = $('#notselected');
-        const elem3 = $('#selected2');
-        const elem4 = $('#notselected2');
-        const elem5 = $('#selected3');
-        const elem6 = $('#notselected3');
-        const elem7 = $('#selected4');
-        const elem8 = $('#notselected4');
-        elem.hide();
-        elem1.hide();
-        elem2.show();
-        elem3.hide();
-        elem4.show();
-        elem5.hide();
-        elem6.show();
-        elem7.hide();
-        elem8.show();
-        return 0;
+    if (screen.width > 700) {
+        document.getElementById("hamburger").onclick = function toggleMenu() {
+            const navToggle = document.getElementsByClassName("toggle");
+            for (let i = 0; i < navToggle.length; i++) {
+                navToggle.item(i).classList.toggle("hidden");
+            }
+        };
     }
-    function clickedOnComp() {
-        const elem = $('#content-comp');
-        const elem1 = $('#selected1');
-        const elem2 = $('#notselected');
-        if (elem1.is(":hidden")) {
-            closeall();
+
+    function closeall() {
+        if (screen.width > 700) {
+            const elem = $('#content-comp');
+            const elem1 = $('#selected1');
+            const elem2 = $('#notselected');
+            const elem3 = $('#selected2');
+            const elem4 = $('#notselected2');
+            const elem5 = $('#selected3');
+            const elem6 = $('#notselected3');
+            const elem7 = $('#selected4');
+            const elem8 = $('#notselected4');
+            elem.hide();
+            elem1.hide();
+            elem2.show();
+            elem3.hide();
+            elem4.show();
+            elem5.hide();
+            elem6.show();
+            elem7.hide();
+            elem8.show();
+            return 0;
         }
-        elem.toggle();
-        elem1.toggle();
-        elem2.toggle();
     }
     function clickedOnComp1() {
-        const elem = $('#content-comp');
-        const elem1 = $('#selected2');
-        const elem2 = $('#notselected2');
-        if (elem1.is(":hidden")) {
-            closeall();
+        if (screen.width > 700) {
+            const elem = $('#content-comp');
+            const elem1 = $('#selected1');
+            const elem2 = $('#notselected');
+            if (elem1.is(":hidden")) {
+                closeall();
+            }
+            elem.toggle();
+            elem1.toggle();
+            elem2.toggle();
         }
-        elem.toggle();
-        elem1.toggle();
-        elem2.toggle();
+
+    }
+    function clickedOnComp2() {
+        if (screen.width > 700) {
+            const elem = $('#content-comp');
+            const elem1 = $('#selected2');
+            const elem2 = $('#notselected2');
+            if (elem1.is(":hidden")) {
+                closeall();
+            }
+            elem.toggle();
+            elem1.toggle();
+            elem2.toggle();
+        }
+
     }
     function clickedOnComp3() {
-        const elem = $('#content-comp');
-        const elem1 = $('#selected3');
-        const elem2 = $('#notselected3');
-        if (elem1.is(":hidden")) {
-            closeall();
+        if (screen.width > 700) {
+            const elem = $('#content-comp');
+            const elem1 = $('#selected3');
+            const elem2 = $('#notselected3');
+            if (elem1.is(":hidden")) {
+                closeall();
+            }
+            elem.toggle();
+            elem1.toggle();
+            elem2.toggle();
         }
-        elem.toggle();
-        elem1.toggle();
-        elem2.toggle();
+
     }
     function clickedOnComp4() {
-        const elem = $('#content-comp');
-        const elem1 = $('#selected4');
-        const elem2 = $('#notselected4');
-        if (elem1.is(":hidden")) {
-            closeall();
+        if (screen.width > 700) {
+            const elem = $('#content-comp');
+            const elem1 = $('#selected4');
+            const elem2 = $('#notselected4');
+            if (elem1.is(":hidden")) {
+                closeall();
+            }
+            elem.toggle();
+            elem1.toggle();
+            elem2.toggle();
         }
-        elem.toggle();
-        elem1.toggle();
-        elem2.toggle();
+
     }
 </script>
 
