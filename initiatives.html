@@ -13,6 +13,10 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Syne&display=swap');
 
+  html {
+    scroll-behavior: smooth!important;
+  }
+
   html body {
     font-family: 'Syne', sans-serif;
     min-height: 100vh;
@@ -57,16 +61,29 @@
     width: 40vw;
   }
 
-.bottom-tag {
+  .bottom-tag {
     font-size: 13vw;
     font-weight: 500;
-}
+  }
+
+  .footer-img-2 {
+    display: none;
+  }
+
+  .footer-right {
+    width: 33%;
+  }
+
+  .footer-items {
+    font-size: 1.4vw;
+  }
 
 
   @media screen and (max-width: 700px) {
     .hero-head .second {
       width: 70vw;
     }
+
     .hero {
       height: 510px;
     }
@@ -74,12 +91,29 @@
     .hero-head .first {
       font-size: 10vw;
     }
+
+    .footer-img-1 {
+      display: none;
+    }
+
+    .footer-img-2 {
+      display: block;
+    }
+
+    .footer-right {
+      width: 50%;
+    }
+
+    .footer-items {
+      font-size: 3vw;
+    }
+
     .bottom-tag {
-            font-size: 8vw;
-            margin-top: 7px;
-            margin-bottom: 17px;
-            font-weight: 500;
-        }
+      font-size: 8vw;
+      margin-top: 7px;
+      margin-bottom: 17px;
+      font-weight: 500;
+    }
   }
 
   .down-arrow {
@@ -128,9 +162,10 @@
       <a href="events.html"
         class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Events</a>
       <a href="initiatives.html"
-        class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none" style="text-decoration: underline;">Initiatives</a>
-      <a href="team.html"
-        class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Team</a>
+        class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none"
+        style="text-decoration: underline;">Initiatives</a>
+      <!-- <a href="team.html"
+        class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Team</a> -->
 
     </div>
   </nav>
@@ -142,19 +177,22 @@
       <div class="hero-head">
         <p class="first">Initiatives</p>
         <p class="second">
-          Alcheringa hosts several campaigns under Initiatives for cultural development and the betterment of society.
-          Explore all of them below.
+          Alcheringa has an overwhelming reach among people that can be used in a positive way to support various social
+          causes in society. We believe it is our responsibility to give back something to the society that has given us
+          so much love. Hence, we host several campaigns under Initiatives for cultural development of the society.
 
 
         </p>
+        <a href="#start">
         <svg class="down-arrow" xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24"
           stroke="currentColor" stroke-width="2" style="width:35px">
           <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
         </svg>
+      </a>
       </div>
     </div>
     <br><br><br>
-    <div class="card rounded-[10px]" style="width: 67%;">
+    <div class="card rounded-[10px]" style="width: 67%;" id="start">
       <div class="card-body">
         <h3 class="card-title" style="color: #F4902E;font-size:xx-large;font-weight: 550;">North East Unveiled</h3>
 
@@ -188,19 +226,6 @@
     </div>
     <div class="card rounded-[10px]" style="width: 67%;">
       <div class="card-body">
-        <h3 class="card-title" style="color: #F4902E;font-size:xx-large;font-weight: 550;">Blood Donation Drive</h3>
-
-        <p class="card-text">Blood Donation Drive has been a large scale initiative taken up by Team Alcheringa with the
-          support from IIT-G Hospital to encourage the youth to donate blood in order to prevent people from dying due
-          to the unavailability of blood during critical situations. In the previous editions of Alcheringa, many
-          youthful souls who attended the fest were inspired to be a part of this noble cause and they willingly made
-          their contribution for the betterment of the society.
-        </p>
-
-      </div>
-    </div>
-    <div class="card rounded-[10px]" style="width: 67%;text-align: left;">
-      <div class="card-body" style="text-align:right;">
         <h3 class="card-title" style="color: #F4902E;font-size:xx-large;font-weight: 550;">Manshakti</h3>
 
         <p class="card-text">Alcheringa IIT Guwahati, has taken a small step on the long journey towards mental
@@ -216,6 +241,84 @@
 
       </div>
     </div>
+    <div class="card rounded-[10px]" style="width: 67%;text-align: left;">
+      <div class="card-body" style="text-align:right;">
+        <h3 class="card-title" style="color: #F4902E;font-size:xx-large;font-weight: 550;">Prithvi</h3>
+
+        <p class="card-text">Climate change is the greatest threat to our existence in our short history on this planet.
+          Each of our daily actions affects the environment in some way or the other. Making people realize their role
+          in the large movement against climate change, by educating them through activities that draw their attention
+          towards issues that affect our planet, can make this world a better place to live in. In solidarity with the
+          international activism about climate change, Team Alcheringa launched Project Prithvi, where we believe in the
+          principle of living life simply and saving the world from climate change.
+        </p>
+
+      </div>
+    </div>
+    <div class="card rounded-[10px]" style="width: 67%;text-align: left;">
+      <div class="card-body">
+        <h3 class="card-title" style="color: #F4902E;font-size:xx-large;font-weight: 550;">SafHer</h3>
+
+        <p class="card-text">Women have walked into space, elected as Heads of States; they have proven themselves equal
+          to men in every way. Yet they are not safe in their immediate surroundings. The sad reality is that we live in
+          an increasingly violent society where the fear of crime is ever-present. To address this situation and take a
+          step forward, Alcheringa organized SafHer, a campaign on women’s safety. SafHer highlights that every woman
+          must raise her voice against any misconduct and get perpetrators to justice.
+        </p>
+
+      </div>
+    </div>
+
+    <footer class="px-7 pt-20 md:px-10 lg:px-14" style="width:100%;background:#2F4858; margin-top: 90px; color:white;">
+      <div class="flex flex-row justify-between footer-items">
+        <div style="width:33%">
+          Siddhant Singh<br>
+          PR Head<br>
+          +91-9310859978<br><br>
+          Danda Akshara<br>
+          PR Head<br>
+          +91-9908991939<br><br>
+          Quasim<br>
+          Outreach and Media Head<br>
+          +91-7763959688<br>
+        </div>
+        <div class="footer-img-1" style="width:13%; margin-top:auto;"><img src="images/Footer_logo.svg" width="100%" />
+        </div>
+        <div class="flex flex-col items-end footer-right">
+          <div>
+            For business
+          </div>
+          <div>
+            related queries
+          </div>
+          <div>
+            alcheringa@iitg.ac.in<br><br>
+          </div>
+          <div class="flex flex-row items-center">
+            <div class="mx-2"><a href="https://www.linkedin.com/company/alcheringaiitguwahati/mycompany/"
+                target="_blank"><img src="images/linkedin.svg" style="width:25px" /></a></div>
+            <div class="mx-2"><a href="https://www.instagram.com/alcheringaiitg/" target="_blank"><img
+                  src="images/instagram.svg" style="width:25px" /></a></div>
+            <div class="mx-2"><a href="https://www.facebook.com/alcheringaiitg" target="_blank"><img
+                  src="images/facebook.svg" style="width:13px" /></a></div>
+            <div class="mx-2"><a href="https://twitter.com/alcheringaiitg" target="_blank"><img src="images/twitter.svg"
+                  style="width:25px" /></a></div>
+            <div class="ml-2"><a href="https://www.youtube.com/c/AlcheringaIITG" target="_blank"><img
+                  src="images/youtube.svg" style="width:27px" /></a></div>
+          </div>
+        </div>
+      </div>
+      <center>
+        <div style="width:13%; margin-top:30px;" class="footer-img-2"><img src="images/Footer_logo.svg" width="100%" />
+        </div>
+      </center>
+      <div class="text-center mt-2" style="font-size:4vw; transform: translate(0,12px);">
+        IIT GUWAHATI'S
+      </div>
+      <div class="text-center bottom-tag">
+        ALCHERINGA
+      </div>
+    </footer>
 </body>
 <script>
   document.getElementById("hamburger").onclick = function toggleMenu() {
