@@ -143,6 +143,12 @@
     .above {
         position: absolute;
         z-index: 0;
+        height:96%;
+        width: 100%;
+    }
+
+    .above img {
+        height: 100%;
     }
 
     .below1 {
@@ -202,10 +208,7 @@
             <div class="hero-head">
                 <p class="first">Competitions</p>
                 <p class="second">
-                    All students, from the fourth year mentors to the first-year freshers, play an active role in
-                    actualising the four days of Alcher. Alcheringa is the most significant cultural festival in the
-                    northeast and is build by the yearlong efforts of all the students involved in making their vision
-                    of Alcher come to life.
+                    Alcheringa has many competitions spread across various genres like fashion, music, art, sports, etc. They take place during the three days with the prize distribution on the last day. People all over the country participate in these competitions to win exciting prizes and goodies and to witness one of India's biggest cultural festival.
 
 
 
@@ -224,45 +227,46 @@
                 <div class="comp-name">Vogue Nation</div>
                 <button onclick="clickedOnComp1()">
                     <div style="position: relative;">
-                        <div class="above"><img src="images/person.png" /></div>
-                        <div class="below1" id="notselected"><img src="images/Frame 51 (1).png" /></div>
-                        <div class="below2 hidden" id="selected1"><img src="images/Frame 51.png" /></div>
+                        <div class="above"><img src="images/Vogue NAtion.jpg" style="width:100%;height:100%" /></div>
+                        <div class="below1" id="notselected"><img src="images/Frame 51 (1).png" height="480px" /></div>
+                        <!-- <div class="below2 hidden" id="selected1"><img src="images/Frame 51.png" /></div> -->
                     </div>
                 </button>
             </div>
             <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
-                <div class="comp-name">Vogue Nation</div>
+                <div class="comp-name">Stage Craft</div>
                 <button onclick="clickedOnComp2()">
                     <div style="position: relative;">
-                        <div class="above"><img src="images/person.png" /></div>
+                        <div class="above"><img src="images/stage craft.jpg" /></div>
                         <div class="below1" id="notselected2"><img src="images/Frame 51 (1).png" /></div>
-                        <div class="below2 hidden" id="selected2"><img src="images/Frame 51.png" /></div>
+                        <!-- <div class="below2 hidden" id="selected2"><img src="images/Frame 51.png" /></div> -->
                     </div>
                 </button>
             </div>
             <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
-                <div class="comp-name">Vogue Nation</div>
+                <div class="comp-name">Sports Module</div>
                 <button onclick="clickedOnComp3()">
                     <div style="position: relative;">
-                        <div class="above"><img src="images/person.png" /></div>
+                        <div class="above"><img src="images/Sports Module.jpg" /></div>
                         <div class="below1" id="notselected3"><img src="images/Frame 51 (1).png" /></div>
-                        <div class="below2 hidden" id="selected3"><img src="images/Frame 51.png" /></div>
+                        <!-- <div class="below2 hidden" id="selected3"><img src="images/Frame 51.png" /></div> -->
                     </div>
                 </button>
             </div>
             <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
-                <div class="comp-name">Vogue Nation</div>
+                <div class="comp-name">Quiz</div>
                 <button onclick="clickedOnComp4()">
                     <div style="position: relative;">
-                        <div class="above"><img src="images/person.png" /></div>
+                        <div class="above"><img src="images/quiz.jpeg" /></div>
                         <div class="below1" id="notselected4"><img src="images/Frame 51 (1).png" /></div>
-                        <div class="below2 hidden" id="selected4"><img src="images/Frame 51.png" /></div>
+                        <!-- <div class="below2 hidden" id="selected4"><img src="images/Frame 51.png" /></div> -->
                     </div>
                 </button>
             </div>
         </div>
+
         <center>
-            <div class="flex justify-center hidden items-center" id="content-comp">
+            <div class="flex justify-center hidden items-center" id="content-comp-1">
                 <div class="w-4/5 flex justify-center items-center" id="content-b1">
                     <div class="bg-white mr-4 mb-4 border-2 px-10 py-10 flex justify-center items-center"
                         style="width:100%">
@@ -271,24 +275,111 @@
                 </div>
             </div>
         </center>
-        <div class="flex flex-row justify-center person-holder">
-            <div class="flex flex-col items-center" style="margin:15px">
-                <div class="comp-name">Vogue Nation</div>
-                <div><img src="images/person.png" /></div>
+
+        
+        <div class="flex flex-row flex-wrap lg:-mx-4 justify-center person-holder" id="start">
+
+            <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+                <div class="comp-name">Music</div>
+                <button onclick="clickedOnComp5()">
+                    <div style="position: relative;">
+                        <div class="above"><img src="images/Music.jpg" /></div>
+                        <div class="below1" id="notselected5"><img src="images/Frame 51 (1).png" /></div>
+                        <!-- <div class="below2 hidden" id="selected5"><img src="images/Frame 51.png" /></div> -->
+                    </div>
+                </button>
             </div>
-            <div class="flex flex-col items-center" style="margin:15px">
-                <div class="comp-name">Vogue Nation</div>
-                <div><img src="images/person.png" /></div>
+
+            <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+                <div class="comp-name">Literary</div>
+                <button onclick="clickedOnComp6()">
+                    <div style="position: relative;">
+                        <div class="above"><img src="images/Literary.jpg" /></div>
+                        <div class="below1" id="notselected6"><img src="images/Frame 51 (1).png" /></div>
+                        <!-- <div class="below2 hidden" id="selected6"><img src="images/Frame 51.png" /></div> -->
+                    </div>
+                </button>
             </div>
-            <div class="flex flex-col items-center" style="margin:15px">
-                <div class="comp-name">Vogue Nation</div>
-                <div><img src="images/person.png" /></div>
+
+            <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+                <div class="comp-name">LCA</div>
+                <button onclick="clickedOnComp7()">
+                    <div style="position: relative;">
+                        <div class="above"><img src="images/LCA.png" /></div>
+                        <div class="below1" id="notselected7"><img src="images/Frame 51 (1).png" /></div>
+                        <!-- <div class="below2 hidden" id="selected7"><img src="images/Frame 51.png" /></div> -->
+                    </div>
+                </button>
             </div>
-            <div class="flex flex-col items-center" style="margin:15px">
-                <div class="comp-name">Vogue Nation</div>
-                <div><img src="images/person.png" /></div>
+
+            <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+                <div class="comp-name">Digital Dexterity</div>
+                <button onclick="clickedOnComp8()">
+                    <div style="position: relative;">
+                        <div class="above"><img src="images/Digital Dexterity.jpg" /></div>
+                        <div class="below1" id="notselected8"><img src="images/Frame 51 (1).png" /></div>
+                        <!-- <div class="below2 hidden" id="selected8"><img src="images/Frame 51.png" /></div> -->
+                    </div>
+                </button>
             </div>
         </div>
+
+        <center>
+            <div class="flex justify-center hidden items-center" id="content-comp-2">
+                <div class="w-4/5 flex justify-center items-center" id="content-b1">
+                    <div class="bg-white mr-4 mb-4 border-2 px-10 py-10 flex justify-center items-center"
+                        style="width:100%">
+                        Coming Soon
+                    </div>
+                </div>
+            </div>
+        </center>
+
+        
+        <div class="flex flex-row flex-wrap lg:-mx-4 justify-center person-holder" id="start">
+
+            <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+                <div class="comp-name">Class Apart</div>
+                <button onclick="clickedOnComp9()">
+                    <div style="position: relative;">
+                        <div class="above"><img src="images/Class Apart.jpeg" /></div>
+                        <div class="below1" id="notselected9"><img src="images/Frame 51 (1).png" /></div>
+                        <!-- <div class="below2 hidden" id="selected9"><img src="images/Frame 51.png" /></div> -->
+                    </div>
+                </button>
+            </div>
+
+            <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+                <div class="comp-name">Art Talkies</div>
+                <button onclick="clickedOnComp10()">
+                    <div style="position: relative;">
+                        <div class="above"><img src="images/Art Talkies.jpg" /></div>
+                        <div class="below1" id="notselected10"><img src="images/Frame 51 (1).png" /></div>
+                        <!-- <div class="below2 hidden" id="selected10"><img src="images/Frame 51.png" /></div> -->
+                    </div>
+                </button>
+            </div>
+            <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+                <div class="comp-name">ABCD</div>
+                <button onclick="clickedOnComp11()">
+                    <div style="position: relative;">
+                        <div class="above"><img src="images/ABCD (1).jpg" /></div>
+                        <div class="below1" id="notselected11"><img src="images/Frame 51 (1).png" /></div>
+                        <!-- <div class="below2 hidden" id="selected11"><img src="images/Frame 51.png" /></div> -->
+                    </div>
+                </button>
+            </div>
+        </div>
+        <center>
+            <div class="flex justify-center hidden items-center" id="content-comp-3">
+                <div class="w-4/5 flex justify-center items-center" id="content-b1">
+                    <div class="bg-white mr-4 mb-4 border-2 px-10 py-10 flex justify-center items-center"
+                        style="width:100%">
+                        Coming Soon
+                    </div>
+                </div>
+            </div>
+        </center>
         <footer class="px-7 pt-20 md:px-10 lg:px-14"
             style="width:100%;background:#2F4858; margin-top: 90px; color:white;">
             <div class="flex flex-row justify-between footer-items">
@@ -316,16 +407,16 @@
                         alcheringa@iitg.ac.in<br><br>
                     </div>
                     <div class="flex flex-row items-center">
-                        <div class="mx-2"><a href="https://www.linkedin.com/company/alcheringaiitguwahati/mycompany/"
-                                target="_blank"><img src="images/linkedin.svg" style="width:25px" /></a></div>
                         <div class="mx-2"><a href="https://www.instagram.com/alcheringaiitg/" target="_blank"><img
                                     src="images/instagram.svg" style="width:25px" /></a></div>
                         <div class="mx-2"><a href="https://www.facebook.com/alcheringaiitg" target="_blank"><img
                                     src="images/facebook.svg" style="width:13px" /></a></div>
-                        <div class="mx-2"><a href="https://twitter.com/alcheringaiitg" target="_blank"><img
-                                    src="images/twitter.svg" style="width:25px" /></a></div>
-                        <div class="ml-2"><a href="https://www.youtube.com/c/AlcheringaIITG" target="_blank"><img
+                        <div class="mx-2"><a href="https://www.youtube.com/c/AlcheringaIITG" target="_blank"><img
                                     src="images/youtube.svg" style="width:27px" /></a></div>
+                        <div class="mx-2"><a href="https://www.linkedin.com/company/alcheringaiitguwahati/mycompany/"
+                                target="_blank"><img src="images/linkedin.svg" style="width:25px" /></a></div>
+                        <div class="ml-2"><a href="https://twitter.com/alcheringaiitg" target="_blank"><img
+                                    src="images/twitter.svg" style="width:25px" /></a></div>
                     </div>
                 </div>
             </div>
@@ -351,16 +442,20 @@
 
     function closeall() {
         if (screen.width > 700) {
-            const elem = $('#content-comp');
-            const elem1 = $('#selected1');
+            const elemcomp1 = $('#content-comp-1');
+            const elemcomp2 = $('#content-comp-2');
+            const elemcomp3 = $('#content-comp-3');
+            // const elem1 = $('#selected1');
             const elem2 = $('#notselected');
-            const elem3 = $('#selected2');
+            // const elem3 = $('#selected2');
             const elem4 = $('#notselected2');
             const elem5 = $('#selected3');
             const elem6 = $('#notselected3');
             const elem7 = $('#selected4');
             const elem8 = $('#notselected4');
-            elem.hide();
+            elemcomp1.hide();
+            elemcomp2.hide();
+            elemcomp3.hide();
             elem1.hide();
             elem2.show();
             elem3.hide();
@@ -374,57 +469,174 @@
     }
     function clickedOnComp1() {
         if (screen.width > 700) {
-            const elem = $('#content-comp');
-            const elem1 = $('#selected1');
-            const elem2 = $('#notselected');
-            if (elem1.is(":hidden")) {
-                closeall();
-            }
-            elem.toggle();
-            elem1.toggle();
-            elem2.toggle();
+            const elemcomp1 = $('#content-comp-1');
+            // const elem1 = $('#selected1');
+            // const elem2 = $('#notselected');
+            // if (elem1.is(":hidden")) {
+            //     closeall();
+            // }
+            elemcomp1.toggle();
+            // elem1.toggle();
+            // elem2.toggle();
         }
 
     }
     function clickedOnComp2() {
         if (screen.width > 700) {
-            const elem = $('#content-comp');
-            const elem1 = $('#selected2');
-            const elem2 = $('#notselected2');
-            if (elem1.is(":hidden")) {
-                closeall();
-            }
-            elem.toggle();
-            elem1.toggle();
-            elem2.toggle();
+            const elemcomp1 = $('#content-comp-1');
+            // const elem1 = $('#selected2');
+            // const elem2 = $('#notselected2');
+            // if (elem1.is(":hidden")) {
+            //     closeall();
+            // }
+            elemcomp1.toggle();
+            // elem1.toggle();
+            // elem2.toggle();
         }
 
     }
     function clickedOnComp3() {
         if (screen.width > 700) {
-            const elem = $('#content-comp');
-            const elem1 = $('#selected3');
-            const elem2 = $('#notselected3');
-            if (elem1.is(":hidden")) {
-                closeall();
-            }
-            elem.toggle();
-            elem1.toggle();
-            elem2.toggle();
+            const elemcomp1 = $('#content-comp-1');
+            // const elem1 = $('#selected3');
+            // const elem2 = $('#notselected3');
+            // if (elem1.is(":hidden")) {
+            //     closeall();
+            // }
+            elemcomp1.toggle();
+            // elem1.toggle();
+            // elem2.toggle();
         }
 
     }
     function clickedOnComp4() {
         if (screen.width > 700) {
-            const elem = $('#content-comp');
-            const elem1 = $('#selected4');
-            const elem2 = $('#notselected4');
-            if (elem1.is(":hidden")) {
-                closeall();
-            }
-            elem.toggle();
-            elem1.toggle();
-            elem2.toggle();
+            const elemcomp1 = $('#content-comp-1');
+            // const elem1 = $('#selected4');
+            // const elem2 = $('#notselected4');
+            // if (elem1.is(":hidden")) {
+            //     closeall();
+            // }
+            elemcomp1.toggle();
+            // elem1.toggle();
+            // elem2.toggle();
+        }
+
+    }
+
+    
+    function clickedOnComp5() {
+        if (screen.width > 700) {
+            const elemcomp2 = $('#content-comp-2');
+            // const elem1 = $('#selected5');
+            // const elem2 = $('#notselected5');
+            // if (elem1.is(":hidden")) {
+            //     closeall();
+            // }
+            elemcomp2.toggle();
+            // elem1.toggle();
+            // elem2.toggle();
+        }
+
+    }
+
+    
+    function clickedOnComp6() {
+        if (screen.width > 700) {
+            const elemcomp2 = $('#content-comp-2');
+            // const elem1 = $('#selected6');
+            // const elem2 = $('#notselected6');
+            // if (elem1.is(":hidden")) {
+            //     closeall();
+            // }
+            elemcomp2.toggle();
+            // elem1.toggle();
+            // elem2.toggle();
+        }
+
+    }
+
+    
+    
+    function clickedOnComp7() {
+        if (screen.width > 700) {
+            const elemcomp2 = $('#content-comp-2');
+            // const elem1 = $('#selected7');
+            // const elem2 = $('#notselected7');
+            // if (elem1.is(":hidden")) {
+            //     closeall();
+            // }
+            elemcomp2.toggle();
+            // elem1.toggle();
+            // elem2.toggle();
+        }
+
+    }
+
+    
+    
+    function clickedOnComp8() {
+        if (screen.width > 700) {
+            const elemcomp2 = $('#content-comp-2');
+            // const elem1 = $('#selected8');
+            // const elem2 = $('#notselected8');
+            // if (elem1.is(":hidden")) {
+            //     closeall();
+            // }
+            elemcomp2.toggle();
+            // elem1.toggle();
+            // elem2.toggle();
+        }
+
+    }
+
+    
+    
+    function clickedOnComp9() {
+        if (screen.width > 700) {
+            const elemcomp2 = $('#content-comp-3');
+            // const elem1 = $('#selected9');
+            // const elem2 = $('#notselected9');
+            // if (elem1.is(":hidden")) {
+            //     closeall();
+            // }
+            elemcomp2.toggle();
+            // elem1.toggle();
+            // elem2.toggle();
+        }
+
+    }
+
+    
+    
+    function clickedOnComp10() {
+        if (screen.width > 700) {
+            const elemcomp2 = $('#content-comp-3');
+            // const elem1 = $('#selected10');
+            // const elem2 = $('#notselected10');
+            // if (elem1.is(":hidden")) {
+            //     closeall();
+            // }
+            elemcomp2.toggle();
+            // elem1.toggle();
+            // elem2.toggle();
+        }
+
+    }
+
+    
+    
+    function clickedOnComp11() {
+        if (screen.width > 700) {
+            const elemcomp2 = $('#content-comp-3');
+            // const elem1 = $('#selected11');
+            // const elem2 = $('#notselected11');
+            // if (elem1.is(":hidden")) {
+            //     closeall();
+            // }
+            elemcomp2.toggle();
+            // elem1.toggle();
+            // elem2.toggle();
         }
 
     }
