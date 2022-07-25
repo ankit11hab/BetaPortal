@@ -296,6 +296,116 @@
             margin-bottom: 17px;
             font-weight: 500;
         }
+        .tags {
+            transform: translate(0,-50px);
+            z-index: -1;
+        }
+    }
+
+
+    .marquee-body {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .marquee-content li img {
+        width: 100%;
+        /* height: 100%; */
+        border: 2px solid #eee;
+    }
+
+    :root {
+        --marquee-width: 80vw;
+        --marquee-height: 26vh;
+        /* --marquee-elements: 12; */
+        /* defined with JavaScript */
+        --marquee-elements-displayed: 5;
+        --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+        --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+    }
+
+    .marquee {
+        width: var(--marquee-width);
+        height: var(--marquee-height);
+        background-color: rgb(255, 255, 255);
+        color: #2F4858;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .marquee:before,
+    .marquee:after {
+        position: absolute;
+        top: 0;
+        width: 10rem;
+        height: 103%;
+        content: "";
+        z-index: 1;
+    }
+
+    .marquee:before {
+        left: 0;
+    }
+
+    .marquee:after {
+        right: 0;
+    }
+
+    .marquee-content {
+        list-style: none;
+        height: 100%;
+        display: flex;
+        animation: scrolling var(--marquee-animation-duration) linear infinite;
+    }
+
+    /* .marquee-content:hover {
+  animation-play-state: paused;
+} */
+    @keyframes scrolling {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements)));
+        }
+    }
+
+    .marquee-content li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* text-align: center; */
+        flex-shrink: 0;
+        width: var(--marquee-element-width);
+        max-height: 100%;
+        font-size: calc(var(--marquee-height)*3/4);
+        /* 5rem; */
+        white-space: nowrap;
+    }
+
+    .marquee-content li img {
+        width: 100%;
+        /* height: 100%; */
+        border: 2px solid #eee;
+    }
+
+    @media (max-width: 600px) {
+        html {
+            font-size: 12px;
+        }
+
+        :root {
+            --marquee-width: 100vw;
+            --marquee-height: 18vh;
+            --marquee-elements-displayed: 3;
+        }
+
+        .marquee:before,
+        .marquee:after {
+            width: 5rem;
+        }
     }
 </style>
 
@@ -410,7 +520,7 @@
             </div>
             <div class="navigator" id="prevSlide"><i class="fa-solid fa-circle-arrow-left"></i></div>
             <div class="navigator" id="nextSlide"><i class="fa-solid fa-circle-arrow-right"></i></div>
-<!-- 
+            <!-- 
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div> -->
 
@@ -422,117 +532,34 @@
         <h1 class="featured-event-heading">
             Featured Events
         </h1>
-
-
-        <div class="pb-12 px-10">
-            <div class="container text-center my-12 mx-auto px-4 md:px-12">
-                <div class="flex flex-wrap -mx-1 lg:-mx-4 justify-center">
-
-                    <!-- Column -->
-                    <div class="my-1 px-1 md:w-1/2 lg:my-4 lg:px-8 lg:w-1/5">
-
-                        <figure class="snip1527">
-                            <div class="snip1527image flex flex-row justify-center">
-                                <img src="images/ev1.svg" alt="pr-sample23" />
-                            </div>
-
-                            <figcaption style="margin-bottom: 20px;padding-top: 20px;">
-                                <div class="name">
-                                    <h1 style="font-weight:500; font-size:20px;color:#515D86">Vogue Nation</h1>
-                                </div>
-                            </figcaption>
-
-                            <a href="#"></a>
-                        </figure>
-
-                    </div>
-                    <!-- END Column -->
-
-                    <!-- Column -->
-                    <div class="my-1 px-1 md:w-1/2 lg:my-4 lg:px-8 lg:w-1/5">
-
-                        <figure class="snip1527">
-                            <div class="snip1527image flex flex-row justify-center">
-                                <img src="images/ev2.svg" alt="pr-sample23" />
-                            </div>
-
-                            <figcaption style="margin-bottom: 20px;padding-top: 20px;">
-                                <div class="name">
-                                    <h1 style="font-weight:500; font-size:20px;color:#515D86">Parliamentary Debate</h1>
-                                </div>
-                            </figcaption>
-
-                            <a href="#"></a>
-                        </figure>
-
-                    </div>
-                    <!-- END Column -->
-
-                    <!-- Column -->
-                    <div class="my-1 px-1 md:w-1/2 lg:my-4 lg:px-8 lg:w-1/5">
-
-                        <figure class="snip1527">
-                            <div class="snip1527image flex flex-row justify-center">
-                                <img src="images/ev3.svg" alt="pr-sample23" />
-                            </div>
-
-                            <figcaption style="margin-bottom: 20px;padding-top: 20px;">
-                                <div class="name">
-                                    <h1 style="font-weight:500; font-size:20px;color:#515D86">Rock-O-Phonix</h1>
-                                </div>
-                            </figcaption>
-
-                            <a href="#"></a>
-                        </figure>
-
-                    </div>
-                    <!-- END Column -->
-
-                    <!-- Column -->
-                    <div class="my-1 px-1 md:w-1/2 lg:my-4 lg:px-8 lg:w-1/5">
-
-                        <figure class="snip1527">
-                            <div class="snip1527image flex flex-row justify-center">
-                                <img src="images/ev4.svg" alt="pr-sample23" />
-                            </div>
-
-                            <figcaption style="margin-bottom: 20px;padding-top: 20px;">
-                                <div class="name">
-                                    <h1 style="font-weight:500; font-size:20px;color:#515D86">Creator's Camp</h1>
-                                </div>
-                            </figcaption>
-
-                            <a href="#"></a>
-                        </figure>
-
-                    </div>
-                    <!-- END Column -->
-
-                    
-                    <!-- Column -->
-                    <div class="my-1 px-1 md:w-1/2 lg:my-4 lg:px-8 lg:w-1/5">
-
-                        <figure class="snip1527">
-                            <div class="snip1527image flex flex-row justify-center">
-                                <img src="images/ev3.svg" alt="pr-sample23" />
-                            </div>
-
-                            <figcaption style="margin-bottom: 20px;padding-top: 20px;">
-                                <div class="name">
-                                    <h1 style="font-weight:500; font-size:20px;color:#515D86">MUN</h1>
-                                </div>
-                            </figcaption>
-
-                            <a href="#"></a>
-                        </figure>
-
-                    </div>
-                    <!-- END Column -->
-
-
-                </div>
+        <div class="marquee-body" style="z-index: 100;">
+            <div class="marquee">
+                <ul class="marquee-content">
+                    <li>
+                        <img src="images/camera-dynamic-gradient.png" alt="pr-sample23" class="marquee-img" style="width: 150px;" />
+                    </li>
+                    <li><img src="images/camera-dynamic-gradient.png" alt="pr-sample23"  style="width: 150px;" /></li>
+                    <li><img src="images/camera-dynamic-gradient.png" alt="pr-sample23"  style="width: 150px;" /></li>
+                    <li><img src="images/camera-dynamic-gradient.png" alt="pr-sample23"  style="width: 150px;" /></li>
+                    <li><img src="images/camera-dynamic-gradient.png" alt="pr-sample23"  style="width: 150px;" /></li>
+                </ul>
             </div>
-
+        </div>
+        <div class="marquee-body tags" style="z-index: 1;">
+            <div class="marquee">
+                <ul class="marquee-content">
+                    <li style="font-size: 19px;">Vogue Nation</li>
+                    <li style="font-size: 19px;">Rock-O-Phonix</li>
+                    <li style="font-size: 19px;">Vogue Nation</li>
+                    <li style="font-size: 19px;">Rock-O-Phonix</li>
+                    <li style="font-size: 19px;">Rock-O-Phonix</li>
+                    <li style="font-size: 19px;">Vogue Nation</li>
+                    <li style="font-size: 19px;">Rock-O-Phonix</li>
+                    <li style="font-size: 19px;">Vogue Nation</li>
+                    <li style="font-size: 19px;">Rock-O-Phonix</li>
+                    <li style="font-size: 19px;">Rock-O-Phonix</li>
+                </ul>
+            </div>
         </div>
 
         <footer class="px-7 pt-20 md:px-10 lg:px-14"
@@ -610,6 +637,18 @@
             navToggle.item(i).classList.toggle("hidden");
         }
     };
+</script>
+
+<script>
+    const root = document.documentElement;
+    const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+    const marqueeContent = document.querySelector("ul.marquee-content");
+
+    root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+
+    for (let i = 0; i < marqueeElementsDisplayed; i++) {
+        marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+    }
 </script>
 
 </html>
