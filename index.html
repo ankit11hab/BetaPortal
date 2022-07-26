@@ -167,7 +167,7 @@
 
     .navigator {
         position: absolute;
-        font-size: 2vw;
+        font-size: 3vw;
         z-index: 100;
         color: #fff;
         background-color: transparent;
@@ -220,6 +220,16 @@
     .bottom-tag {
         font-size: 13vw;
         font-weight: 500;
+    }
+
+    .swiper-pagination .swiper-pagination-bullet {
+        opacity: 1;
+        border: white solid 1px;
+        background-color: transparent;
+    }
+
+    .swiper-pagination .swiper-pagination-bullet-active {
+        background-color: white;
     }
 
     @media only screen and (max-width: 720px) {
@@ -297,6 +307,15 @@
         .tags {
             transform: translate(0, -50px);
             z-index: -1;
+        }
+
+
+        .swiper-pagination .swiper-pagination-bullet {
+            transform: translate(0, -15px);
+        }
+
+        .navigator {
+            font-size: 6vw;
         }
     }
 
@@ -404,16 +423,6 @@
         .marquee:after {
             width: 5rem;
         }
-    }
-
-    .swiper-pagination .swiper-pagination-bullet {
-        opacity: 1;
-        border: white solid 1px;
-        background-color: transparent;
-    }
-
-    .swiper-pagination  .swiper-pagination-bullet-active {
-        background-color: white;
     }
 </style>
 
