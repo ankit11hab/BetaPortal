@@ -294,8 +294,9 @@
             margin-bottom: 17px;
             font-weight: 500;
         }
+
         .tags {
-            transform: translate(0,-50px);
+            transform: translate(0, -50px);
             z-index: -1;
         }
     }
@@ -404,6 +405,16 @@
         .marquee:after {
             width: 5rem;
         }
+    }
+
+    .swiper-pagination .swiper-pagination-bullet {
+        opacity: 1;
+        border: white solid 1px;
+        background-color: transparent;
+    }
+
+    .swiper-pagination  .swiper-pagination-bullet-active {
+        background-color: white;
     }
 </style>
 
@@ -533,13 +544,13 @@
         <div class="marquee-body" style="z-index: 100;">
             <div class="marquee">
                 <ul class="marquee-content">
-                    <li><img src="images/parliament.png" alt="pr-sample23"  style="width: 150px;" /></li>
-                    <li><img src="images/rock.png" alt="pr-sample23"  style="width: 150px;" /></li>
-                    <li><img src="images/vogue.png" alt="pr-sample23"  style="width: 150px;" /></li>
-                    <li><img src="images/mun.png" alt="pr-sample23"  style="width: 150px;" /></li>
-                    <li><img src="images/creators.png" alt="pr-sample23"  style="width: 150px;" /></li>
-                    <li><img src="images/northeastunveiled.png" alt="pr-sample23"  style="width: 150px;" /></li>
-                    <li><img src="images/sports.png" alt="pr-sample23"  style="width: 150px;" /></li>
+                    <li><img src="images/parliament.png" alt="pr-sample23" style="width: 150px;" /></li>
+                    <li><img src="images/rock.png" alt="pr-sample23" style="width: 150px;" /></li>
+                    <li><img src="images/vogue.png" alt="pr-sample23" style="width: 150px;" /></li>
+                    <li><img src="images/mun.png" alt="pr-sample23" style="width: 150px;" /></li>
+                    <li><img src="images/creators.png" alt="pr-sample23" style="width: 150px;" /></li>
+                    <li><img src="images/northeastunveiled.png" alt="pr-sample23" style="width: 150px;" /></li>
+                    <li><img src="images/sports.png" alt="pr-sample23" style="width: 150px;" /></li>
                 </ul>
             </div>
         </div>
@@ -620,7 +631,7 @@
         pagination: {
             el: ".swiper-pagination",
         },
-        loop:true,
+        loop: true,
         navigation: {
             prevEl: '#prevSlide',
             nextEl: '#nextSlide',
