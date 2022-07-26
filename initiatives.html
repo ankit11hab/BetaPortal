@@ -24,7 +24,7 @@
   }
 
   .hero {
-    height: 400px;
+    height: 100%;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -32,7 +32,10 @@
     text-align: center;
     color: #fff;
     position: relative;
-    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
   }
 
   .bg-image {
@@ -50,15 +53,16 @@
   }
 
   .hero-head .first {
-    font-size: 3vw;
+    font-size: 3.2vw;
     font-weight: 600;
   }
 
   .hero-head .second {
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin: 2rem auto;
-    width: 40vw;
+    width: 46vw;
+    line-height: 23.5px;
   }
 
   .bottom-tag {
@@ -78,6 +82,9 @@
     font-size: 1.4vw;
   }
 
+  .top-holder {
+    height: 100vh;
+  }
 
   @media screen and (max-width: 700px) {
     .hero-head .second {
@@ -85,7 +92,7 @@
     }
 
     .hero {
-      height: 510px;
+      height: 545px;
     }
 
     .hero-head .first {
@@ -114,6 +121,10 @@
       margin-bottom: 17px;
       font-weight: 500;
     }
+
+    .top-holder {
+      height: 100%;
+    }
   }
 
   .down-arrow {
@@ -141,37 +152,37 @@
 </style>
 
 <body>
-  <nav class="flex flex-wrap items-center justify-between p-2"
-    style="background:#F4902E; position: fixed;width:100%;z-index: 1000;background-size: cover;">
-    <div class="flex px-10">
-      <img src="images/name.svg" alt="ACME" width="35" />
-      <img src="images/logo.svg" alt="ACME" width="140" class="px-4" />
-    </div>
-    <div class="flex md:hidden px-10">
-      <button id="hamburger" class="focus:outline-none">
-        <img class="toggle block" src="images/hamburger.png" width="30" height="30" />
-        <img class="toggle hidden" src="images/close.png" width="20" height="20" />
-      </button>
-    </div>
-    <div
-      class="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-blue-900 md:border-none links px-7">
-      <a href="index.html"
-        class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Home</a>
-      <a href="competitions.html"
-        class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Competitions</a>
-      <a href="events.html"
-        class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Events</a>
-      <a href="initiatives.html"
-        class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none"
-        style="text-decoration: underline;">Initiatives</a>
-      <!-- <a href="team.html"
+  <div class="top-holder">
+    <nav class="flex flex-wrap items-center justify-between p-2"
+      style="background:#F4902E; position: fixed;width:100%;z-index: 1000;background-size: cover;">
+      <div class="flex px-10">
+        <img src="images/name.svg" alt="ACME" width="35" />
+        <img src="images/logo.svg" alt="ACME" width="140" class="px-4" />
+      </div>
+      <div class="flex md:hidden px-10">
+        <button id="hamburger" class="focus:outline-none">
+          <img class="toggle block" src="images/hamburger.png" width="30" height="30" />
+          <img class="toggle hidden" src="images/close.png" width="20" height="20" />
+        </button>
+      </div>
+      <div
+        class="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-blue-900 md:border-none links px-7">
+        <a href="index.html"
+          class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Home</a>
+        <a href="competitions.html"
+          class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Competitions</a>
+        <a href="events.html"
+          class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Events</a>
+        <a href="initiatives.html"
+          class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none"
+          style="text-decoration: underline;">Initiatives</a>
+        <!-- <a href="team.html"
         class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Team</a> -->
 
-    </div>
-  </nav>
+      </div>
+    </nav>
 
 
-  <div>
     <div class="hero">
       <img class="bg-image" src="./images/Rectangle 9.png" />
       <div class="hero-head">
@@ -191,145 +202,146 @@
         </a>
       </div>
     </div>
-    <br><br><br>
-    <div style="background: url('./images/Home.svg');background-repeat: no-repeat;background-size: cover;">
-      <div class="card rounded-[10px]" style="width: 67%;background-color: white;" id="start">
-        <div class="card-body">
-          <h3 class="card-title" style="color: #F4902E;font-size:xx-large;font-weight: 550;">North East Unveiled</h3>
+  </div>
+  <br><br><br>
+  <div style="background: url('./images/Home.svg');background-repeat: no-repeat;background-size: cover;">
+    <div class="card rounded-[10px]" style="width: 67%;background-color: white;" id="start">
+      <div class="card-body">
+        <h3 class="card-title" style="color: #F4902E;font-size:xx-large;font-weight: 550;">North East Unveiled</h3>
 
-          <p class="card-text">North East India is a microcosm of India with its own diversity in terms of languages,
-            culture, arts and religion. There is a need to promote and unveil the true potential of this part of
-            country,
-            which is still unexplored by many. Our campaigns hits the nail on its head by promoting the shared identity
-            and culture that this part of country shares with other part of the nation, by showcasing, through videos
-            and
-            posters, the rich and diverse food and travel destinations and by running information campaigns to develop
-            entrepreneurship and to remove stereotypes from the minds of general people about this part of country.
+        <p class="card-text">North East India is a microcosm of India with its own diversity in terms of languages,
+          culture, arts and religion. There is a need to promote and unveil the true potential of this part of
+          country,
+          which is still unexplored by many. Our campaigns hits the nail on its head by promoting the shared identity
+          and culture that this part of country shares with other part of the nation, by showcasing, through videos
+          and
+          posters, the rich and diverse food and travel destinations and by running information campaigns to develop
+          entrepreneurship and to remove stereotypes from the minds of general people about this part of country.
 
 
 
-          </p>
+        </p>
 
-        </div>
       </div>
-      <div class="card rounded-[10px]" style="width: 67%;text-align: left;background-color: white;">
-        <div class="card-body" style="text-align:right;">
-          <h3 class="card-title" style="color: #F4902E;font-size:xx-large;font-weight: 550;">Udaan</h3>
+    </div>
+    <div class="card rounded-[10px]" style="width: 67%;text-align: left;background-color: white;">
+      <div class="card-body" style="text-align:right;">
+        <h3 class="card-title" style="color: #F4902E;font-size:xx-large;font-weight: 550;">Udaan</h3>
 
-          <p class="card-text">Originated under the name "Bachpan" in 2011, Udaan is a social initiative taken by the
-            students of IIT Guwahati which aims on delivering hope to those who never had the opportunity. In the past
-            it
-            has contributed towards the upliftment of the underprivileged through the conduction of various educational
-            workshop and innovational programs. During their vacations, students from IIT Guwahati and several other
-            colleges conducted Udaan where they reached out to various underprivileged children from orphanages,
-            villages
-            and slums in their locality, and spared a weekend to give flights to their hopes with the help of various
-            documentaries, presentations, games and motivation.
-          </p>
+        <p class="card-text">Originated under the name "Bachpan" in 2011, Udaan is a social initiative taken by the
+          students of IIT Guwahati which aims on delivering hope to those who never had the opportunity. In the past
+          it
+          has contributed towards the upliftment of the underprivileged through the conduction of various educational
+          workshop and innovational programs. During their vacations, students from IIT Guwahati and several other
+          colleges conducted Udaan where they reached out to various underprivileged children from orphanages,
+          villages
+          and slums in their locality, and spared a weekend to give flights to their hopes with the help of various
+          documentaries, presentations, games and motivation.
+        </p>
 
-        </div>
       </div>
-      <div class="card rounded-[10px]" style="width: 67%;background-color: white;">
-        <div class="card-body">
-          <h3 class="card-title" style="color: #F4902E;font-size:xx-large;font-weight: 550;">Manshakti</h3>
+    </div>
+    <div class="card rounded-[10px]" style="width: 67%;background-color: white;">
+      <div class="card-body">
+        <h3 class="card-title" style="color: #F4902E;font-size:xx-large;font-weight: 550;">Manshakti</h3>
 
-          <p class="card-text">Alcheringa IIT Guwahati, has taken a small step on the long journey towards mental
-            wellness. Manshakti is a mental health awareness and wellness campaign which aims to empathize and
-            understand
-            the people who suffer. During this time of a global pandemic, our health care heroes are striving to battle
-            against the invisible enemy!<br><br>
+        <p class="card-text">Alcheringa IIT Guwahati, has taken a small step on the long journey towards mental
+          wellness. Manshakti is a mental health awareness and wellness campaign which aims to empathize and
+          understand
+          the people who suffer. During this time of a global pandemic, our health care heroes are striving to battle
+          against the invisible enemy!<br><br>
 
-            The only solace they have is our love and support motivating them to keep working. A few words of
-            appreciation
-            is the least we can do to help them fight the stress and inhibitions and empower their minds in this state
-            of
-            crisis! Through Manshakti, we managed to collect the motivating messages and greetings from public and were
-            sent to the Covid-19 doctors and staff.
-          </p>
+          The only solace they have is our love and support motivating them to keep working. A few words of
+          appreciation
+          is the least we can do to help them fight the stress and inhibitions and empower their minds in this state
+          of
+          crisis! Through Manshakti, we managed to collect the motivating messages and greetings from public and were
+          sent to the Covid-19 doctors and staff.
+        </p>
 
-        </div>
       </div>
-      <div class="card rounded-[10px]" style="width: 67%;text-align: left;background-color: white;">
-        <div class="card-body" style="text-align:right;">
-          <h3 class="card-title" style="color: #F4902E;font-size:xx-large;font-weight: 550;">Prithvi</h3>
+    </div>
+    <div class="card rounded-[10px]" style="width: 67%;text-align: left;background-color: white;">
+      <div class="card-body" style="text-align:right;">
+        <h3 class="card-title" style="color: #F4902E;font-size:xx-large;font-weight: 550;">Prithvi</h3>
 
-          <p class="card-text">Climate change is the greatest threat to our existence in our short history on this
-            planet.
-            Each of our daily actions affects the environment in some way or the other. Making people realize their role
-            in the large movement against climate change, by educating them through activities that draw their attention
-            towards issues that affect our planet, can make this world a better place to live in. In solidarity with the
-            international activism about climate change, Team Alcheringa launched Project Prithvi, where we believe in
-            the
-            principle of living life simply and saving the world from climate change.
-          </p>
+        <p class="card-text">Climate change is the greatest threat to our existence in our short history on this
+          planet.
+          Each of our daily actions affects the environment in some way or the other. Making people realize their role
+          in the large movement against climate change, by educating them through activities that draw their attention
+          towards issues that affect our planet, can make this world a better place to live in. In solidarity with the
+          international activism about climate change, Team Alcheringa launched Project Prithvi, where we believe in
+          the
+          principle of living life simply and saving the world from climate change.
+        </p>
 
-        </div>
       </div>
-      <div class="card rounded-[10px]" style="width: 67%;text-align: left;background-color: white;">
-        <div class="card-body">
-          <h3 class="card-title" style="color: #F4902E;font-size:xx-large;font-weight: 550;">SafHer</h3>
+    </div>
+    <div class="card rounded-[10px]" style="width: 67%;text-align: left;background-color: white;">
+      <div class="card-body">
+        <h3 class="card-title" style="color: #F4902E;font-size:xx-large;font-weight: 550;">SafHer</h3>
 
-          <p class="card-text">Women have walked into space, elected as Heads of States; they have proven themselves
-            equal
-            to men in every way. Yet they are not safe in their immediate surroundings. The sad reality is that we live
-            in
-            an increasingly violent society where the fear of crime is ever-present. To address this situation and take
-            a
-            step forward, Alcheringa organized SafHer, a campaign on women’s safety. SafHer highlights that every woman
-            must raise her voice against any misconduct and get perpetrators to justice.
-          </p>
+        <p class="card-text">Women have walked into space, elected as Heads of States; they have proven themselves
+          equal
+          to men in every way. Yet they are not safe in their immediate surroundings. The sad reality is that we live
+          in
+          an increasingly violent society where the fear of crime is ever-present. To address this situation and take
+          a
+          step forward, Alcheringa organized SafHer, a campaign on women’s safety. SafHer highlights that every woman
+          must raise her voice against any misconduct and get perpetrators to justice.
+        </p>
 
+      </div>
+    </div>
+  </div>
+  <footer class="px-7 pt-20 md:px-10 lg:px-14" style="width:100%;background:#2F4858; margin-top: 90px; color:white;">
+    <div class="flex flex-row justify-between footer-items">
+      <div style="width:33%">
+        Siddhant Singh<br>
+        Public Relations Head<br>
+        +91-9310859978<br><br>
+        Danda Akshara<br>
+        Public Relations Head<br>
+        +91-9908991939<br><br>
+      </div>
+      <div class="footer-img-1" style="width:13%; margin-top:auto;"><img src="images/Footer_logo.svg" width="100%" />
+      </div>
+      <div class="flex flex-col items-end footer-right">
+        <div>
+          For business
+        </div>
+        <div>
+          related queries
+        </div>
+        <div>
+          alcheringa@iitg.ac.in<br><br>
+        </div>
+
+        <div class="flex flex-row items-center">
+          <div class="mx-2"><a href="https://www.instagram.com/alcheringaiitg/" target="_blank"><img
+                src="images/instagram.svg" style="width:25px" /></a></div>
+          <div class="mx-2"><a href="https://www.facebook.com/alcheringaiitg" target="_blank"><img
+                src="images/facebook.svg" style="width:13px" /></a></div>
+          <div class="mx-2"><a href="https://www.youtube.com/c/AlcheringaIITG" target="_blank"><img
+                src="images/youtube.svg" style="width:27px" /></a></div>
+          <div class="mx-2"><a href="https://www.linkedin.com/company/alcheringaiitguwahati/mycompany/"
+              target="_blank"><img src="images/linkedin.svg" style="width:25px" /></a></div>
+          <div class="ml-2"><a href="https://twitter.com/alcheringaiitg" target="_blank"><img src="images/twitter.svg"
+                style="width:25px" /></a></div>
         </div>
       </div>
     </div>
-    <footer class="px-7 pt-20 md:px-10 lg:px-14" style="width:100%;background:#2F4858; margin-top: 90px; color:white;">
-      <div class="flex flex-row justify-between footer-items">
-        <div style="width:33%">
-          Siddhant Singh<br>
-          Public Relations Head<br>
-          +91-9310859978<br><br>
-          Danda Akshara<br>
-          Public Relations Head<br>
-          +91-9908991939<br><br>
-        </div>
-        <div class="footer-img-1" style="width:13%; margin-top:auto;"><img src="images/Footer_logo.svg" width="100%" />
-        </div>
-        <div class="flex flex-col items-end footer-right">
-          <div>
-            For business
-          </div>
-          <div>
-            related queries
-          </div>
-          <div>
-            alcheringa@iitg.ac.in<br><br>
-          </div>
-
-          <div class="flex flex-row items-center">
-            <div class="mx-2"><a href="https://www.instagram.com/alcheringaiitg/" target="_blank"><img
-                  src="images/instagram.svg" style="width:25px" /></a></div>
-            <div class="mx-2"><a href="https://www.facebook.com/alcheringaiitg" target="_blank"><img
-                  src="images/facebook.svg" style="width:13px" /></a></div>
-            <div class="mx-2"><a href="https://www.youtube.com/c/AlcheringaIITG" target="_blank"><img
-                  src="images/youtube.svg" style="width:27px" /></a></div>
-            <div class="mx-2"><a href="https://www.linkedin.com/company/alcheringaiitguwahati/mycompany/"
-                target="_blank"><img src="images/linkedin.svg" style="width:25px" /></a></div>
-            <div class="ml-2"><a href="https://twitter.com/alcheringaiitg" target="_blank"><img src="images/twitter.svg"
-                  style="width:25px" /></a></div>
-          </div>
-        </div>
+    <center>
+      <div style="width:13%; margin-top:30px;" class="footer-img-2"><img src="images/Footer_logo.svg" width="100%" />
       </div>
-      <center>
-        <div style="width:13%; margin-top:30px;" class="footer-img-2"><img src="images/Footer_logo.svg" width="100%" />
-        </div>
-      </center>
-      <div class="text-center mt-2" style="font-size:4vw; transform: translate(0,12px);">
-        IIT GUWAHATI'S
-      </div>
-      <div class="text-center bottom-tag">
-        ALCHERINGA
-      </div>
-    </footer>
+    </center>
+    <div class="text-center mt-2" style="font-size:4vw; transform: translate(0,12px);">
+      IIT GUWAHATI'S
+    </div>
+    <div class="text-center bottom-tag">
+      ALCHERINGA
+    </div>
+  </footer>
 </body>
 <script>
   document.getElementById("hamburger").onclick = function toggleMenu() {

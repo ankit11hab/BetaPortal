@@ -25,7 +25,7 @@
     }
 
     .hero {
-        height: 400px;
+        height: 100%;
         width: 100%;
         background-repeat: no-repeat;
         background-size: cover;
@@ -33,7 +33,10 @@
         text-align: center;
         color: #fff;
         position: relative;
-        padding-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 2px;
     }
 
     .bg-image {
@@ -51,15 +54,16 @@
     }
 
     .hero-head .first {
-        font-size: 3vw;
+        font-size: 3.2vw;
         font-weight: 600;
+        letter-spacing: 4px;
     }
 
     .hero-head .second {
         font-weight: 400;
-        font-size: 1rem;
+        font-size: 1.1rem;
         margin: 2rem auto;
-        width: 40vw;
+        width: 46vw;
     }
 
     .footer-img-2 {
@@ -84,6 +88,10 @@
         margin-top: 50px;
     }
 
+    .top-holder {
+        height: 100vh;
+    }
+
     @media screen and (max-width: 700px) {
         .hero-head .second {
             width: 70vw;
@@ -91,10 +99,11 @@
 
         .hero {
             height: 510px;
+            letter-spacing: 1px;
         }
 
         .hero-head .first {
-            font-size: 10vw;
+            font-size: 9vw;
         }
 
         .bottom-tag {
@@ -123,6 +132,10 @@
 
         .footer-items {
             font-size: 3vw;
+        }
+
+        .top-holder {
+            height: 100%;
         }
     }
 
@@ -173,54 +186,57 @@
 </style>
 
 <body>
-    <nav class="flex flex-wrap items-center justify-between p-2"
-        style="background:#4A5680; position: fixed;width:100%;z-index: 1000;background-size: cover;">
-        <div class="flex px-10">
-            <img src="images/name.svg" alt="ACME" width="35" />
-            <img src="images/logo.svg" alt="ACME" width="140" class="px-4" />
-        </div>
-        <div class="flex md:hidden px-10">
-            <button id="hamburger" class="focus:outline-none">
-                <img class="toggle block" src="images/hamburger.png" width="30" height="30" />
-                <img class="toggle hidden" src="images/close.png" width="20" height="20" />
-            </button>
-        </div>
-        <div
-            class="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-blue-900 md:border-none links px-7">
-            <a href="index.html"
-                class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Home</a>
-            <a href="competitions.html"
-                class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none"
-                style="text-decoration: underline;">Competitions</a>
-            <a href="events.html"
-                class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Events</a>
-            <a href="initiatives.html"
-                class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Initiatives</a>
-            <!-- <a href="team.html"
+    <div class="top-holder">
+        <nav class="flex flex-wrap items-center justify-between p-2"
+            style="background:#4A5680; position: fixed;width:100%;z-index: 1000;background-size: cover;">
+            <div class="flex px-10">
+                <img src="images/name.svg" alt="ACME" width="35" />
+                <img src="images/logo.svg" alt="ACME" width="140" class="px-4" />
+            </div>
+            <div class="flex md:hidden px-10">
+                <button id="hamburger" class="focus:outline-none">
+                    <img class="toggle block" src="images/hamburger.png" width="30" height="30" />
+                    <img class="toggle hidden" src="images/close.png" width="20" height="20" />
+                </button>
+            </div>
+            <div
+                class="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-blue-900 md:border-none links px-7">
+                <a href="index.html"
+                    class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Home</a>
+                <a href="competitions.html"
+                    class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none"
+                    style="text-decoration: underline;">Competitions</a>
+                <a href="events.html"
+                    class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Events</a>
+                <a href="initiatives.html"
+                    class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Initiatives</a>
+                <!-- <a href="team.html"
                 class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Team</a> -->
-        </div>
-    </nav>
+            </div>
+        </nav>
 
 
-    <div class="hero">
-        <img class="bg-image" src="./images/Rectangle 11.png" />
-        <div class="hero-head">
-            <p class="first">Competitions</p>
-            <p class="second">
-                Alcheringa has many competitions spread across various genres. They take place during the three days
-                with the prize distribution on the last day. People all over the country participate in these
-                competitions to win exciting prizes and goodies and to witness one of India's biggest cultural festival.
+        <div class="hero">
+            <img class="bg-image" src="./images/Rectangle 11.png" />
+            <div class="hero-head">
+                <p class="first">Competitions</p>
+                <p class="second">
+                    Alcheringa has many competitions spread across various genres. They take place during the three days
+                    with the prize distribution on the last day. People all over the country participate in these
+                    competitions to win exciting prizes and goodies and to witness one of India's biggest cultural
+                    festival.
 
 
 
 
-            </p>
-            <a href="#start">
-                <svg class="down-arrow" xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none"
-                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:35px">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
-            </a>
+                </p>
+                <a href="#start">
+                    <svg class="down-arrow" xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:35px">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </a>
+            </div>
         </div>
     </div>
 
@@ -385,6 +401,7 @@
             </div>
         </center>
     </div>
+
     <footer class="px-7 pt-20 md:px-10 lg:px-14" style="width:100%;background:#2F4858; color:white;">
         <div class="flex flex-row justify-between footer-items">
             <div style="width:33%">
