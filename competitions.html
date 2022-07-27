@@ -1,1 +1,396 @@
-<!DOCTYPE html><html lang="en"><head> <meta charset="UTF-8"/> <meta http-equiv="X-UA-Compatible" content="IE=edge"/> <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <script src="https://cdn.tailwindcss.com"></script> <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/> <title>Alcheringa - Competitions</title></head><link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/><style>@import url('https://fonts.googleapis.com/css2?family=Syne&display=swap'); html{scroll-behavior: smooth !important;}html body{font-family: 'Syne', sans-serif; min-height: 100vh; overflow-x: hidden !important;}.hero{height: 100%; width: 100%; background-repeat: no-repeat; background-size: cover; text-align: center; color: #fff; position: relative; display: flex; justify-content: center; align-items: center; letter-spacing: 2px;}.bg-image{height: 100%; width: 100%; position: absolute; top: 0; left: 0; right: 0; z-index: -12;}.hero-head{padding: 10vh 10px 20px 10px;}.hero-head .first{font-size: 3.2vw; font-weight: 600; letter-spacing: 4px;}.hero-head .second{font-weight: 400; font-size: 1.1rem; margin: 2rem auto; width: 46vw;}.footer-img-2{display: none;}.footer-right{width: 33%;}.footer-items{font-size: 1.4vw;}.bottom-tag{font-size: 13vw; font-weight: 500;}.person-holder{padding: 5px 180px 5px 180px; margin-top: 50px;}.top-holder{height: 100vh;}@media screen and (min-width: 700px){.hero-head .first{margin-bottom: 48px;}.hero-head .second{margin-bottom: 48px;}}@media screen and (min-width: 2200px){.hero-head .first{margin-bottom: 60px;}.hero-head .second{margin-bottom: 60px;}}@media screen and (max-width: 700px){.hero-head .second{width: 70vw;}.hero{height: 510px; letter-spacing: 1px;}.hero-head .first{font-size: 9vw;}.bottom-tag{font-size: 8vw; margin-top: 7px; margin-bottom: 17px; font-weight: 500;}.person-holder{padding: 5px 50px 5px 50px; margin-top: 50px;}.footer-img-1{display: none;}.footer-img-2{display: block;}.footer-right{width: 50%;}.footer-items{font-size: 3vw;}.top-holder{height: 100%;}}.down-arrow{margin: 0 auto; height: 5%; width: 5%;}.comp-name{font-size: 16px; font-weight: 600; margin-bottom: 10px; color: #2F4858;}.above{position: absolute; z-index: 2; height: 96%; width: 100%;}.above img{height: 100%;}.below1{margin-left: 10px; position: relative; visibility: visible; width: 102%; z-index: 1;}.below2{margin-left: 10px; position: relative; visibility: visible; width: 102%; z-index: -1;}#content-b1{background-image: url(/images/Frame\ 51\ \(2\).png);}</style><body> <div class="top-holder"> <nav class="flex flex-wrap items-center justify-between p-2" style="background:#4A5680; position: fixed;width:100%;z-index: 1000;background-size: cover;"> <div class="flex px-10"> <img src="images/name.svg" alt="ACME" width="35"/> <img src="images/logo.svg" alt="ACME" width="140" class="px-4"/> </div><div class="flex md:hidden px-10"> <button id="hamburger" class="focus:outline-none"> <img class="toggle block" src="images/hamburger.png" width="30" height="30"/> <img class="toggle hidden" src="images/close.png" width="20" height="20"/> </button> </div><div class="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-blue-900 md:border-none links px-7"> <a href="index.html" class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Home</a> <a href="competitions.html" class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none" style="text-decoration: underline;">Competitions</a> <a href="events.html" class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Events</a> <a href="initiatives.html" class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Initiatives</a> </div></nav> <div class="hero"> <img class="bg-image" src="./images/Rectangle 11.png"/> <div class="hero-head"> <p class="first">Competitions</p><p class="second"> Alcheringa has many competitions spread across various genres. They take place during the three days with the prize distribution on the last day. People all over the country participate in these competitions to win exciting prizes and goodies and to witness one of India's biggest cultural festival. </p><a href="#start"> <svg class="down-arrow" xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:35px"> <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/> </svg> </a> </div></div></div><div style="background:url('./images/comp-bg.svg'); background-repeat: no-repeat;background-size: cover;padding-bottom: 90px;"> <div class="flex flex-row flex-wrap lg:-mx-4 justify-center person-holder" id="start"> <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4"> <div class="comp-name">Any Body Can Dance</div><button onclick="clickedOnComp1()"> <div style="position: relative;"> <div class="above"><img src="images/abcdd.jpg"/></div><div class="below1" id="notselected"><img src="images/Frame 51 (1).png" height="480px"/></div></div></button> </div><div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4"> <div class="comp-name">Music</div><button onclick="clickedOnComp2()"> <div style="position: relative;"> <div class="above"><img src="images/Music.jpg"/></div><div class="below1" id="notselected2"><img src="images/Frame 51 (1).png"/></div></div></button> </div><div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4"> <div class="comp-name">Vogue Nation</div><button onclick="clickedOnComp3()"> <div style="position: relative;"> <div class="above"><img src="images/voguenation.jpg"/></div><div class="below1" id="notselected3"><img src="images/Frame 51 (1).png"/></div></div></button> </div><div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4"> <div class="comp-name">Stage Craft</div><button onclick="clickedOnComp4()"> <div style="position: relative;"> <div class="above"><img src="images/stagecraft.jpg"/></div><div class="below1" id="notselected4"><img src="images/Frame 51 (1).png"/></div></div></button> </div></div><center> <div class="flex justify-center hidden items-center" id="content-comp-1"> <div class="w-4/5 flex justify-center items-center" id="content-b1"> <div class="bg-white mr-4 mb-4 border-2 px-10 py-10 flex justify-center items-center" style="width:100%"> Coming Soon </div></div></div></center> <div class="flex flex-row flex-wrap lg:-mx-4 justify-center person-holder" id="start"> <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4"> <div class="comp-name">Lights Camera Action</div><button onclick="clickedOnComp5()"> <div style="position: relative;"> <div class="above"><img src="images/lca.jpg"/></div><div class="below1" id="notselected5"><img src="images/Frame 51 (1).png"/></div></div></button> </div><div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4"> <div class="comp-name">Class Apart</div><button onclick="clickedOnComp6()"> <div style="position: relative;"> <div class="above"><img src="images/classapart.jpg"/></div><div class="below1" id="notselected6"><img src="images/Frame 51 (1).png"/></div></div></button> </div><div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4"> <div class="comp-name">Art Talkies</div><button onclick="clickedOnComp7()"> <div style="position: relative;"> <div class="above"><img src="images/arttalkies.jpg"/></div><div class="below1" id="notselected7"><img src="images/Frame 51 (1).png"/></div></div></button> </div><div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4"> <div class="comp-name">Literary</div><button onclick="clickedOnComp8()"> <div style="position: relative;"> <div class="above"><img src="images/Literary.jpg"/></div><div class="below1" id="notselected8"><img src="images/Frame 51 (1).png"/></div></div></button> </div></div><center> <div class="flex justify-center hidden items-center" id="content-comp-2"> <div class="w-4/5 flex justify-center items-center" id="content-b1"> <div class="bg-white mr-4 mb-4 border-2 px-10 py-10 flex justify-center items-center" style="width:100%"> Coming Soon </div></div></div></center> <div class="flex flex-row flex-wrap lg:-mx-4 justify-center person-holder" id="start"> <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4"> <div class="comp-name">Digital Dexterity</div><button onclick="clickedOnComp9()"> <div style="position: relative;"> <div class="above"><img src="images/digital.jpg"/></div><div class="below1" id="notselected9"><img src="images/Frame 51 (1).png"/></div></div></button> </div><div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4"> <div class="comp-name">Sports</div><button onclick="clickedOnComp10()"> <div style="position: relative;"> <div class="above"><img src="images/sports.jpg"/></div><div class="below1" id="notselected10"><img src="images/Frame 51 (1).png"/></div></div></button> </div><div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4"> <div class="comp-name">Quiz</div><button onclick="clickedOnComp11()"> <div style="position: relative;"> <div class="above"><img src="images/quiz.jpg"/></div><div class="below1" id="notselected11"><img src="images/Frame 51 (1).png"/></div></div></button> </div></div><center> <div class="flex justify-center hidden items-center" id="content-comp-3"> <div class="w-4/5 flex justify-center items-center" id="content-b1"> <div class="bg-white mr-4 mb-4 border-2 px-10 py-10 flex justify-center items-center" style="width:100%"> Coming Soon </div></div></div></center> </div><footer class="px-7 pt-20 md:px-10 lg:px-14" style="width:100%;background:#2F4858; color:white;"> <div class="flex flex-row justify-between footer-items"> <div style="width:33%"> Siddhant Singh<br>Public Relations Head<br>+91-9310859978<br><br>Danda Akshara<br>Public Relations Head<br>+91-9908991939<br><br></div><div class="footer-img-1" style="width:13%; margin-top:auto;"><img src="images/Footer_logo.svg" width="100%"/></div><div class="flex flex-col items-end footer-right"> <div> For business </div><div> related queries </div><div> alcheringa@iitg.ac.in<br><br></div><div class="flex flex-row items-center"> <div class="mx-2"><a href="https://www.instagram.com/alcheringaiitg/" target="_blank"><img src="images/instagram.svg" style="width:25px"/></a></div><div class="mx-2"><a href="https://www.facebook.com/alcheringaiitg" target="_blank"><img src="images/facebook.svg" style="width:13px"/></a></div><div class="mx-2"><a href="https://www.youtube.com/c/AlcheringaIITG" target="_blank"><img src="images/youtube.svg" style="width:27px"/></a></div><div class="mx-2"><a href="https://www.linkedin.com/company/alcheringaiitguwahati/mycompany/" target="_blank"><img src="images/linkedin.svg" style="width:25px"/></a></div><div class="ml-2"><a href="https://twitter.com/alcheringaiitg" target="_blank"><img src="images/twitter.svg" style="width:25px"/></a></div></div></div></div><center> <div style="width:13%; margin-top:30px;" class="footer-img-2"><img src="images/Footer_logo.svg" width="100%"/></div></center> <div class="text-center mt-2" style="font-size:4vw; transform: translate(0,12px);"> IIT GUWAHATI'S </div><div class="text-center bottom-tag"> ALCHERINGA </div></footer></body><script>document.getElementById("hamburger").onclick=function toggleMenu(){const navToggle=document.getElementsByClassName("toggle"); for (let i=0; i < navToggle.length; i++){navToggle.item(i).classList.toggle("hidden");}}; function closeall(){if (screen.width > 700){const elemcomp1=$('#content-comp-1'); const elemcomp2=$('#content-comp-2'); const elemcomp3=$('#content-comp-3'); const elem2=$('#notselected'); const elem4=$('#notselected2'); const elem5=$('#selected3'); const elem6=$('#notselected3'); const elem7=$('#selected4'); const elem8=$('#notselected4'); elemcomp1.hide(); elemcomp2.hide(); elemcomp3.hide(); elem1.hide(); elem2.show(); elem3.hide(); elem4.show(); elem5.hide(); elem6.show(); elem7.hide(); elem8.show(); return 0;}}function clickedOnComp1(){if (screen.width > 700){const elemcomp1=$('#content-comp-1'); elemcomp1.toggle();}}function clickedOnComp2(){if (screen.width > 700){const elemcomp1=$('#content-comp-1'); elemcomp1.toggle();}}function clickedOnComp3(){if (screen.width > 700){const elemcomp1=$('#content-comp-1'); elemcomp1.toggle();}}function clickedOnComp4(){if (screen.width > 700){const elemcomp1=$('#content-comp-1'); elemcomp1.toggle();}}function clickedOnComp5(){if (screen.width > 700){const elemcomp2=$('#content-comp-2'); elemcomp2.toggle();}}function clickedOnComp6(){if (screen.width > 700){const elemcomp2=$('#content-comp-2'); elemcomp2.toggle();}}function clickedOnComp7(){if (screen.width > 700){const elemcomp2=$('#content-comp-2'); elemcomp2.toggle();}}function clickedOnComp8(){if (screen.width > 700){const elemcomp2=$('#content-comp-2'); elemcomp2.toggle();}}function clickedOnComp9(){if (screen.width > 700){const elemcomp2=$('#content-comp-3'); elemcomp2.toggle();}}function clickedOnComp10(){if (screen.width > 700){const elemcomp2=$('#content-comp-3'); elemcomp2.toggle();}}function clickedOnComp11(){if (screen.width > 700){const elemcomp2=$('#content-comp-3'); elemcomp2.toggle();}}</script></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Alcheringa - Competitions</title>
+</head>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Syne&display=swap');
+
+    html {
+        scroll-behavior: smooth !important;
+    }
+
+    html body {
+        font-family: 'Syne', sans-serif;
+        min-height: 100vh;
+        overflow-x: hidden !important;
+    }
+
+    .hero {
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        color: #fff;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 2px;
+    }
+
+    .bg-image {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -12;
+    }
+
+    .hero-head {
+        padding: 10vh 10px 20px 10px;
+    }
+
+    .hero-head .first {
+        font-size: 3.2vw;
+        font-weight: 600;
+        letter-spacing: 4px;
+    }
+
+    .hero-head .second {
+        font-weight: 400;
+        font-size: 1.1rem;
+        margin: 2rem auto;
+        width: 46vw;
+    }
+
+    .footer-img-2 {
+        display: none;
+    }
+
+    .footer-right {
+        width: 33%;
+    }
+
+    .footer-items {
+        font-size: 1.4vw;
+    }
+
+    .bottom-tag {
+        font-size: 13vw;
+        font-weight: 500;
+    }
+
+    .person-holder {
+        padding: 5px 180px 5px 180px;
+        margin-top: 50px;
+    }
+
+    .top-holder {
+        height: 100vh;
+    }
+
+    @media screen and (min-width: 700px) {
+        .hero-head .first {
+            margin-bottom: 48px;
+        }
+
+        .hero-head .second {
+            margin-bottom: 48px;
+        }
+    }
+
+    @media screen and (min-width: 2200px) {
+        .hero-head .first {
+            margin-bottom: 200px;
+        }
+
+        .hero-head .second {
+            margin-bottom: 200px;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        .hero-head .second {
+            width: 70vw;
+        }
+
+        .hero {
+            height: 510px;
+            letter-spacing: 1px;
+        }
+
+        .hero-head .first {
+            font-size: 9vw;
+        }
+
+        .bottom-tag {
+            font-size: 8vw;
+            margin-top: 7px;
+            margin-bottom: 17px;
+            font-weight: 500;
+        }
+
+        .person-holder {
+            padding: 5px 50px 5px 50px;
+            margin-top: 50px;
+        }
+
+        .footer-img-1 {
+            display: none;
+        }
+
+        .footer-img-2 {
+            display: block;
+        }
+
+        .footer-right {
+            width: 50%;
+        }
+
+        .footer-items {
+            font-size: 3vw;
+        }
+
+        .top-holder {
+            height: 100%;
+        }
+    }
+
+    .down-arrow {
+        margin: 0 auto;
+        height: 5%;
+        width: 5%;
+    }
+
+    .comp-name {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #2F4858;
+    }
+
+    .above {
+        position: absolute;
+        z-index: 2;
+        height: 96%;
+        width: 100%;
+    }
+
+    .above img {
+        height: 100%;
+    }
+
+    .below1 {
+        margin-left: 10px;
+        position: relative;
+        visibility: visible;
+        width: 102%;
+        z-index: 1;
+    }
+
+    .below2 {
+        margin-left: 10px;
+        position: relative;
+        visibility: visible;
+        width: 102%;
+        z-index: -1;
+    }
+
+    #content-b1 {
+        background-image: url(/images/Frame\ 51\ \(2\).png);
+    }
+</style>
+
+<body>
+    <div class="top-holder">
+        <nav class="flex flex-wrap items-center justify-between p-2"
+            style="background:#4A5680; position: fixed;width:100%;z-index: 1000;background-size: cover;">
+            <div class="flex px-10"> <img src="images/name.svg" alt="ACME" width="35" /> <img src="images/logo.svg"
+                    alt="ACME" width="140" class="px-4" /> </div>
+            <div class="flex md:hidden px-10"> <button id="hamburger" class="focus:outline-none"> <img
+                        class="toggle block" src="images/hamburger.png" width="30" height="30" /> <img
+                        class="toggle hidden" src="images/close.png" width="20" height="20" /> </button> </div>
+            <div
+                class="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-blue-900 md:border-none links px-7">
+                <a href="index.html"
+                    class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Home</a>
+                <a href="competitions.html"
+                    class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none"
+                    style="text-decoration: underline;">Competitions</a> <a href="events.html"
+                    class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Events</a>
+                <a href="initiatives.html"
+                    class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Initiatives</a>
+            </div>
+        </nav>
+        <div class="hero"> <img class="bg-image" src="./images/Rectangle 11.png" />
+            <div class="hero-head">
+                <p class="first">Competitions</p>
+                <p class="second"> Alcheringa has many competitions spread across various genres. They take place during
+                    the three days with the prize distribution on the last day. People all over the country participate
+                    in these competitions to win exciting prizes and goodies and to witness one of India's biggest
+                    cultural festival. </p><a href="#start"> <svg class="down-arrow" xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                        style="width:35px">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg> </a>
+            </div>
+        </div>
+    </div>
+    <div
+        style="background:url('./images/comp-bg.svg'); background-repeat: no-repeat;background-size: cover;padding-bottom: 90px;">
+        <div class="flex flex-row flex-wrap lg:-mx-4 justify-center person-holder" id="start">
+            <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+                <div class="comp-name">Any Body Can Dance</div><button onclick="clickedOnComp1()">
+                    <div style="position: relative;">
+                        <div class="above"><img src="images/abcdd.jpg" /></div>
+                        <div class="below1" id="notselected"><img src="images/Frame 51 (1).png" height="480px" /></div>
+                    </div>
+                </button>
+            </div>
+            <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+                <div class="comp-name">Music</div><button onclick="clickedOnComp2()">
+                    <div style="position: relative;">
+                        <div class="above"><img src="images/Music.jpg" /></div>
+                        <div class="below1" id="notselected2"><img src="images/Frame 51 (1).png" /></div>
+                    </div>
+                </button>
+            </div>
+            <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+                <div class="comp-name">Vogue Nation</div><button onclick="clickedOnComp3()">
+                    <div style="position: relative;">
+                        <div class="above"><img src="images/voguenation.jpg" /></div>
+                        <div class="below1" id="notselected3"><img src="images/Frame 51 (1).png" /></div>
+                    </div>
+                </button>
+            </div>
+            <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+                <div class="comp-name">Stage Craft</div><button onclick="clickedOnComp4()">
+                    <div style="position: relative;">
+                        <div class="above"><img src="images/stagecraft.jpg" /></div>
+                        <div class="below1" id="notselected4"><img src="images/Frame 51 (1).png" /></div>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <center>
+            <div class="flex justify-center hidden items-center" id="content-comp-1">
+                <div class="w-4/5 flex justify-center items-center" id="content-b1">
+                    <div class="bg-white mr-4 mb-4 border-2 px-10 py-10 flex justify-center items-center"
+                        style="width:100%"> Coming Soon </div>
+                </div>
+            </div>
+        </center>
+        <div class="flex flex-row flex-wrap lg:-mx-4 justify-center person-holder" id="start">
+            <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+                <div class="comp-name">Lights Camera Action</div><button onclick="clickedOnComp5()">
+                    <div style="position: relative;">
+                        <div class="above"><img src="images/lca.jpg" /></div>
+                        <div class="below1" id="notselected5"><img src="images/Frame 51 (1).png" /></div>
+                    </div>
+                </button>
+            </div>
+            <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+                <div class="comp-name">Class Apart</div><button onclick="clickedOnComp6()">
+                    <div style="position: relative;">
+                        <div class="above"><img src="images/classapart.jpg" /></div>
+                        <div class="below1" id="notselected6"><img src="images/Frame 51 (1).png" /></div>
+                    </div>
+                </button>
+            </div>
+            <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+                <div class="comp-name">Art Talkies</div><button onclick="clickedOnComp7()">
+                    <div style="position: relative;">
+                        <div class="above"><img src="images/arttalkies.jpg" /></div>
+                        <div class="below1" id="notselected7"><img src="images/Frame 51 (1).png" /></div>
+                    </div>
+                </button>
+            </div>
+            <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+                <div class="comp-name">Literary</div><button onclick="clickedOnComp8()">
+                    <div style="position: relative;">
+                        <div class="above"><img src="images/Literary.jpg" /></div>
+                        <div class="below1" id="notselected8"><img src="images/Frame 51 (1).png" /></div>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <center>
+            <div class="flex justify-center hidden items-center" id="content-comp-2">
+                <div class="w-4/5 flex justify-center items-center" id="content-b1">
+                    <div class="bg-white mr-4 mb-4 border-2 px-10 py-10 flex justify-center items-center"
+                        style="width:100%"> Coming Soon </div>
+                </div>
+            </div>
+        </center>
+        <div class="flex flex-row flex-wrap lg:-mx-4 justify-center person-holder" id="start">
+            <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+                <div class="comp-name">Digital Dexterity</div><button onclick="clickedOnComp9()">
+                    <div style="position: relative;">
+                        <div class="above"><img src="images/Digital Dexterity.jpg" /></div>
+                        <div class="below1" id="notselected9"><img src="images/Frame 51 (1).png" /></div>
+                    </div>
+                </button>
+            </div>
+            <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+                <div class="comp-name">Sports</div><button onclick="clickedOnComp10()">
+                    <div style="position: relative;">
+                        <div class="above"><img src="images/sports.jpg" /></div>
+                        <div class="below1" id="notselected10"><img src="images/Frame 51 (1).png" /></div>
+                    </div>
+                </button>
+            </div>
+            <div class="flex flex-col items-center md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+                <div class="comp-name">Quiz</div><button onclick="clickedOnComp11()">
+                    <div style="position: relative;">
+                        <div class="above"><img src="images/quiz.jpg" /></div>
+                        <div class="below1" id="notselected11"><img src="images/Frame 51 (1).png" /></div>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <center>
+            <div class="flex justify-center hidden items-center" id="content-comp-3">
+                <div class="w-4/5 flex justify-center items-center" id="content-b1">
+                    <div class="bg-white mr-4 mb-4 border-2 px-10 py-10 flex justify-center items-center"
+                        style="width:100%"> Coming Soon </div>
+                </div>
+            </div>
+        </center>
+    </div>
+    <footer class="px-7 pt-20 md:px-10 lg:px-14" style="width:100%;background:#2F4858; color:white;">
+        <div class="flex flex-row justify-between footer-items">
+            <div style="width:33%"> Siddhant Singh<br>Public Relations Head<br>+91-9310859978<br><br>Danda
+                Akshara<br>Public Relations Head<br>+91-9908991939<br><br></div>
+            <div class="footer-img-1" style="width:13%; margin-top:auto;"><img src="images/Footer_logo.svg"
+                    width="100%" /></div>
+            <div class="flex flex-col items-end footer-right">
+                <div> For business </div>
+                <div> related queries </div>
+                <div> alcheringa@iitg.ac.in<br><br></div>
+                <div class="flex flex-row items-center">
+                    <div class="mx-2"><a href="https://www.instagram.com/alcheringaiitg/" target="_blank"><img
+                                src="images/instagram.svg" style="width:25px" /></a></div>
+                    <div class="mx-2"><a href="https://www.facebook.com/alcheringaiitg" target="_blank"><img
+                                src="images/facebook.svg" style="width:13px" /></a></div>
+                    <div class="mx-2"><a href="https://www.youtube.com/c/AlcheringaIITG" target="_blank"><img
+                                src="images/youtube.svg" style="width:27px" /></a></div>
+                    <div class="mx-2"><a href="https://www.linkedin.com/company/alcheringaiitguwahati/mycompany/"
+                            target="_blank"><img src="images/linkedin.svg" style="width:25px" /></a></div>
+                    <div class="ml-2"><a href="https://twitter.com/alcheringaiitg" target="_blank"><img
+                                src="images/twitter.svg" style="width:25px" /></a></div>
+                </div>
+            </div>
+        </div>
+        <center>
+            <div style="width:13%; margin-top:30px;" class="footer-img-2"><img src="images/Footer_logo.svg"
+                    width="100%" /></div>
+        </center>
+        <div class="text-center mt-2" style="font-size:4vw; transform: translate(0,12px);"> IIT GUWAHATI'S </div>
+        <div class="text-center bottom-tag"> ALCHERINGA </div>
+    </footer>
+</body>
+<script>document.getElementById("hamburger").onclick = function toggleMenu() { const navToggle = document.getElementsByClassName("toggle"); for (let i = 0; i < navToggle.length; i++) { navToggle.item(i).classList.toggle("hidden"); } }; function closeall() { if (screen.width > 700) { const elemcomp1 = $('#content-comp-1'); const elemcomp2 = $('#content-comp-2'); const elemcomp3 = $('#content-comp-3'); const elem2 = $('#notselected'); const elem4 = $('#notselected2'); const elem5 = $('#selected3'); const elem6 = $('#notselected3'); const elem7 = $('#selected4'); const elem8 = $('#notselected4'); elemcomp1.hide(); elemcomp2.hide(); elemcomp3.hide(); elem1.hide(); elem2.show(); elem3.hide(); elem4.show(); elem5.hide(); elem6.show(); elem7.hide(); elem8.show(); return 0; } } function clickedOnComp1() { if (screen.width > 700) { const elemcomp1 = $('#content-comp-1'); elemcomp1.toggle(); } } function clickedOnComp2() { if (screen.width > 700) { const elemcomp1 = $('#content-comp-1'); elemcomp1.toggle(); } } function clickedOnComp3() { if (screen.width > 700) { const elemcomp1 = $('#content-comp-1'); elemcomp1.toggle(); } } function clickedOnComp4() { if (screen.width > 700) { const elemcomp1 = $('#content-comp-1'); elemcomp1.toggle(); } } function clickedOnComp5() { if (screen.width > 700) { const elemcomp2 = $('#content-comp-2'); elemcomp2.toggle(); } } function clickedOnComp6() { if (screen.width > 700) { const elemcomp2 = $('#content-comp-2'); elemcomp2.toggle(); } } function clickedOnComp7() { if (screen.width > 700) { const elemcomp2 = $('#content-comp-2'); elemcomp2.toggle(); } } function clickedOnComp8() { if (screen.width > 700) { const elemcomp2 = $('#content-comp-2'); elemcomp2.toggle(); } } function clickedOnComp9() { if (screen.width > 700) { const elemcomp2 = $('#content-comp-3'); elemcomp2.toggle(); } } function clickedOnComp10() { if (screen.width > 700) { const elemcomp2 = $('#content-comp-3'); elemcomp2.toggle(); } } function clickedOnComp11() { if (screen.width > 700) { const elemcomp2 = $('#content-comp-3'); elemcomp2.toggle(); } }</script>
+
+</html>
