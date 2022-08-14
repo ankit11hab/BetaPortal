@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Alcheringa</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Syne&display=swap');
+
+    html body {
+        font-family: 'Syne', sans-serif;
+        overflow-x: hidden !important;
+    }
+
+    .links {
+        font-size: 1.1rem;
+    }
+
+    .hero {
+        min-height: 100vh;
+        width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-size: 100%;
+
+        text-align: center;
+        color: #fff;
+        position: relative;
+
+    }
+
+    .bg-image {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -12;
+    }
+
+    .hero-head {
+        padding-top: 160px;
+    }
+
+    .hero-head .first {
+        font-size: 3vw;
+        font-weight: 600;
+
+    }
+
+    .hero-head .second {
+        font-weight: 700;
+        font-size: 7vw;
+        margin-top: -15px;
+    }
+
+    .hero-box {
+        position: absolute;
+        background: url('./images/Frame\ 6356120.png');
+        background-size: cover;
+        bottom: -45vh;
+        left: 0;
+        right: 0;
+        margin: 15vh auto;
+        height: 65vh;
+        width: 70%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 40px;
+    }
+
+    .hero-box .first {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    .hero-box .second {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .hero-box:after {
+        content: '';
+        position: absolute;
+        overflow: hidden;
+        top: 26px;
+        left: -26px;
+        z-index: -5;
+        width: calc(100% + 52px);
+        height: calc(100% + 0px);
+        border: 4px solid rgba(245, 232, 91, 0.971);
+        mix-blend-mode: difference;
+        color: #fff;
+    }
+
+    .circles {
+        margin: 0 auto;
+        margin-top: 30vh;
+        display: flex;
+        height: 50vh;
+        width: 70%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    svg {
+        width: 25%;
+        padding: 0;
+    }
+
+    svg textPath {
+        font-size: 42px;
+        letter-spacing: 20px;
+        fill: red;
+
+    }
+
+    .circles .first {
+        fill: #F2A450;
+    }
+
+    .circles .second {
+        fill: #636A8A;
+    }
+
+    .circles .third {
+        fill: #956FA8;
+    }
+
+    .circles .forth {
+        fill: #E6756E;
+    }
+
+
+
+    .swiper {
+        height: auto;
+        width: 100%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .swiper-wrapper {
+        display: flex;
+    }
+
+    .navigator {
+        position: absolute;
+        font-size: 3vw;
+        z-index: 100;
+        color: #fff;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #prevSlide {
+        top: 0;
+        bottom: 0;
+        left: 30px;
+    }
+
+    #nextSlide {
+        top: 0;
+        bottom: 0;
+        right: 30px;
+    }
+
+    .featured-event-heading {
+        margin: 130px 10px 40px 10px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 600;
+        color: #2F4858;
+        letter-spacing: 1.5px;
+    }
+
+    .person-holder {
+        padding: 5px 180px 5px 180px;
+    }
+
+    /* .snip1527 {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    } */
+
+    .footer-img-2 {
+        display: none;
+    }
+
+    .footer-right {
+        width: 33%;
+    }
+
+    .footer-items {
+        font-size: 1.4vw;
+    }
+
+    .bottom-tag {
+        font-size: 13vw;
+        font-weight: 500;
+    }
+
+    .swiper-pagination .swiper-pagination-bullet {
+        opacity: 1;
+        border: white solid 1px;
+        background-color: transparent;
+    }
+
+    .swiper-pagination .swiper-pagination-bullet-active {
+        background-color: white;
+    }
+
+    @media only screen and (max-width: 720px) {
+        .hero-box {
+            width: 84%;
+            bottom: 0vh;
+        }
+
+        .bg-image {
+            height: 60%;
+        }
+
+        .hero {
+            height: 40vh;
+        }
+
+        .hero-head .first {
+            font-size: 4.3vw;
+            transform: translate(0,30px);
+        }
+
+        .hero-head .second {
+            font-size: 10.2vw;
+            transform: translate(0,20px);
+        }
+
+        .hero-box {
+            height: 45vh;
+        }
+
+        .hero-box .first {
+            font-size: 1.8rem;
+        }
+
+        .hero-box .second {
+            font-size: 1.3rem;
+        }
+
+        .hero-head .second {
+            margin-top: 6px;
+        }
+
+        .hero-box:after {
+            top: 15px;
+            left: -15px;
+            z-index: -5;
+            width: calc(100% + 30px);
+            height: calc(100% + 0px);
+            border: 2px solid rgba(245, 232, 91, 0.971);
+            mix-blend-mode: difference;
+            color: #fff;
+        }
+
+        .circles {
+            /* flex-direction: column; */
+            width: 100%;
+            margin-top: 0;
+            height: 8vh;
+            transform: translate(0, -7vh);
+        }
+
+        .footer-img-1 {
+            display: none;
+        }
+
+        .footer-img-2 {
+            display: block;
+        }
+
+        .footer-right {
+            width: 50%;
+        }
+
+        .footer-items {
+            font-size: 3vw;
+        }
+
+        .bottom-tag {
+            font-size: 8vw;
+            margin-top: 7px;
+            margin-bottom: 17px;
+            font-weight: 500;
+        }
+
+        .tags {
+            transform: translate(0, -50px);
+            z-index: -1;
+        }
+
+
+        .swiper-pagination .swiper-pagination-bullet {
+            transform: translate(0, -15px);
+        }
+
+        .navigator {
+            font-size: 5vw;
+        }
+    }
+
+
+    .marquee-body {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .marquee-content li img {
+        width: 100%;
+        /* height: 100%; */
+        border: 2px solid #eee;
+    }
+
+    :root {
+        --marquee-width: 80vw;
+        --marquee-height: 26vh;
+        /* --marquee-elements: 12; */
+        /* defined with JavaScript */
+        --marquee-elements-displayed: 5;
+        --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+        --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+    }
+
+    .marquee {
+        width: var(--marquee-width);
+        height: var(--marquee-height);
+        background-color: rgb(255, 255, 255);
+        color: #2F4858;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .marquee:before,
+    .marquee:after {
+        position: absolute;
+        top: 0;
+        width: 10rem;
+        height: 103%;
+        content: "";
+        z-index: 1;
+    }
+
+    .marquee:before {
+        left: 0;
+    }
+
+    .marquee:after {
+        right: 0;
+    }
+
+    .marquee-content {
+        list-style: none;
+        height: 100%;
+        display: flex;
+        animation: scrolling var(--marquee-animation-duration) linear infinite;
+    }
+
+    /* .marquee-content:hover {
+  animation-play-state: paused;
+} */
+    @keyframes scrolling {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements)));
+        }
+    }
+
+    .marquee-content li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* text-align: center; */
+        flex-shrink: 0;
+        width: var(--marquee-element-width);
+        max-height: 100%;
+        font-size: calc(var(--marquee-height)*3/4);
+        /* 5rem; */
+        white-space: nowrap;
+    }
+
+    .marquee-content li img {
+        width: 100%;
+        /* height: 100%; */
+        border: 2px solid #eee;
+    }
+
+    @media (max-width: 600px) {
+        html {
+            font-size: 12px;
+        }
+
+        :root {
+            --marquee-width: 100vw;
+            --marquee-height: 18vh;
+            --marquee-elements-displayed: 3;
+        }
+
+        .marquee:before,
+        .marquee:after {
+            width: 5rem;
+        }
+    }
+</style>
+
+<body>
+    <nav class="flex flex-wrap items-center justify-between p-2"
+        style="background:url('images/image.webp'); position: fixed;width:100%;z-index: 1000;background-size: cover;">
+        <div class="flex px-10">
+            <img src="images/name.svg" alt="ACME" width="35" />
+            <img src="images/logo.svg" alt="ACME" width="140" class="px-4" />
+        </div>
+        <div class="flex md:hidden px-10">
+            <button id="hamburger" class="focus:outline-none">
+                <img class="toggle block" src="images/hamburger.png" width="30" height="30" />
+                <img class="toggle hidden" src="images/close.png" width="20" height="20" />
+            </button>
+        </div>
+        <div
+            class="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-blue-900 md:border-none links px-7">
+            <a href="index.html"
+                class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none"
+                style="text-decoration: underline;">Home</a>
+            <a href="competitions.html"
+                class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Competitions</a>
+            <a href="events.html"
+                class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Events</a>
+            <a href="initiatives.html"
+                class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Initiatives</a>
+        </div>
+    </nav>
+    <div class="h-screen">
+        <div class="hero">
+            <img class="bg-image" src="./images/Rectangle.png">
+            <div class="hero-head">
+                <p class="first">IIT GUWAHATI'S</p>
+                <p class="second">ALCHERINGA</p>
+            </div>
+            <div class="hero-box">
+                <div class="first">The largest Cultural Fest Of North-East India</div>
+                <div class="second">Alcheringa is the annual cultural festival of the Indian Institute of Technology
+                    (IIT), Guwahati. Started in 1996 by a group of students, Alcheringa, IIT Guwahati has become one of
+                    Asia’s most significant college-level cultural fests. Spread over three days and four nights,
+                    Alcheringa attracts people from all over the world with its spectacular events and competitions.
+                </div>
+            </div>
+        </div>
+        <div class="circles">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+                <title>Alcher</title>
+                <defs>
+                    <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"
+                        id="textcircle">
+                        <animateTransform attributeName="transform" begin="0s" dur="30s" type="rotate" from="0 250 250"
+                            to="360 250 250" repeatCount="indefinite" />
+                    </path>
+                </defs>
+                <circle class="first" cx="250" cy="250" r="100" stroke="black" stroke-width="0" />
+                <text dy="70" textLength="1220">
+                    <textPath class="first" xlink:href="#textcircle">26 EDITIONS • 26 EDITIONS •</textPath>
+                </text>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+                <title>Alcher</title>
+                <defs>
+                    <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"
+                        id="textcircle">
+                        <animateTransform attributeName="transform" begin="0s" dur="30s" type="rotate" from="0 250 250"
+                            to="360 250 250" repeatCount="indefinite" />
+                    </path>
+                </defs>
+                <circle class="second" cx="250" cy="250" r="100" stroke="black" stroke-width="0" />
+                <text dy="70" textLength="1220">
+                    <textPath class="second" xlink:href="#textcircle">140k FOOTFALL • 140k FOOTFALL •</textPath>
+                </text>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+                <title>Alcher</title>
+                <defs>
+                    <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"
+                        id="textcircle">
+                        <animateTransform attributeName="transform" begin="0s" dur="30s" type="rotate" from="0 250 250"
+                            to="360 250 250" repeatCount="indefinite" />
+                    </path>
+                </defs>
+                <circle class="third" cx="250" cy="250" r="100" stroke="black" stroke-width="0" />
+                <text dy="70" textLength="1220">
+                    <textPath class="third" xlink:href="#textcircle">100+ EVENTS • 100+ EVENTS •</textPath>
+                </text>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+                <title>Alcher</title>
+                <defs>
+                    <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"
+                        id="textcircle">
+                        <animateTransform attributeName="transform" begin="0s" dur="30s" type="rotate" from="0 250 250"
+                            to="360 250 250" repeatCount="indefinite" />
+                    </path>
+                </defs>
+                <circle class="forth" cx="250" cy="250" r="100" stroke="black" stroke-width="0" />
+                <text dy="70" textLength="1220">
+                    <textPath class="forth" xlink:href="#textcircle">500+ COLLEGES • 500+ COLLEGES •</textPath>
+                </text>
+            </svg>
+        </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./images/index4.jpg"></div>
+                <div class="swiper-slide"><img src="./images/index5.jpg"></div>
+                <div class="swiper-slide"><img src="./images/index2.jpg"></div>
+                <div class="swiper-slide"><img src="./images/index3.jpg"></div>
+                <div class="swiper-slide"><img src="./images/index1.jpg"></div>
+            </div>
+            <div class="navigator" id="prevSlide"><i class="fa-solid fa-circle-arrow-left"></i></div>
+            <div class="navigator" id="nextSlide"><i class="fa-solid fa-circle-arrow-right"></i></div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+
+        <h1 class="featured-event-heading">
+            Featured Events
+        </h1>
+        <div class="marquee-body" style="z-index: 100;">
+            <div class="marquee">
+                <ul class="marquee-content">
+                    <li><img src="images/parliament.png" alt="pr-sample23" style="width: 150px;" /></li>
+                    <li><img src="images/rock.png" alt="pr-sample23" style="width: 150px;" /></li>
+                    <li><img src="images/vogue.png" alt="pr-sample23" style="width: 150px;" /></li>
+                    <li><img src="images/mun.png" alt="pr-sample23" style="width: 150px;" /></li>
+                    <li><img src="images/creators.png" alt="pr-sample23" style="width: 150px;" /></li>
+                    <li><img src="images/northeastunveiled.png" alt="pr-sample23" style="width: 150px;" /></li>
+                    <li><img src="images/sports.png" alt="pr-sample23" style="width: 150px;" /></li>
+                </ul>
+            </div>
+        </div>
+
+        <footer class="px-7 pt-20 md:px-10 lg:px-14"
+            style="width:100%;background:#2F4858; margin-top: 90px; color:white;">
+            <div class="flex flex-row justify-between footer-items">
+                <div style="width:33%">
+                    Siddhant Singh<br>
+                    Public Relations Head<br>
+                    +91-9310859978<br><br>
+                    Danda Akshara<br>
+                    Public Relations Head<br>
+                    +91-9908991939<br><br>
+                </div>
+                <div class="footer-img-1" style="width:13%; margin-top:auto;"><img src="images/Footer_logo.svg"
+                        width="100%" /></div>
+                <div class="flex flex-col items-end footer-right">
+                    <div>
+                        For business
+                    </div>
+                    <div>
+                        related queries
+                    </div>
+                    <div>
+                        alcheringa@iitg.ac.in<br><br>
+                    </div>
+                    <div class="flex flex-row items-center">
+                        <div class="mx-2"><a href="https://www.instagram.com/alcheringaiitg/" target="_blank"><img
+                                    src="images/instagram.svg" style="width:25px" /></a></div>
+                        <div class="mx-2"><a href="https://www.facebook.com/alcheringaiitg" target="_blank"><img
+                                    src="images/facebook.svg" style="width:13px" /></a></div>
+                        <div class="mx-2"><a href="https://www.youtube.com/c/AlcheringaIITG" target="_blank"><img
+                                    src="images/youtube.svg" style="width:27px" /></a></div>
+                        <div class="mx-2"><a href="https://www.linkedin.com/company/alcheringaiitguwahati/mycompany/"
+                                target="_blank"><img src="images/linkedin.svg" style="width:25px" /></a></div>
+                        <div class="ml-2"><a href="https://twitter.com/alcheringaiitg" target="_blank"><img
+                                    src="images/twitter.svg" style="width:25px" /></a></div>
+                    </div>
+                </div>
+            </div>
+            <center>
+                <div style="width:13%; margin-top:30px;" class="footer-img-2"><img src="images/Footer_logo.svg"
+                        width="100%" /></div>
+            </center>
+            <div class="text-center mt-2" style="font-size:4vw; transform: translate(0,12px);">
+                IIT GUWAHATI'S
+            </div>
+            <div class="text-center bottom-tag">
+                ALCHERINGA
+            </div>
+        </footer>
+
+    </div>
+
+
+</body>
+<script type="module">
+    import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
+
+    var swiper = new Swiper(".mySwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        loop: true,
+        navigation: {
+            prevEl: '#prevSlide',
+            nextEl: '#nextSlide',
+        }
+    });
+
+</script>
+<script>
+    document.getElementById("hamburger").onclick = function toggleMenu() {
+        const navToggle = document.getElementsByClassName("toggle");
+        for (let i = 0; i < navToggle.length; i++) {
+            navToggle.item(i).classList.toggle("hidden");
+        }
+    };
+</script>
+
+<script>
+    const root = document.documentElement;
+    const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+    const marqueeContent = document.querySelector("ul.marquee-content");
+
+    root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+
+    for (let i = 0; i < marqueeElementsDisplayed; i++) {
+        marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+    }
+</script>
+
+</html>

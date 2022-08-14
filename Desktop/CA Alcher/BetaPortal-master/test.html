@@ -1,0 +1,57 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            height: 26vw;
+        }
+
+        .img-1 {
+            width: 20vw;
+            -webkit-clip-path: polygon(0 0, 0 100px, 100px 80px, 100px 0);
+            clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+            border-radius: 2vw 0 0 2vw;
+        }
+
+        .img-2 {
+            width: 20vw;
+            -webkit-clip-path: polygon(0 0, 0 100px, 100px 80px, 100px 0);
+            clip-path: polygon(0 0, 80% 0, 100% 100%, 20% 100%);
+        }
+
+        .img-3 {
+            width: 20vw;
+            -webkit-clip-path: polygon(0 0, 0 100px, 100px 80px, 100px 0);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+            border-radius: 0 2vw 2vw 0;
+        }
+
+        .shift {
+            margin-left: -3.8vw;
+        }
+
+        .holder {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            width: max-content;
+            padding: 0.9vw;
+            border-radius: 2vw;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="holder">
+            <img src="images/events1.jpg" class="img-1" />
+            <img src="images/events2.jpg" class="shift img-2" />
+            <img src="images/events3.jpg" class="shift img-2" />
+            <img src="images/events4.jpg" class="shift img-3" />
+        </div>
+    </center>
+</body>
+
+</html>
