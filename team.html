@@ -13,6 +13,11 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Syne&display=swap');
 
+
+  html {
+    scroll-behavior: smooth !important;
+  }
+
   html body {
     font-family: 'Syne', sans-serif;
     min-height: 200vh;
@@ -20,15 +25,17 @@
   }
 
   .hero {
-    height: 400px;
+    height: 100%;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-
     text-align: center;
     color: #fff;
     position: relative;
-    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
   }
 
   .bg-image {
@@ -46,18 +53,22 @@
   }
 
   .hero-head .first {
-    font-size: 3vw;
+    font-size: 3.2vw;
     font-weight: 600;
   }
 
   .hero-head .second {
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin: 2rem auto;
-    width: 40vw;
+    width: 46vw;
   }
 
-  .team-title{
+  .top-holder {
+    height: 100vh;
+  }
+
+  .team-title {
     font-size: 3vw;
     font-weight: 600;
     text-align: center;
@@ -90,7 +101,7 @@
 
   .name,
   .position {
-    font-size: large;
+    font-size: 15px;
     font-weight: bolder;
   }
 
@@ -107,7 +118,7 @@
     width: 100%;
     vertical-align: top;
     position: relative;
-
+    filter: brightness(80%);
   }
 
   .snip1527 figcaption div {
@@ -141,7 +152,22 @@
     top: 5%;
   }
 
+  .bottom-tag {
+    font-size: 13vw;
+    font-weight: 500;
+  }
 
+  .footer-img-2 {
+    display: none;
+  }
+
+  .footer-right {
+    width: 33%;
+  }
+
+  .footer-items {
+    font-size: 1.4vw;
+  }
 
 
 
@@ -155,32 +181,78 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 
-.bottom-tag {
+  .bottom-tag {
     font-size: 13vw;
     font-weight: 500;
-}
+  }
 
+  @media screen and (min-width: 700px) {
 
+    .hero-head .first {
+      margin-bottom: 48px;
+    }
+
+    .hero-head .second {
+      margin-bottom: 48px;
+    }
+  }
+
+  @media screen and (min-width: 2200px) {
+
+    .hero-head .first {
+      margin-bottom: 200px;
+    }
+
+    .hero-head .second {
+      margin-bottom: 200px;
+    }
+  }
 
   @media screen and (max-width: 700px) {
     .hero-head .second {
       width: 70vw;
     }
+
     .hero {
-      height: 510px;
+      height: 540px;
+      letter-spacing: 1px;
     }
-    .hero-head .first{
+
+    .hero-head .first {
+      font-size: 9vw;
+    }
+
+    .team-title {
       font-size: 10vw;
     }
-    .team-title{
-      font-size: 10vw;
+
+
+    .footer-img-1 {
+      display: none;
     }
+
+    .footer-img-2 {
+      display: block;
+    }
+
+    .footer-right {
+      width: 50%;
+    }
+
+    .footer-items {
+      font-size: 3vw;
+    }
+
     .bottom-tag {
-            font-size: 8vw;
-            margin-top: 7px;
-            margin-bottom: 17px;
-            font-weight: 500;
-        }
+      font-size: 8vw;
+      margin-top: 7px;
+      margin-bottom: 17px;
+      font-weight: 500;
+    }
+
+    .top-holder {
+      height: 100%;
+    }
   }
 
   .down-arrow {
@@ -191,35 +263,34 @@
 </style>
 
 <body>
-  <nav class="flex flex-wrap items-center justify-between p-2"
-    style="background:#A273B2; position: fixed;width:100%;z-index: 1000;background-size: cover;">
-    <div class="flex px-10">
-      <img src="images/name.svg" alt="ACME" width="35" />
-      <img src="images/logo.svg" alt="ACME" width="140" class="px-4" />
-    </div>
-    <div class="flex md:hidden px-10">
-      <button id="hamburger" class="focus:outline-none">
-        <img class="toggle block" src="images/hamburger.png" width="30" height="30" />
-        <img class="toggle hidden" src="images/close.png" width="20" height="20" />
-      </button>
-    </div>
-    <div
-      class="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-blue-900 md:border-none links px-7">
-      <a href="index.html"
-        class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Home</a>
+  <div class="top-holder">
+    <nav class="flex flex-wrap items-center justify-between p-2"
+      style="background:#A273B2; position: fixed;width:100%;z-index: 1000;background-size: cover;">
+      <div class="flex px-10">
+        <img src="images/name.svg" alt="ACME" width="35" />
+        <img src="images/logo.svg" alt="ACME" width="140" class="px-4" />
+      </div>
+      <div class="flex md:hidden px-10">
+        <button id="hamburger" class="focus:outline-none">
+          <img class="toggle block" src="images/hamburger.png" width="30" height="30" />
+          <img class="toggle hidden" src="images/close.png" width="20" height="20" />
+        </button>
+      </div>
+      <div
+        class="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-blue-900 md:border-none links px-7">
+        <a href="index.html"
+          class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Home</a>
         <a href="competitions.html"
           class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Competitions</a>
-      <a href="events.html"
-        class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Events</a>
-      <a href="initiatives.html"
-        class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Initiatives</a>
-      <a href="team.html"
-        class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none" style="text-decoration: underline;">Team</a>
-    </div>
-  </nav>
-
-
-  <div>
+        <a href="events.html"
+          class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Events</a>
+        <a href="initiatives.html"
+          class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Initiatives</a>
+        <a href="team.html"
+          class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none"
+          style="text-decoration: underline;">Team</a>
+      </div>
+    </nav>
     <div class="hero">
       <img class="bg-image" src="./images/Rectangle 10.png" />
       <div class="hero-head">
@@ -233,45 +304,49 @@
 
 
         </p>
-        <svg class="down-arrow" xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24"
-          stroke="currentColor" stroke-width="2" style="width:35px">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-        </svg>
+        <a href="#start"> <svg class="down-arrow" xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:35px">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg> </a>
       </div>
     </div>
+  </div>
 
-    
+  <div>
+
+
+
     <!-- PRB Team -->
-    <div class="pb-12 px-10 md:px-10">
+    <div class="pb-12 px-10 md:px-10" id="start">
       <div class="container my-12 mx-auto px-4 md:px-12">
-        <h1 class="team-title py-8" style="color:#A273B2">PR & Branding</h1>
-        <div class="flex flex-wrap -mx-1 lg:-mx-4">
+        <h1 class="team-title py-8" style="color:#A273B2">Public Relations & Branding</h1>
+        <div class="flex flex-wrap justify-center -mx-1 lg:-mx-4">
 
           <!-- Column -->
           <div class="my-8 px-1 md:px-2 w-full md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
 
             <figure class="snip1527 team-img">
               <div class="snip1527image">
-                <img src="images/person.png" alt="pr-sample23" />
+                <img src="images/akshara.jpg" alt="pr-sample23" />
               </div>
               <figcaption>
 
                 <!-- <div> -->
                 <div class="name">
-                  <h3>ABCD</h3>
+                  <h3>Danda Akshara</h3>
                 </div>
                 <div class="position">
-                  <h3>PR and Branding Head</h3>
+                  <h6>Public Relations Head</h6>
                 </div>
                 <h5 class="contact">
-                  9432352622
+                  9908991939
                   <br />
-                  abcd@iitg.ac.in
+                  akshara@alcheringa.in
                 </h5>
               </figcaption>
               <div class="sm-icons">
                 <p>
-                  <a href="#" target="__blank">
+                  <a href="https://www.instagram.com/danda_akshara/" target="__blank">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"
                       fill="white">
                       <path
@@ -279,14 +354,14 @@
                       </path>
                     </svg>
                   </a>
-                  <a href="#" target="__blank">
+                  <a href="https://www.facebook.com/akshara.reddy.37051/" target="__blank">
                     <svg width="24" height="24" viewBox="0 0 24 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M20.5068 23.8524L21.6081 16.4786H14.7249V11.7021C14.6772 11.1559 14.7507 10.6058 14.94 10.092C15.1293 9.57823 15.4296 9.11384 15.8189 8.73281C16.2082 8.35179 16.6767 8.06378 17.1901 7.88985C17.7035 7.71592 18.2488 7.66048 18.786 7.72758H21.9695V1.45197C20.102 1.15332 18.2158 0.990206 16.3253 0.963867C10.5778 0.963867 6.82643 4.45032 6.82643 10.8654V16.4786H0.390625V23.8524H6.74039V41.1452H14.6045V23.8524H20.5068Z"
                         fill="white" />
                     </svg>
                   </a>
-                  <a href="#" target="__blank">
+                  <a href="https://twitter.com/_Akshara_Reddy?t=i4P9ELL4vW0H7NZ6TuXZig&s=09" target="__blank">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 30 30"
                       fill="white">
                       <path
@@ -308,26 +383,26 @@
 
             <figure class="snip1527 team-img">
               <div class="snip1527image">
-                <img src="images/person.png" alt="pr-sample23" />
+                <img src="images/siddhant.jpg" alt="pr-sample23" />
               </div>
               <figcaption>
 
                 <!-- <div> -->
                 <div class="name">
-                  <h3>ABCD</h3>
+                  <h3>Siddhant Singh</h3>
                 </div>
                 <div class="position">
-                  <h3>PR and Branding Head</h3>
+                  <h3>Public Relations Head</h3>
                 </div>
                 <h5 class="contact">
-                  9432352622
+                  9310859978
                   <br />
-                  abcd@iitg.ac.in
+                  siddhant.s@alcheringa.in
                 </h5>
               </figcaption>
               <div class="sm-icons">
                 <p>
-                  <a href="#" target="__blank">
+                  <a href="https://www.instagram.com/sid_8171/" target="__blank">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"
                       fill="white">
                       <path
@@ -335,14 +410,14 @@
                       </path>
                     </svg>
                   </a>
-                  <a href="#" target="__blank">
+                  <a href="https://www.facebook.com/sid8171/" target="__blank">
                     <svg width="24" height="24" viewBox="0 0 24 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M20.5068 23.8524L21.6081 16.4786H14.7249V11.7021C14.6772 11.1559 14.7507 10.6058 14.94 10.092C15.1293 9.57823 15.4296 9.11384 15.8189 8.73281C16.2082 8.35179 16.6767 8.06378 17.1901 7.88985C17.7035 7.71592 18.2488 7.66048 18.786 7.72758H21.9695V1.45197C20.102 1.15332 18.2158 0.990206 16.3253 0.963867C10.5778 0.963867 6.82643 4.45032 6.82643 10.8654V16.4786H0.390625V23.8524H6.74039V41.1452H14.6045V23.8524H20.5068Z"
                         fill="white" />
                     </svg>
                   </a>
-                  <a href="#" target="__blank">
+                  <a href="https://twitter.com/sid_8171" target="__blank">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 30 30"
                       fill="white">
                       <path
@@ -364,26 +439,26 @@
 
             <figure class="snip1527 team-img">
               <div class="snip1527image">
-                <img src="images/person.png" alt="pr-sample23" />
+                <img src="images/quasim.jpg" alt="pr-sample23" />
               </div>
               <figcaption>
 
                 <!-- <div> -->
                 <div class="name">
-                  <h3>ABCD</h3>
+                  <h3>Quasim Khan</h3>
                 </div>
                 <div class="position">
-                  <h3>PR and Branding Head</h3>
+                  <h3>Media and Outreach Head</h3>
                 </div>
                 <h5 class="contact">
-                  9432352622
+                  7763959688
                   <br />
-                  abcd@iitg.ac.in
+                  quasim@alcheringa.in
                 </h5>
               </figcaption>
               <div class="sm-icons">
                 <p>
-                  <a href="#" target="__blank">
+                  <a href="https://www.instagram.com/quasim._/" target="__blank">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"
                       fill="white">
                       <path
@@ -391,70 +466,14 @@
                       </path>
                     </svg>
                   </a>
-                  <a href="#" target="__blank">
+                  <a href="https://www.facebook.com/quasim.khan.1291" target="__blank">
                     <svg width="24" height="24" viewBox="0 0 24 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M20.5068 23.8524L21.6081 16.4786H14.7249V11.7021C14.6772 11.1559 14.7507 10.6058 14.94 10.092C15.1293 9.57823 15.4296 9.11384 15.8189 8.73281C16.2082 8.35179 16.6767 8.06378 17.1901 7.88985C17.7035 7.71592 18.2488 7.66048 18.786 7.72758H21.9695V1.45197C20.102 1.15332 18.2158 0.990206 16.3253 0.963867C10.5778 0.963867 6.82643 4.45032 6.82643 10.8654V16.4786H0.390625V23.8524H6.74039V41.1452H14.6045V23.8524H20.5068Z"
                         fill="white" />
                     </svg>
                   </a>
-                  <a href="#" target="__blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 30 30"
-                      fill="white">
-                      <path
-                        d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z">
-                      </path>
-                    </svg>
-                  </a>
-                </p>
-              </div>
-
-              <a href="#"></a>
-            </figure>
-
-          </div>
-          <!-- END Column -->
-
-          <!-- Column -->
-          <div class="my-8 px-1 w-full md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
-
-            <figure class="snip1527 team-img">
-              <div class="snip1527image">
-                <img src="images/person.png" alt="pr-sample23" />
-              </div>
-              <figcaption>
-
-                <!-- <div> -->
-                <div class="name">
-                  <h3>ABCD</h3>
-                </div>
-                <div class="position">
-                  <h3>PR and Branding Head</h3>
-                </div>
-                <h5 class="contact">
-                  9432352622
-                  <br />
-                  abcd@iitg.ac.in
-                </h5>
-              </figcaption>
-              <div class="sm-icons">
-                <p>
-                  <a href="#" target="__blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"
-                      fill="white">
-                      <path
-                        d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z">
-                      </path>
-                    </svg>
-                  </a>
-                  <a href="#" target="__blank">
-                    <svg width="24" height="24" viewBox="0 0 24 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M20.5068 23.8524L21.6081 16.4786H14.7249V11.7021C14.6772 11.1559 14.7507 10.6058 14.94 10.092C15.1293 9.57823 15.4296 9.11384 15.8189 8.73281C16.2082 8.35179 16.6767 8.06378 17.1901 7.88985C17.7035 7.71592 18.2488 7.66048 18.786 7.72758H21.9695V1.45197C20.102 1.15332 18.2158 0.990206 16.3253 0.963867C10.5778 0.963867 6.82643 4.45032 6.82643 10.8654V16.4786H0.390625V23.8524H6.74039V41.1452H14.6045V23.8524H20.5068Z"
-                        fill="white" />
-                    </svg>
-                  </a>
-                  <a href="#" target="__blank">
+                  <a href="https://twitter.com/IMquasi" target="__blank">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 30 30"
                       fill="white">
                       <path
@@ -477,38 +496,42 @@
       </div>
 
     </div>
+
+
+
+
 
     <!-- CRM Team -->
-    <div>
+    <div class="pb-12 px-10 md:px-10" id="start">
       <div class="container my-12 mx-auto px-4 md:px-12">
-        <h1 class="team-title py-8">CRM</h1>
-        <div class="flex flex-wrap -mx-1 lg:-mx-4">
+        <h1 class="team-title py-8" style="color:#A273B2">Corporate Relations & Marketing</h1>
+        <div class="flex flex-wrap justify-center -mx-1 lg:-mx-4">
 
           <!-- Column -->
-          <div class="my-8 px-1 w-full md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+          <div class="my-8 px-1 md:px-2 w-full md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
 
             <figure class="snip1527 team-img">
               <div class="snip1527image">
-                <img src="images/person.png" alt="pr-sample23" />
+                <img src="images/akshat.jpg" alt="pr-sample23" />
               </div>
               <figcaption>
 
                 <!-- <div> -->
                 <div class="name">
-                  <h3>ABCD</h3>
+                  <h3>Akshat Gautam</h3>
                 </div>
                 <div class="position">
-                  <h3>PR and Branding Head</h3>
+                  <h6>CRM Head</h6>
                 </div>
                 <h5 class="contact">
-                  9432352622
+                  8770677470
                   <br />
-                  abcd@iitg.ac.in
+                  akshatg@alcheringa.in
                 </h5>
               </figcaption>
               <div class="sm-icons">
                 <p>
-                  <a href="#" target="__blank">
+                  <a href="https://www.instagram.com/akshatgautam___/" target="__blank">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"
                       fill="white">
                       <path
@@ -516,14 +539,14 @@
                       </path>
                     </svg>
                   </a>
-                  <a href="#" target="__blank">
+                  <a href="https://www.facebook.com/akshatgautam13" target="__blank">
                     <svg width="24" height="24" viewBox="0 0 24 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M20.5068 23.8524L21.6081 16.4786H14.7249V11.7021C14.6772 11.1559 14.7507 10.6058 14.94 10.092C15.1293 9.57823 15.4296 9.11384 15.8189 8.73281C16.2082 8.35179 16.6767 8.06378 17.1901 7.88985C17.7035 7.71592 18.2488 7.66048 18.786 7.72758H21.9695V1.45197C20.102 1.15332 18.2158 0.990206 16.3253 0.963867C10.5778 0.963867 6.82643 4.45032 6.82643 10.8654V16.4786H0.390625V23.8524H6.74039V41.1452H14.6045V23.8524H20.5068Z"
                         fill="white" />
                     </svg>
                   </a>
-                  <a href="#" target="__blank">
+                  <a href="https://twitter.com/AkshatGautam___" target="__blank">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 30 30"
                       fill="white">
                       <path
@@ -545,26 +568,26 @@
 
             <figure class="snip1527 team-img">
               <div class="snip1527image">
-                <img src="images/person.png" alt="pr-sample23" />
+                <img src="images/sajal.jpg" alt="pr-sample23" />
               </div>
               <figcaption>
 
                 <!-- <div> -->
                 <div class="name">
-                  <h3>ABCD</h3>
+                  <h3>Sajal Agarwal</h3>
                 </div>
                 <div class="position">
-                  <h3>PR and Branding Head</h3>
+                  <h3>CRM Head</h3>
                 </div>
                 <h5 class="contact">
-                  9432352622
+                  8696396788
                   <br />
-                  abcd@iitg.ac.in
+                  sajal@alcheringa.in
                 </h5>
               </figcaption>
               <div class="sm-icons">
                 <p>
-                  <a href="#" target="__blank">
+                  <a href="https://www.instagram.com/sajal_1029/" target="__blank">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"
                       fill="white">
                       <path
@@ -572,14 +595,62 @@
                       </path>
                     </svg>
                   </a>
-                  <a href="#" target="__blank">
+                  <a href="https://www.facebook.com/agrawalsajal2910" target="__blank">
                     <svg width="24" height="24" viewBox="0 0 24 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M20.5068 23.8524L21.6081 16.4786H14.7249V11.7021C14.6772 11.1559 14.7507 10.6058 14.94 10.092C15.1293 9.57823 15.4296 9.11384 15.8189 8.73281C16.2082 8.35179 16.6767 8.06378 17.1901 7.88985C17.7035 7.71592 18.2488 7.66048 18.786 7.72758H21.9695V1.45197C20.102 1.15332 18.2158 0.990206 16.3253 0.963867C10.5778 0.963867 6.82643 4.45032 6.82643 10.8654V16.4786H0.390625V23.8524H6.74039V41.1452H14.6045V23.8524H20.5068Z"
                         fill="white" />
                     </svg>
                   </a>
-                  <a href="#" target="__blank">
+                </p>
+              </div>
+
+              <a href="#"></a>
+            </figure>
+
+          </div>
+          <!-- END Column -->
+
+          <!-- Column -->
+          <div class="my-8 px-1 w-full md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+
+            <figure class="snip1527 team-img">
+              <div class="snip1527image">
+                <img src="images/aminur.jpg" alt="pr-sample23" />
+              </div>
+              <figcaption>
+
+                <!-- <div> -->
+                <div class="name">
+                  <h3>Aminur Rahman</h3>
+                </div>
+                <div class="position">
+                  <h3>CRM Head</h3>
+                </div>
+                <h5 class="contact">
+                  8822860090
+                  <br />
+                  aminur@alcheringa.com
+                </h5>
+              </figcaption>
+              <div class="sm-icons">
+                <p>
+                  <a href="https://www.instagram.com/aminurxyz/" target="__blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"
+                      fill="white">
+                      <path
+                        d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a href="https://www.facebook.com/ar57rhmn/" target="__blank">
+                    <svg width="24" height="24" viewBox="0 0 24 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20.5068 23.8524L21.6081 16.4786H14.7249V11.7021C14.6772 11.1559 14.7507 10.6058 14.94 10.092C15.1293 9.57823 15.4296 9.11384 15.8189 8.73281C16.2082 8.35179 16.6767 8.06378 17.1901 7.88985C17.7035 7.71592 18.2488 7.66048 18.786 7.72758H21.9695V1.45197C20.102 1.15332 18.2158 0.990206 16.3253 0.963867C10.5778 0.963867 6.82643 4.45032 6.82643 10.8654V16.4786H0.390625V23.8524H6.74039V41.1452H14.6045V23.8524H20.5068Z"
+                        fill="white" />
+                    </svg>
+                  </a>
+                  <a href="https://twitter.com/aminurar57" target="__blank">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 30 30"
                       fill="white">
                       <path
@@ -601,26 +672,26 @@
 
             <figure class="snip1527 team-img">
               <div class="snip1527image">
-                <img src="images/person.png" alt="pr-sample23" />
+                <img src="images/nithin.jpg" alt="pr-sample23" />
               </div>
               <figcaption>
 
                 <!-- <div> -->
                 <div class="name">
-                  <h3>ABCD</h3>
+                  <h3>Nithin Sagar</h3>
                 </div>
                 <div class="position">
-                  <h3>PR and Branding Head</h3>
+                  <h3>CRM Head</h3>
                 </div>
                 <h5 class="contact">
-                  9432352622
+                  8179414110
                   <br />
-                  abcd@iitg.ac.in
+                  nithin@alcheringa.in
                 </h5>
               </figcaption>
               <div class="sm-icons">
                 <p>
-                  <a href="#" target="__blank">
+                  <a href="https://www.instagram.com/nithinsunny_17/" target="__blank">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"
                       fill="white">
                       <path
@@ -628,70 +699,14 @@
                       </path>
                     </svg>
                   </a>
-                  <a href="#" target="__blank">
+                  <a href="https://www.facebook.com/nithin.sagar.5439/" target="__blank">
                     <svg width="24" height="24" viewBox="0 0 24 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M20.5068 23.8524L21.6081 16.4786H14.7249V11.7021C14.6772 11.1559 14.7507 10.6058 14.94 10.092C15.1293 9.57823 15.4296 9.11384 15.8189 8.73281C16.2082 8.35179 16.6767 8.06378 17.1901 7.88985C17.7035 7.71592 18.2488 7.66048 18.786 7.72758H21.9695V1.45197C20.102 1.15332 18.2158 0.990206 16.3253 0.963867C10.5778 0.963867 6.82643 4.45032 6.82643 10.8654V16.4786H0.390625V23.8524H6.74039V41.1452H14.6045V23.8524H20.5068Z"
                         fill="white" />
                     </svg>
                   </a>
-                  <a href="#" target="__blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 30 30"
-                      fill="white">
-                      <path
-                        d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z">
-                      </path>
-                    </svg>
-                  </a>
-                </p>
-              </div>
-
-              <a href="#"></a>
-            </figure>
-
-          </div>
-          <!-- END Column -->
-
-          <!-- Column -->
-          <div class="my-8 px-1 w-full md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
-
-            <figure class="snip1527 team-img">
-              <div class="snip1527image">
-                <img src="images/person.png" alt="pr-sample23" />
-              </div>
-              <figcaption>
-
-                <!-- <div> -->
-                <div class="name">
-                  <h3>ABCD</h3>
-                </div>
-                <div class="position">
-                  <h3>PR and Branding Head</h3>
-                </div>
-                <h5 class="contact">
-                  9432352622
-                  <br />
-                  abcd@iitg.ac.in
-                </h5>
-              </figcaption>
-              <div class="sm-icons">
-                <p>
-                  <a href="#" target="__blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"
-                      fill="white">
-                      <path
-                        d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z">
-                      </path>
-                    </svg>
-                  </a>
-                  <a href="#" target="__blank">
-                    <svg width="24" height="24" viewBox="0 0 24 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M20.5068 23.8524L21.6081 16.4786H14.7249V11.7021C14.6772 11.1559 14.7507 10.6058 14.94 10.092C15.1293 9.57823 15.4296 9.11384 15.8189 8.73281C16.2082 8.35179 16.6767 8.06378 17.1901 7.88985C17.7035 7.71592 18.2488 7.66048 18.786 7.72758H21.9695V1.45197C20.102 1.15332 18.2158 0.990206 16.3253 0.963867C10.5778 0.963867 6.82643 4.45032 6.82643 10.8654V16.4786H0.390625V23.8524H6.74039V41.1452H14.6045V23.8524H20.5068Z"
-                        fill="white" />
-                    </svg>
-                  </a>
-                  <a href="#" target="__blank">
+                  <a href="https://twitter.com/nithinsagar1" target="__blank">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 30 30"
                       fill="white">
                       <path
@@ -714,6 +729,777 @@
       </div>
 
     </div>
+
+
+
+
+
+    <!-- Events Team -->
+    <div class="pb-12 px-10 md:px-10" id="start">
+      <div class="container my-12 mx-auto px-4 md:px-12">
+        <h1 class="team-title py-8" style="color:#A273B2">Events</h1>
+        <div class="flex flex-wrap justify-center -mx-1 lg:-mx-4">
+
+          <!-- Column -->
+          <div class="my-8 px-1 md:px-2 w-full md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+
+            <figure class="snip1527 team-img">
+              <div class="snip1527image">
+                <img src="images/shriyanshu.jpg" alt="pr-sample23" />
+              </div>
+              <figcaption>
+
+                <!-- <div> -->
+                <div class="name">
+                  <h3>Shriyanshu Morchhale</h3>
+                </div>
+                <div class="position">
+                  <h6>Events Management Head</h6>
+                </div>
+                <h5 class="contact">
+                  8719805330
+                  <br />
+                  shriyanshu@alcheringa.in
+                </h5>
+              </figcaption>
+              <div class="sm-icons">
+                <p>
+                  <a href="https://www.instagram.com/shriyanshu30/" target="__blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"
+                      fill="white">
+                      <path
+                        d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a href="https://www.facebook.com/profile.php?id=100008475857658" target="__blank">
+                    <svg width="24" height="24" viewBox="0 0 24 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20.5068 23.8524L21.6081 16.4786H14.7249V11.7021C14.6772 11.1559 14.7507 10.6058 14.94 10.092C15.1293 9.57823 15.4296 9.11384 15.8189 8.73281C16.2082 8.35179 16.6767 8.06378 17.1901 7.88985C17.7035 7.71592 18.2488 7.66048 18.786 7.72758H21.9695V1.45197C20.102 1.15332 18.2158 0.990206 16.3253 0.963867C10.5778 0.963867 6.82643 4.45032 6.82643 10.8654V16.4786H0.390625V23.8524H6.74039V41.1452H14.6045V23.8524H20.5068Z"
+                        fill="white" />
+                    </svg>
+                  </a>
+                  <a href="https://twitter.com/ShriyanshuMorc1" target="__blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 30 30"
+                      fill="white">
+                      <path
+                        d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z">
+                      </path>
+                    </svg>
+                  </a>
+                </p>
+              </div>
+
+              <a href="#"></a>
+            </figure>
+
+          </div>
+          <!-- END Column -->
+
+          <!-- Column -->
+          <!-- <div class="my-8 px-1 w-full md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+
+            <figure class="snip1527 team-img">
+              <div class="snip1527image">
+                <img src="images/person.png" alt="pr-sample23" />
+              </div>
+              <figcaption>
+
+                <div class="name">
+                  <h3>Gaurang Thakur</h3>
+                </div>
+                <div class="position">
+                  <h3>Pronites Head</h3>
+                </div>
+                <h5 class="contact">
+                  8696396788
+                  <br />
+                  sajal@alcheringa.in
+                </h5>
+              </figcaption>
+              <div class="sm-icons">
+                <p>
+                  <a href="https://www.instagram.com/sajal_1029/" target="__blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"
+                      fill="white">
+                      <path
+                        d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a href="https://www.facebook.com/agrawalsajal2910" target="__blank">
+                    <svg width="24" height="24" viewBox="0 0 24 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20.5068 23.8524L21.6081 16.4786H14.7249V11.7021C14.6772 11.1559 14.7507 10.6058 14.94 10.092C15.1293 9.57823 15.4296 9.11384 15.8189 8.73281C16.2082 8.35179 16.6767 8.06378 17.1901 7.88985C17.7035 7.71592 18.2488 7.66048 18.786 7.72758H21.9695V1.45197C20.102 1.15332 18.2158 0.990206 16.3253 0.963867C10.5778 0.963867 6.82643 4.45032 6.82643 10.8654V16.4786H0.390625V23.8524H6.74039V41.1452H14.6045V23.8524H20.5068Z"
+                        fill="white" />
+                    </svg>
+                  </a>
+                </p>
+              </div>
+
+              <a href="#"></a>
+            </figure>
+
+          </div> -->
+          <!-- END Column -->
+
+          <!-- Column -->
+          <div class="my-8 px-1 w-full md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+
+            <figure class="snip1527 team-img">
+              <div class="snip1527image">
+                <img src="images/eshan.jpg" alt="pr-sample23" />
+              </div>
+              <figcaption>
+
+                <!-- <div> -->
+                <div class="name">
+                  <h3>Eshan Arora</h3>
+                </div>
+                <div class="position">
+                  <h3>Campaigns Head</h3>
+                </div>
+                <h5 class="contact">
+                  8822860090
+                  <br />
+                  aminur@alcheringa.com
+                </h5>
+              </figcaption>
+              <div class="sm-icons">
+                <p>
+                  <a href="https://www.instagram.com/aminurar57/" target="__blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"
+                      fill="white">
+                      <path
+                        d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a href="https://www.facebook.com/ar57rhmn/" target="__blank">
+                    <svg width="24" height="24" viewBox="0 0 24 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20.5068 23.8524L21.6081 16.4786H14.7249V11.7021C14.6772 11.1559 14.7507 10.6058 14.94 10.092C15.1293 9.57823 15.4296 9.11384 15.8189 8.73281C16.2082 8.35179 16.6767 8.06378 17.1901 7.88985C17.7035 7.71592 18.2488 7.66048 18.786 7.72758H21.9695V1.45197C20.102 1.15332 18.2158 0.990206 16.3253 0.963867C10.5778 0.963867 6.82643 4.45032 6.82643 10.8654V16.4786H0.390625V23.8524H6.74039V41.1452H14.6045V23.8524H20.5068Z"
+                        fill="white" />
+                    </svg>
+                  </a>
+                  <a href="https://twitter.com/aminurar57" target="__blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 30 30"
+                      fill="white">
+                      <path
+                        d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z">
+                      </path>
+                    </svg>
+                  </a>
+                </p>
+              </div>
+
+              <a href="#"></a>
+            </figure>
+
+          </div>
+          <!-- END Column -->
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <!-- Creatives Team -->
+    <div class="pb-12 px-10 md:px-10" id="start">
+      <div class="container my-12 mx-auto px-4 md:px-12">
+        <h1 class="team-title py-8" style="color:#A273B2">Creatives</h1>
+        <div class="flex flex-wrap justify-center -mx-1 lg:-mx-4">
+
+          <!-- Column -->
+          <div class="my-8 px-1 md:px-2 w-full md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+
+            <figure class="snip1527 team-img">
+              <div class="snip1527image">
+                <img src="images/sarvesh.jpg" alt="pr-sample23" />
+              </div>
+              <figcaption>
+
+                <!-- <div> -->
+                <div class="name">
+                  <h3>Sarvesh Chavan</h3>
+                </div>
+                <div class="position">
+                  <h6>Creatives Head</h6>
+                </div>
+                <h5 class="contact">
+                  9930725799
+                  <br />
+                  creatives23@alcheringa.in
+                </h5>
+              </figcaption>
+              <div class="sm-icons">
+                <p>
+                  <a href="https://www.instagram.com/taboopancake/" target="__blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"
+                      fill="white">
+                      <path
+                        d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a href="https://www.facebook.com/profile.php?id=100081299619665" target="__blank">
+                    <svg width="24" height="24" viewBox="0 0 24 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20.5068 23.8524L21.6081 16.4786H14.7249V11.7021C14.6772 11.1559 14.7507 10.6058 14.94 10.092C15.1293 9.57823 15.4296 9.11384 15.8189 8.73281C16.2082 8.35179 16.6767 8.06378 17.1901 7.88985C17.7035 7.71592 18.2488 7.66048 18.786 7.72758H21.9695V1.45197C20.102 1.15332 18.2158 0.990206 16.3253 0.963867C10.5778 0.963867 6.82643 4.45032 6.82643 10.8654V16.4786H0.390625V23.8524H6.74039V41.1452H14.6045V23.8524H20.5068Z"
+                        fill="white" />
+                    </svg>
+                  </a>
+                </p>
+              </div>
+
+              <a href="#"></a>
+            </figure>
+
+          </div>
+          <!-- END Column -->
+
+          <!-- Column -->
+          <div class="my-8 px-1 w-full md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+
+            <figure class="snip1527 team-img">
+              <div class="snip1527image">
+                <img src="images/aabha.jpg" alt="pr-sample23" />
+              </div>
+              <figcaption>
+
+                <!-- <div> -->
+                <div class="name">
+                  <h3>Aabha Kanvinde</h3>
+                </div>
+                <div class="position">
+                  <h3>Digital Media Head</h3>
+                </div>
+                <h5 class="contact">
+                  8452029460
+                  <br />
+                  creatives23@alcheringa.in
+                </h5>
+              </figcaption>
+              <div class="sm-icons">
+                <p>
+                  <a href="https://www.instagram.com/aab_hahaha/" target="__blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"
+                      fill="white">
+                      <path
+                        d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a href="https://www.facebook.com/profile.php?id=100081999782972" target="__blank">
+                    <svg width="24" height="24" viewBox="0 0 24 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20.5068 23.8524L21.6081 16.4786H14.7249V11.7021C14.6772 11.1559 14.7507 10.6058 14.94 10.092C15.1293 9.57823 15.4296 9.11384 15.8189 8.73281C16.2082 8.35179 16.6767 8.06378 17.1901 7.88985C17.7035 7.71592 18.2488 7.66048 18.786 7.72758H21.9695V1.45197C20.102 1.15332 18.2158 0.990206 16.3253 0.963867C10.5778 0.963867 6.82643 4.45032 6.82643 10.8654V16.4786H0.390625V23.8524H6.74039V41.1452H14.6045V23.8524H20.5068Z"
+                        fill="white" />
+                    </svg>
+                  </a>
+                  <a href="https://www.twitter.com/ayush18240281" target="__blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 30 30"
+                      fill="white">
+                      <path
+                        d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z">
+                      </path>
+                    </svg>
+                  </a>
+                </p>
+              </div>
+
+              <a href="#"></a>
+            </figure>
+
+          </div>
+          <!-- END Column -->
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <!-- Web Design Team -->
+    <div class="pb-12 px-10 md:px-10" id="start">
+      <div class="container my-12 mx-auto px-4 md:px-12">
+        <h1 class="team-title py-8" style="color:#A273B2">Web Design</h1>
+        <div class="flex flex-wrap justify-center -mx-1 lg:-mx-4">
+
+          <!-- Column -->
+          <div class="my-8 px-1 md:px-2 w-full md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+
+            <figure class="snip1527 team-img">
+              <div class="snip1527image">
+                <img src="images/ayush.jpg" alt="pr-sample23" />
+              </div>
+              <figcaption>
+
+                <!-- <div> -->
+                <div class="name">
+                  <h3>Ayush Singh</h3>
+                </div>
+                <div class="position">
+                  <h6>Web Design Head</h6>
+                </div>
+                <h5 class="contact">
+                  7357442395
+                  <br />
+                  creatives@iitg.ac.in
+                </h5>
+              </figcaption>
+              <div class="sm-icons">
+                <p>
+                  <a href="https://www.instagram.com/sigh.yush/" target="__blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"
+                      fill="white">
+                      <path
+                        d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a href="https://www.facebook.com/profile.php?id=100002442294419" target="__blank">
+                    <svg width="24" height="24" viewBox="0 0 24 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20.5068 23.8524L21.6081 16.4786H14.7249V11.7021C14.6772 11.1559 14.7507 10.6058 14.94 10.092C15.1293 9.57823 15.4296 9.11384 15.8189 8.73281C16.2082 8.35179 16.6767 8.06378 17.1901 7.88985C17.7035 7.71592 18.2488 7.66048 18.786 7.72758H21.9695V1.45197C20.102 1.15332 18.2158 0.990206 16.3253 0.963867C10.5778 0.963867 6.82643 4.45032 6.82643 10.8654V16.4786H0.390625V23.8524H6.74039V41.1452H14.6045V23.8524H20.5068Z"
+                        fill="white" />
+                    </svg>
+                  </a>
+                  <a href="https://www.twitter.com/ayush18240281" target="__blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 30 30"
+                      fill="white">
+                      <path
+                        d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z">
+                      </path>
+                    </svg>
+                  </a>
+                </p>
+              </div>
+
+              <a href="#"></a>
+            </figure>
+
+          </div>
+          <!-- END Column -->
+
+
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <!-- Web and App Operations Team -->
+    <div class="pb-12 px-10 md:px-10" id="start">
+      <div class="container my-12 mx-auto px-4 md:px-12">
+        <h1 class="team-title py-8" style="color:#A273B2">Web & App Operations</h1>
+        <div class="flex flex-wrap justify-center -mx-1 lg:-mx-4">
+
+          <!-- Column -->
+          <div class="my-8 px-1 md:px-2 w-full md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+
+            <figure class="snip1527 team-img">
+              <div class="snip1527image">
+                <img src="images/ankit.jpg" alt="pr-sample23" />
+              </div>
+              <figcaption>
+
+                <!-- <div> -->
+                <div class="name">
+                  <h3>Ankit Guha</h3>
+                </div>
+                <div class="position">
+                  <h6>Web-Ops Head</h6>
+                </div>
+                <h5 class="contact">
+                  8250240574
+                  <br />
+                  web-ops@alcheringa.in
+                </h5>
+              </figcaption>
+              <div class="sm-icons">
+                <p>
+                  <a href="https://www.instagram.com/ankit_guha_2/" target="__blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"
+                      fill="white">
+                      <path
+                        d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a href="https://www.facebook.com/ankit.guha.355/" target="__blank">
+                    <svg width="24" height="24" viewBox="0 0 24 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20.5068 23.8524L21.6081 16.4786H14.7249V11.7021C14.6772 11.1559 14.7507 10.6058 14.94 10.092C15.1293 9.57823 15.4296 9.11384 15.8189 8.73281C16.2082 8.35179 16.6767 8.06378 17.1901 7.88985C17.7035 7.71592 18.2488 7.66048 18.786 7.72758H21.9695V1.45197C20.102 1.15332 18.2158 0.990206 16.3253 0.963867C10.5778 0.963867 6.82643 4.45032 6.82643 10.8654V16.4786H0.390625V23.8524H6.74039V41.1452H14.6045V23.8524H20.5068Z"
+                        fill="white" />
+                    </svg>
+                  </a>
+                  <a href="https://twitter.com/ankit11hab" target="__blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 30 30"
+                      fill="white">
+                      <path
+                        d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z">
+                      </path>
+                    </svg>
+                  </a>
+                </p>
+              </div>
+
+              <a href="#"></a>
+            </figure>
+
+          </div>
+          <!-- END Column -->
+
+
+
+          <!-- Column -->
+          <div class="my-8 px-1 md:px-2 w-full md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+
+            <figure class="snip1527 team-img">
+              <div class="snip1527image">
+                <img src="images/nitish.jpg" alt="pr-sample23" />
+              </div>
+              <figcaption>
+
+                <!-- <div> -->
+                <div class="name">
+                  <h3>Nitish</h3>
+                </div>
+                <div class="position">
+                  <h6>App-Ops Head</h6>
+                </div>
+                <h5 class="contact">
+                  8250240574
+                  <br />
+                  web-ops@alcheringa.in
+                </h5>
+              </figcaption>
+              <div class="sm-icons">
+                <p>
+                  <a href="https://www.instagram.com/ankit_guha_2/" target="__blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"
+                      fill="white">
+                      <path
+                        d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a href="https://www.facebook.com/ankit.guha.355/" target="__blank">
+                    <svg width="24" height="24" viewBox="0 0 24 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20.5068 23.8524L21.6081 16.4786H14.7249V11.7021C14.6772 11.1559 14.7507 10.6058 14.94 10.092C15.1293 9.57823 15.4296 9.11384 15.8189 8.73281C16.2082 8.35179 16.6767 8.06378 17.1901 7.88985C17.7035 7.71592 18.2488 7.66048 18.786 7.72758H21.9695V1.45197C20.102 1.15332 18.2158 0.990206 16.3253 0.963867C10.5778 0.963867 6.82643 4.45032 6.82643 10.8654V16.4786H0.390625V23.8524H6.74039V41.1452H14.6045V23.8524H20.5068Z"
+                        fill="white" />
+                    </svg>
+                  </a>
+                  <a href="https://twitter.com/ankit11hab" target="__blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 30 30"
+                      fill="white">
+                      <path
+                        d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z">
+                      </path>
+                    </svg>
+                  </a>
+                </p>
+              </div>
+
+              <a href="#"></a>
+            </figure>
+
+          </div>
+          <!-- END Column -->
+
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+    <!-- MUN Team -->
+    <div class="pb-12 px-10 md:px-10" id="start">
+      <div class="container my-12 mx-auto px-4 md:px-12">
+        <h1 class="team-title py-8" style="color:#A273B2">IITG MUN</h1>
+        <div class="flex flex-wrap justify-center -mx-1 lg:-mx-4">
+
+          <!-- Column -->
+          <div class="my-8 px-1 md:px-2 w-full md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+
+            <figure class="snip1527 team-img">
+              <div class="snip1527image">
+                <img src="images/suhayl.jpg" alt="pr-sample23" />
+              </div>
+              <figcaption>
+
+                <!-- <div> -->
+                <div class="name">
+                  <h3>Suhayl Mahek</h3>
+                </div>
+                <div class="position">
+                  <h6>Secretary General MUN</h6>
+                </div>
+                <h5 class="contact">
+                  9765567011
+                  <br />
+                  suhayl@iitg.ac.in
+                </h5>
+              </figcaption>
+              <div class="sm-icons">
+                <p>
+                  <a href="https://www.instagram.com/suhaylmahek" target="__blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"
+                      fill="white">
+                      <path
+                        d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a href="https://www.facebook.com/suhaylmahek" target="__blank">
+                    <svg width="24" height="24" viewBox="0 0 24 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20.5068 23.8524L21.6081 16.4786H14.7249V11.7021C14.6772 11.1559 14.7507 10.6058 14.94 10.092C15.1293 9.57823 15.4296 9.11384 15.8189 8.73281C16.2082 8.35179 16.6767 8.06378 17.1901 7.88985C17.7035 7.71592 18.2488 7.66048 18.786 7.72758H21.9695V1.45197C20.102 1.15332 18.2158 0.990206 16.3253 0.963867C10.5778 0.963867 6.82643 4.45032 6.82643 10.8654V16.4786H0.390625V23.8524H6.74039V41.1452H14.6045V23.8524H20.5068Z"
+                        fill="white" />
+                    </svg>
+                  </a>
+                </p>
+              </div>
+
+              <a href="#"></a>
+            </figure>
+
+          </div>
+          <!-- END Column -->
+
+
+
+          <!-- Column -->
+          <div class="my-8 px-1 md:px-2 w-full md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+
+            <figure class="snip1527 team-img">
+              <div class="snip1527image">
+                <img src="images/vinda.jpg" alt="pr-sample23" />
+              </div>
+              <figcaption>
+
+                <!-- <div> -->
+                <div class="name">
+                  <h3>Vinda Kunte</h3>
+                </div>
+                <div class="position">
+                  <h6>Director General MUN</h6>
+                </div>
+                <h5 class="contact">
+                  8104189818
+                  <br />
+                  k.vinda@iitg.ac.in
+                </h5>
+              </figcaption>
+              <div class="sm-icons">
+                <p>
+                  <a href="http://instagram.com/vindakunte?utm_source=qr" target="__blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"
+                      fill="white">
+                      <path
+                        d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a href="https://www.facebook.com/vinda.kunte" target="__blank">
+                    <svg width="24" height="24" viewBox="0 0 24 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20.5068 23.8524L21.6081 16.4786H14.7249V11.7021C14.6772 11.1559 14.7507 10.6058 14.94 10.092C15.1293 9.57823 15.4296 9.11384 15.8189 8.73281C16.2082 8.35179 16.6767 8.06378 17.1901 7.88985C17.7035 7.71592 18.2488 7.66048 18.786 7.72758H21.9695V1.45197C20.102 1.15332 18.2158 0.990206 16.3253 0.963867C10.5778 0.963867 6.82643 4.45032 6.82643 10.8654V16.4786H0.390625V23.8524H6.74039V41.1452H14.6045V23.8524H20.5068Z"
+                        fill="white" />
+                    </svg>
+                  </a>
+                </p>
+              </div>
+
+              <a href="#"></a>
+            </figure>
+
+          </div>
+          <!-- END Column -->
+
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+    <!-- Finance and Accounts -->
+    <div class="pb-12 px-10 md:px-10" id="start">
+      <div class="container my-12 mx-auto px-4 md:px-12">
+        <h1 class="team-title py-8" style="color:#A273B2">Finance & Accounts</h1>
+        <div class="flex flex-wrap justify-center -mx-1 lg:-mx-4">
+
+          <!-- Column -->
+          <div class="my-8 px-1 md:px-2 w-full md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+
+            <figure class="snip1527 team-img">
+              <div class="snip1527image">
+                <img src="images/shashwat.jpg" alt="pr-sample23" />
+              </div>
+              <figcaption>
+
+                <!-- <div> -->
+                <div class="name">
+                  <h3>Shashwat Methi</h3>
+                </div>
+                <div class="position">
+                  <h6>Finance and Accounts Head</h6>
+                </div>
+                <h5 class="contact">
+                  7742082184
+                  <br />
+                  shashwat.m@alcheringa.in
+                </h5>
+              </figcaption>
+              <div class="sm-icons">
+                <p>
+                  <a href="https://www.instagram.com/shashwat_911/" target="__blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"
+                      fill="white">
+                      <path
+                        d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a href="https://www.facebook.com/shashwat.methi.7" target="__blank">
+                    <svg width="24" height="24" viewBox="0 0 24 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20.5068 23.8524L21.6081 16.4786H14.7249V11.7021C14.6772 11.1559 14.7507 10.6058 14.94 10.092C15.1293 9.57823 15.4296 9.11384 15.8189 8.73281C16.2082 8.35179 16.6767 8.06378 17.1901 7.88985C17.7035 7.71592 18.2488 7.66048 18.786 7.72758H21.9695V1.45197C20.102 1.15332 18.2158 0.990206 16.3253 0.963867C10.5778 0.963867 6.82643 4.45032 6.82643 10.8654V16.4786H0.390625V23.8524H6.74039V41.1452H14.6045V23.8524H20.5068Z"
+                        fill="white" />
+                    </svg>
+                  </a>
+                </p>
+              </div>
+
+              <a href="#"></a>
+            </figure>
+
+          </div>
+          <!-- END Column -->
+
+
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- Convener -->
+    <div class="pb-12 px-10 md:px-10" id="start">
+      <div class="container my-12 mx-auto px-4 md:px-12">
+        <h1 class="team-title py-8" style="color:#A273B2">Convener</h1>
+        <div class="flex flex-wrap justify-center -mx-1 lg:-mx-4">
+
+          <!-- Column -->
+          <div class="my-8 px-1 md:px-2 w-full md:w-1/2 lg:my-4 lg:px-8 lg:w-1/4">
+
+            <figure class="snip1527 team-img">
+              <div class="snip1527image">
+                <img src="images/varun.jpg" alt="pr-sample23" />
+              </div>
+              <figcaption>
+
+                <!-- <div> -->
+                <div class="name">
+                  <h3>Varun Bhardwaj </h3>
+                </div>
+                <div class="position">
+                  <h6>Convener</h6>
+                </div>
+                <h5 class="contact">
+                  9910271539
+                  <br />
+                  varun@alcheringa.in
+                </h5>
+              </figcaption>
+              <div class="sm-icons">
+                <p>
+                  <a href="https://www.instagram.com/bhardwajvarun286/" target="__blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"
+                      fill="white">
+                      <path
+                        d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a href="https://www.facebook.com/varun.bhardwaj.92754397/" target="__blank">
+                    <svg width="24" height="24" viewBox="0 0 24 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20.5068 23.8524L21.6081 16.4786H14.7249V11.7021C14.6772 11.1559 14.7507 10.6058 14.94 10.092C15.1293 9.57823 15.4296 9.11384 15.8189 8.73281C16.2082 8.35179 16.6767 8.06378 17.1901 7.88985C17.7035 7.71592 18.2488 7.66048 18.786 7.72758H21.9695V1.45197C20.102 1.15332 18.2158 0.990206 16.3253 0.963867C10.5778 0.963867 6.82643 4.45032 6.82643 10.8654V16.4786H0.390625V23.8524H6.74039V41.1452H14.6045V23.8524H20.5068Z"
+                        fill="white" />
+                    </svg>
+                  </a>
+                  <a href="https://twitter.com/VarunBh24719284" target="__blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 30 30"
+                      fill="white">
+                      <path
+                        d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z">
+                      </path>
+                    </svg>
+                  </a>
+                </p>
+              </div>
+
+              <a href="#"></a>
+            </figure>
+
+          </div>
+          <!-- END Column -->
+
+
+        </div>
+      </div>
+
+    </div>
+
+    
+    <footer class="px-7 pt-20 md:px-10 lg:px-14" style="width:100%;background:#2F4858; margin-top: 90px; color:white;">
+      <div class="flex flex-row justify-between footer-items">
+          <div style="width:33%"> Siddhant Singh<br>Public Relations Head<br>+91-9310859978<br><br>Danda
+              Akshara<br>Public Relations Head<br>+91-9908991939<br><br></div>
+          <div class="footer-img-1" style="width:13%; margin-top:auto;"><img src="images/Footer_logo.svg"
+                  width="100%" /> </div>
+          <div class="flex flex-col items-end footer-right">
+              <div> For business </div>
+              <div> related queries </div>
+              <div> alcheringa@iitg.ac.in<br><br></div>
+              <div class="flex flex-row items-center">
+                  <div class="mx-2"><a href="https://www.instagram.com/alcheringaiitg/" target="_blank"><img
+                              src="images/instagram.svg" style="width:25px" /></a></div>
+                  <div class="mx-2"><a href="https://www.facebook.com/alcheringaiitg" target="_blank"><img
+                              src="images/facebook.svg" style="width:13px" /></a></div>
+                  <div class="mx-2"><a href="https://www.youtube.com/c/AlcheringaIITG" target="_blank"><img
+                              src="images/youtube.svg" style="width:27px" /></a></div>
+                  <div class="mx-2"><a href="https://www.linkedin.com/company/alcheringaiitguwahati/mycompany/"
+                          target="_blank"><img src="images/linkedin.svg" style="width:25px" /></a></div>
+                  <div class="ml-2"><a href="https://twitter.com/alcheringaiitg" target="_blank"><img
+                              src="images/twitter.svg" style="width:25px" /></a></div>
+              </div>
+          </div>
+      </div>
+      <center>
+          <div style="width:13%; margin-top:30px;" class="footer-img-2"><img src="images/Footer_logo.svg"
+                  width="100%" /> </div>
+      </center>
+      <div class="text-center mt-2" style="font-size:4vw; transform: translate(0,12px);"> IIT GUWAHATI'S </div>
+      <div class="text-center bottom-tag"> ALCHERINGA </div>
+  </footer>
+
+
+
 </body>
 <script>
   document.getElementById("hamburger").onclick = function toggleMenu() {
