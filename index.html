@@ -13,6 +13,8 @@
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Syne&display=swap');
 
@@ -434,6 +436,38 @@
             width: 5rem;
         }
     }
+
+    #dropdown{
+        /* visibility:hidden; */
+        display: none;
+    }
+
+    @media (min-width: 768px) {
+        #directlink {
+            visibility: hidden;
+        }
+
+        #dropdown {
+            /* visibility: visible; */
+            display: block;
+            color: #eee;
+            padding: 2%;
+        }
+
+        .CA-redirect {
+            color: #eee;
+            text-decoration: underline;
+            text-align: center;
+        }
+
+        .CA-redirect:hover {
+            background-color: rgb(245, 106, 88);
+            color: #eee;
+        }
+    }
+
+    
+    
 </style>
 
 <body>
@@ -451,10 +485,10 @@
         </div>
         <div
             class="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-5 md:mt-0 border-blue-900 md:border-none links px-7">
-            <a href="index.html"
+            <!-- <a href="index.html"
                 class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none"
-                style="text-decoration: underline;">Home</a>
-            <a href="competitions.html"
+                style="text-decoration: underline;">Home</a> -->
+            <!-- <a href="competitions.html"
                 class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Competitions</a>
             <a href="events.html"
                 class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Events</a>
@@ -462,6 +496,31 @@
                 class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Initiatives</a>
             <a href="team.html"
                 class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Team</a>
+            <a href="team.html"
+                class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Team</a> -->
+            <!-- <div class="dropdown" id="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Programs
+                </button>
+                <ul class="dropdown-menu">
+                    <a class="dropdown-item" href="#">
+                        <a href="http://ambassador.alcheringa.in/" class="direct">CA</a>
+                    </a>
+                </ul>
+            </div> -->
+            <a href="http://ambassador.alcheringa.in/" id="directlink"
+                class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none"
+                style="text-decoration: underline;">CA</a>
+
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                id="dropdown">
+                Programs
+            </a>
+            <ul class="dropdown-menu dropdown-menu" style="background-color:rgb(245, 106, 88);">
+                <li><a class="dropdown-item CA-redirect" href="http://ambassador.alcheringa.in/">CA</a></li>
+            </ul>
+
         </div>
     </nav>
     <div class="h-screen">
@@ -659,5 +718,8 @@
         marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
     }
 </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
 
 </html>
