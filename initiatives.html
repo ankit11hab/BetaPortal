@@ -8,6 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>Alcheringa - Initiatives</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Syne&display=swap');
@@ -166,6 +168,35 @@
     .card-title {
         margin-bottom: 20px;
     }
+
+    #dropdown {
+        display: none;
+    }
+
+    @media (min-width: 768px) {
+        #directlink {
+            display: none;
+        }
+
+        #dropdown {
+            display: block;
+            color: white;
+            padding: 2.5%;
+            padding-top: 2.8%;
+        }
+
+        .CA-redirect {
+            color: black;
+            text-decoration: underline;
+            text-align: center;
+        }
+
+        .CA-redirect:hover {
+            /* background-color: rgb(245, 106, 88); */
+            background-color:white;
+        }
+    }
+
 </style>
 
 <body>
@@ -188,8 +219,18 @@
                 <a href="initiatives.html"
                     class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none"
                     style="text-decoration: underline;">Initiatives</a>
-                    <a href="team.html"
-                        class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Team</a>
+                <a href="team.html"
+                    class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Team</a>
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false" id="dropdown">
+                    Programs
+                </a>
+                <ul class="dropdown-menu" style="background-color:white">
+                    <li><a class="dropdown-item CA-redirect" href="http://ambassador.alcheringa.in/">CA</a></li>
+                </ul>
+
+                <a href="http://ambassador.alcheringa.in/" id="directlink"
+                    class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">CA</a>
             </div>
         </nav>
         <div class="hero"> <img class="bg-image" src="./images/Rectangle 9.png" />
@@ -303,5 +344,8 @@
     </footer>
 </body>
 <script>document.getElementById("hamburger").onclick = function toggleMenu() { const navToggle = document.getElementsByClassName("toggle"); for (let i = 0; i < navToggle.length; i++) { navToggle.item(i).classList.toggle("hidden"); } };</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
 
 </html>

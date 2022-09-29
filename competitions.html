@@ -11,6 +11,8 @@
     <title>Alcheringa - Competitions</title>
 </head>
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Syne&display=swap');
 
@@ -201,6 +203,33 @@
     #content-b1 {
         background-image: url(/images/Frame\ 51\ \(2\).png);
     }
+
+    #dropdown {
+        display: none;
+    }
+
+    @media (min-width: 768px) {
+        #directlink {
+            display: none;
+        }
+
+        #dropdown {
+            display: block;
+            color: white;
+            padding: 2.5%;
+            padding-top: 2.8%;
+        }
+
+        .CA-redirect {
+            color: black;
+            text-decoration: underline;
+            text-align: center;
+        }
+
+        .CA-redirect:hover {
+            background-color:white;
+        }
+    }
 </style>
 
 <body>
@@ -222,8 +251,18 @@
                     class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Events</a>
                 <a href="initiatives.html"
                     class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Initiatives</a>
-                    <a href="team.html"
-                        class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Team</a>
+                <a href="team.html"
+                    class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Team</a>
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false" id="dropdown">
+                    Programs
+                </a>
+                <ul class="dropdown-menu" style="background-color:white">
+                    <li><a class="dropdown-item CA-redirect" href="http://ambassador.alcheringa.in/">CA</a></li>
+                </ul>
+
+                <a href="http://ambassador.alcheringa.in/" id="directlink"
+                    class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">CA</a>
             </div>
         </nav>
         <div class="hero"> <img class="bg-image" src="./images/Rectangle 11.png" />
@@ -394,5 +433,8 @@
     </footer>
 </body>
 <script>document.getElementById("hamburger").onclick = function toggleMenu() { const navToggle = document.getElementsByClassName("toggle"); for (let i = 0; i < navToggle.length; i++) { navToggle.item(i).classList.toggle("hidden"); } }; function closeall() { if (screen.width > 700) { const elemcomp1 = $('#content-comp-1'); const elemcomp2 = $('#content-comp-2'); const elemcomp3 = $('#content-comp-3'); const elem2 = $('#notselected'); const elem4 = $('#notselected2'); const elem5 = $('#selected3'); const elem6 = $('#notselected3'); const elem7 = $('#selected4'); const elem8 = $('#notselected4'); elemcomp1.hide(); elemcomp2.hide(); elemcomp3.hide(); elem1.hide(); elem2.show(); elem3.hide(); elem4.show(); elem5.hide(); elem6.show(); elem7.hide(); elem8.show(); return 0; } } function clickedOnComp1() { if (screen.width > 700) { const elemcomp1 = $('#content-comp-1'); elemcomp1.toggle(); } } function clickedOnComp2() { if (screen.width > 700) { const elemcomp1 = $('#content-comp-1'); elemcomp1.toggle(); } } function clickedOnComp3() { if (screen.width > 700) { const elemcomp1 = $('#content-comp-1'); elemcomp1.toggle(); } } function clickedOnComp4() { if (screen.width > 700) { const elemcomp1 = $('#content-comp-1'); elemcomp1.toggle(); } } function clickedOnComp5() { if (screen.width > 700) { const elemcomp2 = $('#content-comp-2'); elemcomp2.toggle(); } } function clickedOnComp6() { if (screen.width > 700) { const elemcomp2 = $('#content-comp-2'); elemcomp2.toggle(); } } function clickedOnComp7() { if (screen.width > 700) { const elemcomp2 = $('#content-comp-2'); elemcomp2.toggle(); } } function clickedOnComp8() { if (screen.width > 700) { const elemcomp2 = $('#content-comp-2'); elemcomp2.toggle(); } } function clickedOnComp9() { if (screen.width > 700) { const elemcomp2 = $('#content-comp-3'); elemcomp2.toggle(); } } function clickedOnComp10() { if (screen.width > 700) { const elemcomp2 = $('#content-comp-3'); elemcomp2.toggle(); } } function clickedOnComp11() { if (screen.width > 700) { const elemcomp2 = $('#content-comp-3'); elemcomp2.toggle(); } }</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
 
 </html>

@@ -10,6 +10,8 @@
   <title>Alcheringa - Team</title>
 </head>
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Syne&display=swap');
 
@@ -260,6 +262,34 @@
     height: 5%;
     width: 5%;
   }
+
+  #dropdown {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    #directlink {
+      display: none;
+    }
+
+    #dropdown {
+      display: block;
+      color: white;
+      padding: 2.5%;
+      padding-top: 2.8%;
+    }
+
+    .CA-redirect {
+      color: black;
+      text-decoration: underline;
+      text-align: center;
+    }
+
+    .CA-redirect:hover {
+      /* background-color: rgb(245, 106, 88); */
+      background-color:white;
+    }
+  }
 </style>
 
 <body>
@@ -289,6 +319,16 @@
         <a href="team.html"
           class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none"
           style="text-decoration: underline;">Team</a>
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+          id="dropdown">
+          Programs
+        </a>
+        <ul class="dropdown-menu" style="background-color:white">
+          <li><a class="dropdown-item CA-redirect" href="http://ambassador.alcheringa.in/">CA</a></li>
+        </ul>
+
+        <a href="http://ambassador.alcheringa.in/" id="directlink"
+          class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">CA</a>
       </div>
     </nav>
     <div class="hero">
@@ -1465,38 +1505,38 @@
 
     </div>
 
-    
+
     <footer class="px-7 pt-20 md:px-10 lg:px-14" style="width:100%;background:#2F4858; margin-top: 90px; color:white;">
       <div class="flex flex-row justify-between footer-items">
-          <div style="width:33%"> Siddhant Singh<br>Public Relations Head<br>+91-9310859978<br><br>Danda
-              Akshara<br>Public Relations Head<br>+91-9908991939<br><br></div>
-          <div class="footer-img-1" style="width:13%; margin-top:auto;"><img src="images/Footer_logo.svg"
-                  width="100%" /> </div>
-          <div class="flex flex-col items-end footer-right">
-              <div> For business </div>
-              <div> related queries </div>
-              <div> alcheringa@iitg.ac.in<br><br></div>
-              <div class="flex flex-row items-center">
-                  <div class="mx-2"><a href="https://www.instagram.com/alcheringaiitg/" target="_blank"><img
-                              src="images/instagram.svg" style="width:25px" /></a></div>
-                  <div class="mx-2"><a href="https://www.facebook.com/alcheringaiitg" target="_blank"><img
-                              src="images/facebook.svg" style="width:13px" /></a></div>
-                  <div class="mx-2"><a href="https://www.youtube.com/c/AlcheringaIITG" target="_blank"><img
-                              src="images/youtube.svg" style="width:27px" /></a></div>
-                  <div class="mx-2"><a href="https://www.linkedin.com/company/alcheringaiitguwahati/mycompany/"
-                          target="_blank"><img src="images/linkedin.svg" style="width:25px" /></a></div>
-                  <div class="ml-2"><a href="https://twitter.com/alcheringaiitg" target="_blank"><img
-                              src="images/twitter.svg" style="width:25px" /></a></div>
-              </div>
+        <div style="width:33%"> Siddhant Singh<br>Public Relations Head<br>+91-9310859978<br><br>Danda
+          Akshara<br>Public Relations Head<br>+91-9908991939<br><br></div>
+        <div class="footer-img-1" style="width:13%; margin-top:auto;"><img src="images/Footer_logo.svg" width="100%" />
+        </div>
+        <div class="flex flex-col items-end footer-right">
+          <div> For business </div>
+          <div> related queries </div>
+          <div> alcheringa@iitg.ac.in<br><br></div>
+          <div class="flex flex-row items-center">
+            <div class="mx-2"><a href="https://www.instagram.com/alcheringaiitg/" target="_blank"><img
+                  src="images/instagram.svg" style="width:25px" /></a></div>
+            <div class="mx-2"><a href="https://www.facebook.com/alcheringaiitg" target="_blank"><img
+                  src="images/facebook.svg" style="width:13px" /></a></div>
+            <div class="mx-2"><a href="https://www.youtube.com/c/AlcheringaIITG" target="_blank"><img
+                  src="images/youtube.svg" style="width:27px" /></a></div>
+            <div class="mx-2"><a href="https://www.linkedin.com/company/alcheringaiitguwahati/mycompany/"
+                target="_blank"><img src="images/linkedin.svg" style="width:25px" /></a></div>
+            <div class="ml-2"><a href="https://twitter.com/alcheringaiitg" target="_blank"><img src="images/twitter.svg"
+                  style="width:25px" /></a></div>
           </div>
+        </div>
       </div>
       <center>
-          <div style="width:13%; margin-top:30px;" class="footer-img-2"><img src="images/Footer_logo.svg"
-                  width="100%" /> </div>
+        <div style="width:13%; margin-top:30px;" class="footer-img-2"><img src="images/Footer_logo.svg" width="100%" />
+        </div>
       </center>
       <div class="text-center mt-2" style="font-size:4vw; transform: translate(0,12px);"> IIT GUWAHATI'S </div>
       <div class="text-center bottom-tag"> ALCHERINGA </div>
-  </footer>
+    </footer>
 
 
 
@@ -1509,5 +1549,7 @@
     }
   };
 </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 
 </html>
