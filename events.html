@@ -213,7 +213,11 @@
     }
 
     @media (min-width: 768px) {
-        #directlink {
+        #directlink1 {
+            display: none;
+        }
+
+        #directlink2 {
             display: none;
         }
 
@@ -226,7 +230,7 @@
 
         .CA-redirect {
             color: black;
-            text-decoration: underline;
+            /* text-decoration: underline; */
             text-align: center;
         }
 
@@ -263,11 +267,18 @@
                     Programs
                 </a>
                 <ul class="dropdown-menu dropdown-menu" style="background-color: pink">
-                    <li><a class="dropdown-item CA-redirect" href="http://ambassador.alcheringa.in/">Campus Ambassador</a></li>
+                    <li><a class="dropdown-item CA-redirect" href="http://ambassador.alcheringa.in/">Campus
+                            Ambassador</a></li>
+                    <li><a class="dropdown-item CA-redirect" href="https://prelims.alcheringa.in/">Highway to Alcher</a>
+                    </li>
                 </ul>
 
-                <a href="http://ambassador.alcheringa.in/" id="directlink"
-                    class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Campus Ambassador</a>
+                <a href="http://ambassador.alcheringa.in/" id="directlink1"
+                    class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Campus
+                    Ambassador</a>
+                <a href="https://prelims.alcheringa.in/" id="directlink2"
+                    class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Highway
+                    to Alcher</a>
             </div>
         </nav>
         <div class="hero"> <img class="bg-image" src="./images/Rectangle_8.png" />

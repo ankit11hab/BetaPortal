@@ -213,7 +213,11 @@
     }
 
     @media (min-width: 768px) {
-        #directlink {
+        #directlink1 {
+            display: none;
+        }
+
+        #directlink2 {
             display: none;
         }
 
@@ -226,7 +230,7 @@
 
         .CA-redirect {
             color: black;
-            text-decoration: underline;
+            /* text-decoration: underline; */
             text-align: center;
         }
 
@@ -245,8 +249,7 @@
             <div class="flex md:hidden px-10"> <button id="hamburger" class="focus:outline-none"> <img
                         class="toggle block" src="images/hamburger.png" width="30" height="30" /> <img
                         class="toggle hidden" src="images/close.png" width="20" height="20" /> </button> </div>
-            <div
-                class="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-0 md:mt-0 border-blue-900 md:border-none links px-5"
+            <div class="toggle hidden md:flex w-full md:w-auto text-right text-bold mt-0 md:mt-0 border-blue-900 md:border-none links px-5"
                 style="top: 50px;">
                 <a href="index.html"
                     class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none navitem">Home</a>
@@ -262,13 +265,19 @@
                     aria-expanded="false" id="dropdown">
                     Programs
                 </a>
-                <ul class="dropdown-menu" style="background-color: pink"
-                style="margin-top: 0px;">
-                    <li><a class="dropdown-item CA-redirect" href="http://ambassador.alcheringa.in/">Campus Ambassador</a></li>
+                <ul class="dropdown-menu" style="background-color: pink" style="margin-top: 0px;">
+                    <li><a class="dropdown-item CA-redirect" href="http://ambassador.alcheringa.in/">Campus
+                            Ambassador</a></li>
+                    <li><a class="dropdown-item CA-redirect" href="https://prelims.alcheringa.in/">Highway to Alcher</a>
+                    </li>
                 </ul>
 
-                <a href="http://ambassador.alcheringa.in/" id="directlink"
-                    class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Campus Ambassador</a>
+                <a href="http://ambassador.alcheringa.in/" id="directlink1"
+                    class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Campus
+                    Ambassador</a>
+                <a href="https://prelims.alcheringa.in/" id="directlink2"
+                    class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Highway
+                    to Alcher</a>
             </div>
         </nav>
         <div class="hero"> <img class="bg-image" src="./images/Rectangle 11.png" />
