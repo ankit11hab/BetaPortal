@@ -442,7 +442,11 @@
     }
 
     @media (min-width: 720px) {
-        #directlink {
+        #directlink1 {
+            display: none;
+        }
+
+        #directlink2 {
             display: none;
         }
 
@@ -456,7 +460,7 @@
 
         .CA-redirect {
             color: black;
-            text-decoration: underline;
+            /* text-decoration: underline; */
             text-align: center;
         }
 
@@ -465,8 +469,7 @@
             background-color: pink;
         }
     }
-    
-    </style>
+</style>
 
 <body>
     <nav class="flex flex-wrap items-center justify-between p-1"
@@ -493,20 +496,30 @@
             <a href="initiatives.html"
                 class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Initiatives</a>
 
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
-                    id="dropdown">
-                    Programs
-                </a>
-                <ul class="dropdown-menu" style="background-color: #FA6F6A; ">
-                    <li><a class="dropdown-item CA-redirect" href="http://ambassador.alcheringa.in/" target="_blank" style="text-decoration: none; color: white;">Campus Ambassador</a></li>
-                </ul>
-    
-                <a href="http://ambassador.alcheringa.in/" id="directlink"
-                    class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none" style="text-decoration: none; ">Campus Ambassador</a>
-                    
+
+
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                id="dropdown">
+                Programs
+            </a>
+
+            <ul class="dropdown-menu" style="background-color: pink;">
+                <li><a class="dropdown-item CA-redirect" href="http://ambassador.alcheringa.in/" target="_blank">Campus
+                        Ambassador</a>
+                </li>
+                <li><a class="dropdown-item CA-redirect" href="https://prelims.alcheringa.in/" target="_blank">Highway
+                        to Alcher</a>
+                </li>
+            </ul>
+
+            <a href="http://ambassador.alcheringa.in/" target="_blank" id="directlink1"
+                class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Campus
+                Ambassador</a>
+            <a href="https://prelims.alcheringa.in/" target="_blank" id="directlink2"
+                class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Highway
+                to Alcher</a>
             <a href="team.html"
                 class="block md:inline-block text-white hover:text-blue-500 px-3 py-3 border-blue-900 md:border-none">Team</a>
-
 
         </div>
     </nav>
